@@ -1,0 +1,497 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F0BFE401921557D0062159E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0BFE3F1921557D0062159E /* Foundation.framework */; };
+		3F0BFE421921557D0062159E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0BFE411921557D0062159E /* CoreGraphics.framework */; };
+		3F0BFE441921557D0062159E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0BFE431921557D0062159E /* UIKit.framework */; };
+		3F0BFE4A1921557D0062159E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3F0BFE481921557D0062159E /* InfoPlist.strings */; };
+		3F0BFE4C1921557D0062159E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0BFE4B1921557D0062159E /* main.m */; };
+		3F0BFE501921557D0062159E /* JBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0BFE4F1921557D0062159E /* JBAppDelegate.m */; };
+		3F0BFE521921557D0062159E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F0BFE511921557D0062159E /* Images.xcassets */; };
+		3F0BFE591921557D0062159E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0BFE581921557D0062159E /* XCTest.framework */; };
+		3F0BFE5A1921557D0062159E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0BFE3F1921557D0062159E /* Foundation.framework */; };
+		3F0BFE5B1921557D0062159E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0BFE431921557D0062159E /* UIKit.framework */; };
+		3F0BFE631921557D0062159E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3F0BFE611921557D0062159E /* InfoPlist.strings */; };
+		3F0BFE651921557D0062159E /* WHWriterAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0BFE641921557D0062159E /* WHWriterAppTests.m */; };
+		3F0BFE7019215F560062159E /* JBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0BFE6F19215F560062159E /* JBViewController.m */; };
+		3F0BFE73192164D40062159E /* JBView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0BFE72192164D40062159E /* JBView.m */; };
+		3F0BFE78192191FA0062159E /* JBTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0BFE77192191FA0062159E /* JBTableViewController.m */; };
+		3F0BFE7B192194E50062159E /* JBNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0BFE7A192194E50062159E /* JBNavController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3F0BFE5C1921557D0062159E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F0BFE341921557D0062159E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F0BFE3B1921557D0062159E;
+			remoteInfo = WHWriterApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3F0BFE3C1921557D0062159E /* WHWriterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WHWriterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F0BFE3F1921557D0062159E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3F0BFE411921557D0062159E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3F0BFE431921557D0062159E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3F0BFE471921557D0062159E /* WHWriterApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WHWriterApp-Info.plist"; sourceTree = "<group>"; };
+		3F0BFE491921557D0062159E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3F0BFE4B1921557D0062159E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3F0BFE4D1921557D0062159E /* WHWriterApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WHWriterApp-Prefix.pch"; sourceTree = "<group>"; };
+		3F0BFE4E1921557D0062159E /* JBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBAppDelegate.h; sourceTree = "<group>"; };
+		3F0BFE4F1921557D0062159E /* JBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBAppDelegate.m; sourceTree = "<group>"; };
+		3F0BFE511921557D0062159E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3F0BFE571921557D0062159E /* WHWriterAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WHWriterAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F0BFE581921557D0062159E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		3F0BFE601921557D0062159E /* WHWriterAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WHWriterAppTests-Info.plist"; sourceTree = "<group>"; };
+		3F0BFE621921557D0062159E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3F0BFE641921557D0062159E /* WHWriterAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WHWriterAppTests.m; sourceTree = "<group>"; };
+		3F0BFE6E19215F560062159E /* JBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBViewController.h; sourceTree = "<group>"; };
+		3F0BFE6F19215F560062159E /* JBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBViewController.m; sourceTree = "<group>"; };
+		3F0BFE71192164D40062159E /* JBView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBView.h; sourceTree = "<group>"; };
+		3F0BFE72192164D40062159E /* JBView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBView.m; sourceTree = "<group>"; };
+		3F0BFE76192191FA0062159E /* JBTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBTableViewController.h; sourceTree = "<group>"; };
+		3F0BFE77192191FA0062159E /* JBTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBTableViewController.m; sourceTree = "<group>"; };
+		3F0BFE79192194E50062159E /* JBNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBNavController.h; sourceTree = "<group>"; };
+		3F0BFE7A192194E50062159E /* JBNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBNavController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3F0BFE391921557D0062159E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F0BFE421921557D0062159E /* CoreGraphics.framework in Frameworks */,
+				3F0BFE441921557D0062159E /* UIKit.framework in Frameworks */,
+				3F0BFE401921557D0062159E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F0BFE541921557D0062159E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F0BFE591921557D0062159E /* XCTest.framework in Frameworks */,
+				3F0BFE5B1921557D0062159E /* UIKit.framework in Frameworks */,
+				3F0BFE5A1921557D0062159E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F0BFE331921557D0062159E = {
+			isa = PBXGroup;
+			children = (
+				3F0BFE451921557D0062159E /* WHWriterApp */,
+				3F0BFE5E1921557D0062159E /* WHWriterAppTests */,
+				3F0BFE3E1921557D0062159E /* Frameworks */,
+				3F0BFE3D1921557D0062159E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3F0BFE3D1921557D0062159E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F0BFE3C1921557D0062159E /* WHWriterApp.app */,
+				3F0BFE571921557D0062159E /* WHWriterAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3F0BFE3E1921557D0062159E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F0BFE3F1921557D0062159E /* Foundation.framework */,
+				3F0BFE411921557D0062159E /* CoreGraphics.framework */,
+				3F0BFE431921557D0062159E /* UIKit.framework */,
+				3F0BFE581921557D0062159E /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3F0BFE451921557D0062159E /* WHWriterApp */ = {
+			isa = PBXGroup;
+			children = (
+				3F0BFE4E1921557D0062159E /* JBAppDelegate.h */,
+				3F0BFE4F1921557D0062159E /* JBAppDelegate.m */,
+				3F0BFE74192189950062159E /* View Controllers */,
+				3F0BFE75192189B00062159E /* Views */,
+				3F0BFE511921557D0062159E /* Images.xcassets */,
+				3F0BFE461921557D0062159E /* Supporting Files */,
+			);
+			path = WHWriterApp;
+			sourceTree = "<group>";
+		};
+		3F0BFE461921557D0062159E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3F0BFE471921557D0062159E /* WHWriterApp-Info.plist */,
+				3F0BFE481921557D0062159E /* InfoPlist.strings */,
+				3F0BFE4B1921557D0062159E /* main.m */,
+				3F0BFE4D1921557D0062159E /* WHWriterApp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3F0BFE5E1921557D0062159E /* WHWriterAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				3F0BFE641921557D0062159E /* WHWriterAppTests.m */,
+				3F0BFE5F1921557D0062159E /* Supporting Files */,
+			);
+			path = WHWriterAppTests;
+			sourceTree = "<group>";
+		};
+		3F0BFE5F1921557D0062159E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3F0BFE601921557D0062159E /* WHWriterAppTests-Info.plist */,
+				3F0BFE611921557D0062159E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3F0BFE74192189950062159E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3F0BFE6E19215F560062159E /* JBViewController.h */,
+				3F0BFE6F19215F560062159E /* JBViewController.m */,
+				3F0BFE76192191FA0062159E /* JBTableViewController.h */,
+				3F0BFE77192191FA0062159E /* JBTableViewController.m */,
+				3F0BFE79192194E50062159E /* JBNavController.h */,
+				3F0BFE7A192194E50062159E /* JBNavController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		3F0BFE75192189B00062159E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3F0BFE71192164D40062159E /* JBView.h */,
+				3F0BFE72192164D40062159E /* JBView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3F0BFE3B1921557D0062159E /* WHWriterApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F0BFE681921557D0062159E /* Build configuration list for PBXNativeTarget "WHWriterApp" */;
+			buildPhases = (
+				3F0BFE381921557D0062159E /* Sources */,
+				3F0BFE391921557D0062159E /* Frameworks */,
+				3F0BFE3A1921557D0062159E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WHWriterApp;
+			productName = WHWriterApp;
+			productReference = 3F0BFE3C1921557D0062159E /* WHWriterApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3F0BFE561921557D0062159E /* WHWriterAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F0BFE6B1921557D0062159E /* Build configuration list for PBXNativeTarget "WHWriterAppTests" */;
+			buildPhases = (
+				3F0BFE531921557D0062159E /* Sources */,
+				3F0BFE541921557D0062159E /* Frameworks */,
+				3F0BFE551921557D0062159E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F0BFE5D1921557D0062159E /* PBXTargetDependency */,
+			);
+			name = WHWriterAppTests;
+			productName = WHWriterAppTests;
+			productReference = 3F0BFE571921557D0062159E /* WHWriterAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3F0BFE341921557D0062159E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JB;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = CS491;
+				TargetAttributes = {
+					3F0BFE561921557D0062159E = {
+						TestTargetID = 3F0BFE3B1921557D0062159E;
+					};
+				};
+			};
+			buildConfigurationList = 3F0BFE371921557D0062159E /* Build configuration list for PBXProject "WHWriterApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3F0BFE331921557D0062159E;
+			productRefGroup = 3F0BFE3D1921557D0062159E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3F0BFE3B1921557D0062159E /* WHWriterApp */,
+				3F0BFE561921557D0062159E /* WHWriterAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3F0BFE3A1921557D0062159E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F0BFE4A1921557D0062159E /* InfoPlist.strings in Resources */,
+				3F0BFE521921557D0062159E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F0BFE551921557D0062159E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F0BFE631921557D0062159E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3F0BFE381921557D0062159E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F0BFE501921557D0062159E /* JBAppDelegate.m in Sources */,
+				3F0BFE7B192194E50062159E /* JBNavController.m in Sources */,
+				3F0BFE7019215F560062159E /* JBViewController.m in Sources */,
+				3F0BFE78192191FA0062159E /* JBTableViewController.m in Sources */,
+				3F0BFE73192164D40062159E /* JBView.m in Sources */,
+				3F0BFE4C1921557D0062159E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F0BFE531921557D0062159E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F0BFE651921557D0062159E /* WHWriterAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3F0BFE5D1921557D0062159E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F0BFE3B1921557D0062159E /* WHWriterApp */;
+			targetProxy = 3F0BFE5C1921557D0062159E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3F0BFE481921557D0062159E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F0BFE491921557D0062159E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3F0BFE611921557D0062159E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F0BFE621921557D0062159E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3F0BFE661921557D0062159E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3F0BFE671921557D0062159E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3F0BFE691921557D0062159E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WHWriterApp/WHWriterApp-Prefix.pch";
+				INFOPLIST_FILE = "WHWriterApp/WHWriterApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3F0BFE6A1921557D0062159E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WHWriterApp/WHWriterApp-Prefix.pch";
+				INFOPLIST_FILE = "WHWriterApp/WHWriterApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3F0BFE6C1921557D0062159E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WHWriterApp.app/WHWriterApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WHWriterApp/WHWriterApp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "WHWriterAppTests/WHWriterAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		3F0BFE6D1921557D0062159E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WHWriterApp.app/WHWriterApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WHWriterApp/WHWriterApp-Prefix.pch";
+				INFOPLIST_FILE = "WHWriterAppTests/WHWriterAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3F0BFE371921557D0062159E /* Build configuration list for PBXProject "WHWriterApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F0BFE661921557D0062159E /* Debug */,
+				3F0BFE671921557D0062159E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F0BFE681921557D0062159E /* Build configuration list for PBXNativeTarget "WHWriterApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F0BFE691921557D0062159E /* Debug */,
+				3F0BFE6A1921557D0062159E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F0BFE6B1921557D0062159E /* Build configuration list for PBXNativeTarget "WHWriterAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F0BFE6C1921557D0062159E /* Debug */,
+				3F0BFE6D1921557D0062159E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3F0BFE341921557D0062159E /* Project object */;
+}
