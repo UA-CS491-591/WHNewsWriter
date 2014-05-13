@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JBView : UIView
+@interface View : UIView
 
 @property UITextField *username;
 @property UITextField *password;

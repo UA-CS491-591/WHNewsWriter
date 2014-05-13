@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JBTableViewController : UITableViewController
+@interface TableViewController : UITableViewController
 
 @end

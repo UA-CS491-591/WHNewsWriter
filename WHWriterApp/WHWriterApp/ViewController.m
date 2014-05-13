@@ -6,15 +6,15 @@
 //  Copyright (c) 2014 CS491. All rights reserved.
 //
 
-#import "JBNavController.h"
-#import "JBViewController.h"
-#import "JBView.h"
+#import "NavController.h"
+#import "ViewController.h"
+#import "View.h"
 
-@interface JBViewController ()
+@interface ViewController ()
 
 @end
 
-@implementation JBViewController
+@implementation ViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,7 +29,7 @@
 {
     [super viewDidLoad];
     
-    JBView *view = [[JBView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    View *view = [[View alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [view.login addTarget:self action:@selector(didTapMyButton:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:view];
     // Do any additional setup after loading the view.
@@ -43,7 +43,7 @@
 
 -(IBAction)Next
 {
-    JBNavController *Navigation = [[JBNavController alloc] initWithNibName:nil bundle:nil];
+    NavController *Navigation = [[NavController alloc] initWithNibName:nil bundle:nil];
     [self presentViewController:Navigation animated:YES completion:NULL];
 }
 

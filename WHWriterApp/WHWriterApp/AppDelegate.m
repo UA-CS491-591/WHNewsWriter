@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 CS491. All rights reserved.
 //
 
-#import "JBAppDelegate.h"
+#import "AppDelegate.h"
 
-@implementation JBAppDelegate
+@implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -17,7 +17,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    _ViewController = [[JBViewController alloc] init];
+    _ViewController = [[ViewController alloc] init];
     [self.window setRootViewController:_ViewController];
     
     return YES;

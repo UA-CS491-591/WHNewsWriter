@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JBViewController.h"
-#import "JBNavController.h"
+#import "ViewController.h"
+#import "NavController.h"
 
-@interface JBAppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property JBViewController *ViewController;
-@property JBNavController *NavController;
+@property ViewController *ViewController;
+@property NavController *NavController;
 
 @end

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JBViewController : UIViewController
+@interface ViewController : UIViewController
 
 -(IBAction)Next;
 

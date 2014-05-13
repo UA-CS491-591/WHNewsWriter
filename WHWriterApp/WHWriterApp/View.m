@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 CS491. All rights reserved.
 //
 
-#import "JBView.h"
+#import "View.h"
 
-@implementation JBView
+@implementation View
 
 - (id)initWithFrame:(CGRect)frame
 {

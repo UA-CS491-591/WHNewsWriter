@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 CS491. All rights reserved.
 //
 
-#import "JBTableViewController.h"
+#import "TableViewController.h"
 
-@interface JBTableViewController ()
+@interface TableViewController ()
 
 @end
 
-@implementation JBTableViewController
+@implementation TableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {

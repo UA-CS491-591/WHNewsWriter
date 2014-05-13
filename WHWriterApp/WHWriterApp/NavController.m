@@ -6,15 +6,15 @@
 //  Copyright (c) 2014 CS491. All rights reserved.
 //
 
-#import "JBNavController.h"
-#import "JBTableViewController.h"
+#import "NavController.h"
+#import "TableViewController.h"
 
-@interface JBNavController ()
-@property JBTableViewController *TableVC;
+@interface NavController ()
+@property TableViewController *TableVC;
 
 @end
 
-@implementation JBNavController
+@implementation NavController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,9 +28,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _TableVC = [[JBTableViewController alloc] initWithNibName:nil bundle:nil];
+    _TableVC = [[TableViewController alloc] initWithNibName:nil bundle:nil];
     _TableVC.title = @"Your Articles";
     [self pushViewController:_TableVC animated:YES];
+    
     // Do any additional setup after loading the view.
 }
 
