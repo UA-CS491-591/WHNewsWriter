@@ -8,9 +8,9 @@
 
 #import "NavController.h"
 #import "ViewController.h"
-#import "View.h"
 
 @interface ViewController ()
+
 
 @end
 
@@ -29,9 +29,9 @@
 {
     [super viewDidLoad];
     
-    View *view = [[View alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    [view.login addTarget:self action:@selector(didTapMyButton:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:view];
+    _loginView = [[LoginView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [_loginView.login addTarget:self action:@selector(didTapMyButton:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_loginView];
     // Do any additional setup after loading the view.
 }
 
