@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		2F9A660C1923C1F2000A6910 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A660B1923C1F2000A6910 /* Default.png */; };
 		2F9A660E1923C46C000A6910 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A660D1923C46C000A6910 /* Default@2x.png */; };
+		2F9A66121923C897000A6910 /* Icon29.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A660F1923C897000A6910 /* Icon29.png */; };
+		2F9A66131923C897000A6910 /* Icon40.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A66101923C897000A6910 /* Icon40.png */; };
+		2F9A66141923C897000A6910 /* Icon60.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A66111923C897000A6910 /* Icon60.png */; };
 		3F0BFE401921557D0062159E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0BFE3F1921557D0062159E /* Foundation.framework */; };
 		3F0BFE421921557D0062159E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0BFE411921557D0062159E /* CoreGraphics.framework */; };
 		3F0BFE441921557D0062159E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0BFE431921557D0062159E /* UIKit.framework */; };
@@ -51,6 +54,9 @@
 /* Begin PBXFileReference section */
 		2F9A660B1923C1F2000A6910 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		2F9A660D1923C46C000A6910 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		2F9A660F1923C897000A6910 /* Icon29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon29.png; sourceTree = "<group>"; };
+		2F9A66101923C897000A6910 /* Icon40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon40.png; sourceTree = "<group>"; };
+		2F9A66111923C897000A6910 /* Icon60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon60.png; sourceTree = "<group>"; };
 		3F0BFE3C1921557D0062159E /* WHWriterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WHWriterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F0BFE3F1921557D0062159E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3F0BFE411921557D0062159E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -169,6 +175,9 @@
 		3F0BFE461921557D0062159E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2F9A660F1923C897000A6910 /* Icon29.png */,
+				2F9A66101923C897000A6910 /* Icon40.png */,
+				2F9A66111923C897000A6910 /* Icon60.png */,
 				2F9A660D1923C46C000A6910 /* Default@2x.png */,
 				2F9A660B1923C1F2000A6910 /* Default.png */,
 				3F0BFE471921557D0062159E /* WHWriterApp-Info.plist */,
@@ -331,9 +340,12 @@
 			files = (
 				2F9A660E1923C46C000A6910 /* Default@2x.png in Resources */,
 				3F0BFE4A1921557D0062159E /* InfoPlist.strings in Resources */,
+				2F9A66131923C897000A6910 /* Icon40.png in Resources */,
 				A08FB3021922815400A67BD7 /* ViewController.xib in Resources */,
 				3F0BFE521921557D0062159E /* Images.xcassets in Resources */,
+				2F9A66121923C897000A6910 /* Icon29.png in Resources */,
 				A08FB3071922825F00A67BD7 /* EditorViewController.xib in Resources */,
+				2F9A66141923C897000A6910 /* Icon60.png in Resources */,
 				2F9A660C1923C1F2000A6910 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
