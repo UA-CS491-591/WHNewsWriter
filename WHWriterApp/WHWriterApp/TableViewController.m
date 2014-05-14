@@ -7,6 +7,7 @@
 //
 
 #import "TableViewController.h"
+#import "EditorViewController.h"
 
 @interface TableViewController ()
 
@@ -32,8 +33,21 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.navigationItem.rightBarButtonItem setAction:@selector(didTapMyButton:)];
+}
+-(void)didTapMyButton:(UIButton *)sender
+{
+    EditorViewController *vc2 = [[EditorViewController alloc] init];
+    [self.navigationController pushViewController:vc2 animated:YES];
 }
 
+-(IBAction)Next
+{
+    //NavController *Navigation = [[NavController alloc] initWithNibName:nil bundle:nil];
+    //[self presentViewController:Navigation animated:YES completion:NULL];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

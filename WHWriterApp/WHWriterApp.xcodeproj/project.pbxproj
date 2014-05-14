@@ -170,10 +170,10 @@
 			children = (
 				3F0BFE6E19215F560062159E /* ViewController.h */,
 				3F0BFE6F19215F560062159E /* ViewController.m */,
+				A08FB3011922815400A67BD7 /* ViewController.xib */,
 				A08FB3031922825F00A67BD7 /* EditorViewController.h */,
 				A08FB3041922825F00A67BD7 /* EditorViewController.m */,
 				A08FB3051922825F00A67BD7 /* EditorViewController.xib */,
-				A08FB3011922815400A67BD7 /* ViewController.xib */,
 				3F0BFE76192191FA0062159E /* TableViewController.h */,
 				3F0BFE77192191FA0062159E /* TableViewController.m */,
 				3F0BFE79192194E50062159E /* NavController.h */,
