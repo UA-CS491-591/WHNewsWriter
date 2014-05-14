@@ -29,14 +29,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    _operationQueue = [[NSOperationQueue alloc]init];
     _loginView = [[LoginView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [_loginView.login addTarget:self action:@selector(didTapMyButton:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_loginView];
-    _operationQueue = [[NSOperationQueue alloc]init];
-    View *view = [[View alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    [view.login addTarget:self action:@selector(didTapMyButton:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:view];
+
     // Do any additional setup after loading the view.
 }
 
