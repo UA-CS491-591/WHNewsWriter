@@ -13,6 +13,7 @@
 
 @interface StoryObject : NSObject
 
+@property NSString *storyId;
 @property NSString *title;
 @property NSString *subtitle;
 @property NSString *body;
@@ -21,7 +22,6 @@
 @property NSNumber *lat;
 @property NSNumber *lng;
 @property CategoryObject *category;
-@property NSString *accessToken;
 @property NSString *imageUrl;
 
 @end

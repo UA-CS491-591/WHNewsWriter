@@ -32,6 +32,8 @@
 		A08FB3131923B4FD00A67BD7 /* StoryObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A08FB30F1923B4FD00A67BD7 /* StoryObject.m */; };
 		A08FB3181923B5D600A67BD7 /* LoginRequestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A08FB3171923B5D600A67BD7 /* LoginRequestObject.m */; };
 		A08FB31B1923B6AD00A67BD7 /* LoginResponseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A08FB31A1923B6AD00A67BD7 /* LoginResponseObject.m */; };
+		A08FB31E1923BAFD00A67BD7 /* EditDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = A08FB31D1923BAFD00A67BD7 /* EditDTO.m */; };
+		A08FB3211923BB5A00A67BD7 /* AddDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = A08FB3201923BB5A00A67BD7 /* AddDTO.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,10 @@
 		A08FB3171923B5D600A67BD7 /* LoginRequestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginRequestObject.m; sourceTree = "<group>"; };
 		A08FB3191923B6AD00A67BD7 /* LoginResponseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginResponseObject.h; sourceTree = "<group>"; };
 		A08FB31A1923B6AD00A67BD7 /* LoginResponseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginResponseObject.m; sourceTree = "<group>"; };
+		A08FB31C1923BAFD00A67BD7 /* EditDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditDTO.h; sourceTree = "<group>"; };
+		A08FB31D1923BAFD00A67BD7 /* EditDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditDTO.m; sourceTree = "<group>"; };
+		A08FB31F1923BB5A00A67BD7 /* AddDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddDTO.h; sourceTree = "<group>"; };
+		A08FB3201923BB5A00A67BD7 /* AddDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddDTO.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +230,10 @@
 				A08FB3171923B5D600A67BD7 /* LoginRequestObject.m */,
 				A08FB3191923B6AD00A67BD7 /* LoginResponseObject.h */,
 				A08FB31A1923B6AD00A67BD7 /* LoginResponseObject.m */,
+				A08FB31C1923BAFD00A67BD7 /* EditDTO.h */,
+				A08FB31D1923BAFD00A67BD7 /* EditDTO.m */,
+				A08FB31F1923BB5A00A67BD7 /* AddDTO.h */,
+				A08FB3201923BB5A00A67BD7 /* AddDTO.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -342,8 +352,10 @@
 				A08FB3181923B5D600A67BD7 /* LoginRequestObject.m in Sources */,
 				3F0BFE7019215F560062159E /* ViewController.m in Sources */,
 				3F0BFE78192191FA0062159E /* TableViewController.m in Sources */,
+				A08FB3211923BB5A00A67BD7 /* AddDTO.m in Sources */,
 				3F0BFE73192164D40062159E /* View.m in Sources */,
 				3F0BFE4C1921557D0062159E /* main.m in Sources */,
+				A08FB31E1923BAFD00A67BD7 /* EditDTO.m in Sources */,
 				A08FB3111923B4FD00A67BD7 /* AuthorObject.m in Sources */,
 				A08FB3131923B4FD00A67BD7 /* StoryObject.m in Sources */,
 				A08FB3061922825F00A67BD7 /* EditorViewController.m in Sources */,
