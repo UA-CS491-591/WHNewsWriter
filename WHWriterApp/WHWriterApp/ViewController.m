@@ -70,12 +70,13 @@
     [NSURLConnection sendAsynchronousRequest:request queue:_operationQueue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         //Decode to string
         _loginResponse = [[LoginResponseObject alloc]initWithJSONData:data];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            NavController *Navigation = [[NavController alloc] initWithNibName:nil bundle:nil];
-            Navigation.user = _loginResponse;
-            [self presentViewController:Navigation animated:YES completion:NULL];
-        });
-        
+        if (_loginResponse.accessToken != nil) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                NavController *Navigation = [[NavController alloc] initWithNibName:nil bundle:nil];
+                Navigation.user = _loginResponse;
+                [self presentViewController:Navigation animated:YES completion:NULL];
+            });
+        }
     }];
 }
 
