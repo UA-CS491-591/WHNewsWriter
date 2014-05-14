@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LoginView.h"
 
 @interface ViewController : UIViewController
+
+@property(strong, nonatomic) LoginView *loginView;
+-(IBAction)Next;
 
 @end

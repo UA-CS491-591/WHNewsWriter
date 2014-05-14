@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 CS491. All rights reserved.
 //
 
-#import "View.h"
+#import "LoginView.h"
 
-@implementation View
+@implementation LoginView
 
 - (id)initWithFrame:(CGRect)frame
 {
