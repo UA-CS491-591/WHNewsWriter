@@ -12,19 +12,17 @@
 
 - (id)initWithFrame:(CGRect)frame
 {
-    self = [super initWithFrame:frame];
+    self = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([LoginView class]) owner:nil options:nil][0];
+    
     if (self) {
         // Initialization code
         self.backgroundColor = [UIColor whiteColor];
-        _username = [[UITextField alloc] initWithFrame:CGRectMake(15, 40, 275, 30)];
         _username.placeholder = @"Username";
         _username.borderStyle = UITextBorderStyleRoundedRect;
-        
-        _password = [[UITextField alloc] initWithFrame:CGRectMake(15, 90, 275, 30)];
+    
         _password.placeholder = @"Password";
         _password.borderStyle = UITextBorderStyleRoundedRect;
         
-        _login = [[UIButton alloc] initWithFrame:CGRectMake(120, 170, 75, 35)];
         _login.backgroundColor = [UIColor redColor];
         [_login setTitle:@"Login" forState:UIControlStateNormal];
         

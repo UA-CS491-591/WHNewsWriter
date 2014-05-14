@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LoginResponseObject.h"
 
 @interface NavController : UINavigationController
+
+@property LoginResponseObject *user;
 
 @end

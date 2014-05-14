@@ -8,10 +8,16 @@
 
 #import "NavController.h"
 #import "ViewController.h"
+#import "LoginRequestObject.h"
+#import "LoginResponseObject.h"
+#import "NSObject+ObjectMap.h"
 
 @interface ViewController ()
 
 @property NSOperationQueue *operationQueue;
+@property LoginRequestObject *loginRequest;
+@property LoginResponseObject *loginResponse;
+
 
 @end
 
@@ -30,6 +36,8 @@
 {
     [super viewDidLoad];
     _operationQueue = [[NSOperationQueue alloc]init];
+    _loginRequest = [[LoginRequestObject alloc]init];
+    _loginResponse = [[LoginResponseObject alloc]init];
     _loginView = [[LoginView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [_loginView.login addTarget:self action:@selector(didTapMyButton:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_loginView];
@@ -49,20 +57,25 @@
     //Set http method
     [request setHTTPMethod:@"POST"];
     
+    _loginRequest.username = _loginView.username.text;
+    _loginRequest.password = _loginView.password.text;
     //Specify the string to get sent to the server
-    NSString *loginString = @"{\"username\": \"zbarnes\",\"password\": \"password\"}";
+    
     //Make that string into raw data
-    NSData *loginData = [loginString dataUsingEncoding:NSUTF8StringEncoding];
+    NSData *loginData = [_loginRequest JSONData];
     //Set that raw data as the HTTP Body for the request
     [request setHTTPBody:loginData];
     
     //Send asynchronous request
     [NSURLConnection sendAsynchronousRequest:request queue:_operationQueue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         //Decode to string
-        NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        NSLog(@"%@", responseString);
-        NavController *Navigation = [[NavController alloc] initWithNibName:nil bundle:nil];
-        [self presentViewController:Navigation animated:YES completion:NULL];
+        _loginResponse = [[LoginResponseObject alloc]initWithJSONData:data];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NavController *Navigation = [[NavController alloc] initWithNibName:nil bundle:nil];
+            Navigation.user = _loginResponse;
+            [self presentViewController:Navigation animated:YES completion:NULL];
+        });
+        
     }];
 }
 
