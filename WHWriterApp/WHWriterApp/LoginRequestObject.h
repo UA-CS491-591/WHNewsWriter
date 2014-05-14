@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSObject+ObjectMap.h"
 
-@interface LoginRequest : NSObject
+@interface LoginRequestObject : NSObject
+
+@property NSString *username;
+@property NSString *password;
 
 @end

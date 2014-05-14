@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 CS491. All rights reserved.
 //
 
-#import "LoginRequest.h"
+#import "LoginRequestObject.h"
 
-@implementation LoginRequest
+@implementation LoginRequestObject
 
 @end

@@ -6,8 +6,8 @@
 //
 //
 
-#import "WHAuthorObject.h"
+#import "AuthorObject.h"
 
-@implementation WHAuthorObject
+@implementation AuthorObject
 
 @end

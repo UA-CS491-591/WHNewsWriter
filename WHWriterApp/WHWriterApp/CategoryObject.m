@@ -6,8 +6,8 @@
 //
 //
 
-#import "WHCategoryObject.h"
+#import "CategoryObject.h"
 
-@implementation WHCategoryObject
+@implementation CategoryObject
 
 @end

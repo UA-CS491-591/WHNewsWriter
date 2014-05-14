@@ -6,8 +6,8 @@
 //
 //
 
-#import "WHStoryObject.h"
+#import "StoryObject.h"
 
-@implementation WHStoryObject
+@implementation StoryObject
 
 @end

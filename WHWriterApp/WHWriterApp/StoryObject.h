@@ -7,20 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "WHAuthorObject.h"
-#import "WHCategoryObject.h"
+#import "AuthorObject.h"
+#import "CategoryObject.h"
 #import "NSObject+ObjectMap.h"
 
-@interface WHStoryObject : NSObject
+@interface StoryObject : NSObject
 
 @property NSString *title;
 @property NSString *subtitle;
 @property NSString *body;
 @property NSDate *datePublished;
-@property WHAuthorObject *author;
+@property AuthorObject *author;
 @property NSNumber *lat;
 @property NSNumber *lng;
-@property WHCategoryObject *category;
+@property CategoryObject *category;
 @property NSString *accessToken;
 @property NSString *imageUrl;
 

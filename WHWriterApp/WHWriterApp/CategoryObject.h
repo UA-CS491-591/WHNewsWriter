@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "NSObject+ObjectMap.h"
 
-@interface WHCategoryObject : NSObject
+@interface CategoryObject : NSObject
 
 @property NSString *categoryId;
 @property NSString *name;

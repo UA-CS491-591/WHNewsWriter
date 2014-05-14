@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "NSObject+ObjectMap.h"
 
-@interface WHAuthorObject : NSObject
+@interface AuthorObject : NSObject
 
 @property NSString *Id;
 @property NSString *firstName;
@@ -18,5 +18,6 @@
 @property NSString *email;
 @property NSString *position;
 @property BOOL isWriter;
+@property NSString *imageUrl;
 
 @end

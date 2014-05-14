@@ -26,6 +26,12 @@
 		A08FB3021922815400A67BD7 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08FB3011922815400A67BD7 /* ViewController.xib */; };
 		A08FB3061922825F00A67BD7 /* EditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A08FB3041922825F00A67BD7 /* EditorViewController.m */; };
 		A08FB3071922825F00A67BD7 /* EditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08FB3051922825F00A67BD7 /* EditorViewController.xib */; };
+		A08FB3101923B4FD00A67BD7 /* NSObject+ObjectMap.m in Sources */ = {isa = PBXBuildFile; fileRef = A08FB3091923B4FD00A67BD7 /* NSObject+ObjectMap.m */; };
+		A08FB3111923B4FD00A67BD7 /* AuthorObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A08FB30B1923B4FD00A67BD7 /* AuthorObject.m */; };
+		A08FB3121923B4FD00A67BD7 /* CategoryObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A08FB30D1923B4FD00A67BD7 /* CategoryObject.m */; };
+		A08FB3131923B4FD00A67BD7 /* StoryObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A08FB30F1923B4FD00A67BD7 /* StoryObject.m */; };
+		A08FB3181923B5D600A67BD7 /* LoginRequestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A08FB3171923B5D600A67BD7 /* LoginRequestObject.m */; };
+		A08FB31B1923B6AD00A67BD7 /* LoginResponseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A08FB31A1923B6AD00A67BD7 /* LoginResponseObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +73,18 @@
 		A08FB3031922825F00A67BD7 /* EditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorViewController.h; sourceTree = "<group>"; };
 		A08FB3041922825F00A67BD7 /* EditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorViewController.m; sourceTree = "<group>"; };
 		A08FB3051922825F00A67BD7 /* EditorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditorViewController.xib; sourceTree = "<group>"; };
+		A08FB3081923B4FD00A67BD7 /* NSObject+ObjectMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ObjectMap.h"; sourceTree = "<group>"; };
+		A08FB3091923B4FD00A67BD7 /* NSObject+ObjectMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ObjectMap.m"; sourceTree = "<group>"; };
+		A08FB30A1923B4FD00A67BD7 /* AuthorObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthorObject.h; sourceTree = "<group>"; };
+		A08FB30B1923B4FD00A67BD7 /* AuthorObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthorObject.m; sourceTree = "<group>"; };
+		A08FB30C1923B4FD00A67BD7 /* CategoryObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryObject.h; sourceTree = "<group>"; };
+		A08FB30D1923B4FD00A67BD7 /* CategoryObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryObject.m; sourceTree = "<group>"; };
+		A08FB30E1923B4FD00A67BD7 /* StoryObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryObject.h; sourceTree = "<group>"; };
+		A08FB30F1923B4FD00A67BD7 /* StoryObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryObject.m; sourceTree = "<group>"; };
+		A08FB3161923B5D600A67BD7 /* LoginRequestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginRequestObject.h; sourceTree = "<group>"; };
+		A08FB3171923B5D600A67BD7 /* LoginRequestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginRequestObject.m; sourceTree = "<group>"; };
+		A08FB3191923B6AD00A67BD7 /* LoginResponseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginResponseObject.h; sourceTree = "<group>"; };
+		A08FB31A1923B6AD00A67BD7 /* LoginResponseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginResponseObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,8 +146,10 @@
 			children = (
 				3F0BFE4E1921557D0062159E /* AppDelegate.h */,
 				3F0BFE4F1921557D0062159E /* AppDelegate.m */,
+				A08FB3141923B54C00A67BD7 /* Models */,
 				3F0BFE74192189950062159E /* View Controllers */,
 				3F0BFE75192189B00062159E /* Views */,
+				A08FB3151923B57800A67BD7 /* Util */,
 				3F0BFE511921557D0062159E /* Images.xcassets */,
 				3F0BFE461921557D0062159E /* Supporting Files */,
 			);
@@ -189,6 +209,32 @@
 				3F0BFE72192164D40062159E /* View.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		A08FB3141923B54C00A67BD7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A08FB30A1923B4FD00A67BD7 /* AuthorObject.h */,
+				A08FB30B1923B4FD00A67BD7 /* AuthorObject.m */,
+				A08FB30C1923B4FD00A67BD7 /* CategoryObject.h */,
+				A08FB30D1923B4FD00A67BD7 /* CategoryObject.m */,
+				A08FB30E1923B4FD00A67BD7 /* StoryObject.h */,
+				A08FB30F1923B4FD00A67BD7 /* StoryObject.m */,
+				A08FB3161923B5D600A67BD7 /* LoginRequestObject.h */,
+				A08FB3171923B5D600A67BD7 /* LoginRequestObject.m */,
+				A08FB3191923B6AD00A67BD7 /* LoginResponseObject.h */,
+				A08FB31A1923B6AD00A67BD7 /* LoginResponseObject.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		A08FB3151923B57800A67BD7 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				A08FB3081923B4FD00A67BD7 /* NSObject+ObjectMap.h */,
+				A08FB3091923B4FD00A67BD7 /* NSObject+ObjectMap.m */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,13 +335,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A08FB31B1923B6AD00A67BD7 /* LoginResponseObject.m in Sources */,
 				3F0BFE501921557D0062159E /* AppDelegate.m in Sources */,
+				A08FB3121923B4FD00A67BD7 /* CategoryObject.m in Sources */,
 				3F0BFE7B192194E50062159E /* NavController.m in Sources */,
+				A08FB3181923B5D600A67BD7 /* LoginRequestObject.m in Sources */,
 				3F0BFE7019215F560062159E /* ViewController.m in Sources */,
 				3F0BFE78192191FA0062159E /* TableViewController.m in Sources */,
 				3F0BFE73192164D40062159E /* View.m in Sources */,
 				3F0BFE4C1921557D0062159E /* main.m in Sources */,
+				A08FB3111923B4FD00A67BD7 /* AuthorObject.m in Sources */,
+				A08FB3131923B4FD00A67BD7 /* StoryObject.m in Sources */,
 				A08FB3061922825F00A67BD7 /* EditorViewController.m in Sources */,
+				A08FB3101923B4FD00A67BD7 /* NSObject+ObjectMap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

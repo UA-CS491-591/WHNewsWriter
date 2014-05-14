@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AuthorObject.h"
+#import "NSObject+ObjectMap.h"
 
 @interface LoginResponseObject : NSObject
+
+@property NSString *accessToken;
+@property AuthorObject *user;
 
 @end
