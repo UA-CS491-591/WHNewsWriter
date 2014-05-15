@@ -63,6 +63,7 @@
     searchDC.searchResultsDataSource = self;
     searchDC.searchResultsDelegate = self;
     
+    
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (tableView == self.searchDisplayController.searchResultsTableView) {
@@ -75,13 +76,29 @@
         cell = [[MainTableViewCell alloc] init];
     }
     
-    cell.cellLbl.text = [_stories[indexPath.row] title];
+    cell.cellLabel.text = [_stories[indexPath.row] title];
     return cell;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return _stories.count;
+    
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Return YES if you want the specified item to be editable.
+    return YES;
+}
+
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        //add code here for when you hit delete
+    }
+}
+
 -(void)didTapMyButton:(UIButton *)sender
 {
     EditorViewController *vc2 = [[EditorViewController alloc] init];
@@ -112,11 +129,6 @@
 }
 
 
--(IBAction)Next
-{
-    //NavController *Navigation = [[NavController alloc] initWithNibName:nil bundle:nil];
-    //[self presentViewController:Navigation animated:YES completion:NULL];
-}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
