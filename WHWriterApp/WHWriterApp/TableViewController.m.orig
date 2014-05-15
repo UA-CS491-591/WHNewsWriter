@@ -64,6 +64,7 @@
     searchDC.searchResultsDelegate = self;
     */
     
+    
 }
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
     if ([searchText  isEqual: @""]) {
@@ -91,6 +92,7 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return _stories.count;
+    
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -99,7 +101,29 @@
     [self.navigationController pushViewController:vc2 animated:YES];
 }
 
+<<<<<<< HEAD
 -(void)refreshTableOnSearch:(NSString *)text{
+=======
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Return YES if you want the specified item to be editable.
+    return YES;
+}
+
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        //add code here for when you hit delete
+    }
+}
+
+-(void)didTapMyButton:(UIButton *)sender
+{
+    EditorViewController *vc3 = [[EditorViewController alloc] init];
+    [self.navigationController pushViewController:vc3 animated:YES];
+}
+
+-(void)refreshTable{
+>>>>>>> b7e404aae0f606086afe8b17e57f89855e922c65
     
     //Create url
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@%@%@%@", @"https://mobileweb.caps.ua.edu/cs491/api/Story/search?token=", self.user.accessToken, @"&searchString=",text,@"&authorId=",self.user.user.Id]];
@@ -121,24 +145,7 @@
     }];
 }
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return YES if you want the specified item to be editable.
-    return YES;
-}
-
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        //add code here for when you hit delete
-    }
-}
-
--(void)didTapMyButton:(UIButton *)sender
-{
-    EditorViewController *vc3 = [[EditorViewController alloc] init];
-    [self.navigationController pushViewController:vc3 animated:YES];
-}
-
+<<<<<<< HEAD
 -(void)refreshTable{
     
     //Create url
@@ -160,7 +167,8 @@
         });
     }];
 }
-
+=======
+>>>>>>> b7e404aae0f606086afe8b17e57f89855e922c65
 
 - (void)didReceiveMemoryWarning
 {
@@ -169,13 +177,6 @@
 }
 
 #pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return _stories.count;
-}
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MainTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *cellLbl;
+@property (weak, nonatomic) IBOutlet UILabel *cellLabel;
 
 @end

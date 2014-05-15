@@ -13,8 +13,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRH-mG-3ej">
-                        <rect key="frame" x="0.0" y="11" width="320" height="21"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7i-H9-oOE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -23,7 +23,7 @@
                 </subviews>
             </tableViewCellContentView>
             <connections>
-                <outlet property="cellLbl" destination="vRH-mG-3ej" id="bKR-d8-2hm"/>
+                <outlet property="cellLabel" destination="J7i-H9-oOE" id="HF7-CT-gq7"/>
             </connections>
         </tableViewCell>
     </objects>
