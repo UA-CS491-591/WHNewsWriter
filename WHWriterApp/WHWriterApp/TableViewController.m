@@ -65,17 +65,17 @@
     
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (tableView == self.searchDisplayController.searchResultsTableView) {
+    /*if (tableView == self.searchDisplayController.searchResultsTableView) {
         ;//self.tableView.tableViewData = searchResultsData objectatindex...; //array with filtered data
     } else {
         ;//tableViewData = defaultData objectatindex...; //array with unfiltered data
-    }
+    }*/
     MainTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MainTableViewCell"];
     if (!cell) {
         cell = [[MainTableViewCell alloc] init];
     }
     
-    cell.cellLbl.text = _stories[indexPath.row];
+    cell.cellLbl.text = [_stories[indexPath.row] title];
     return cell;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -111,12 +111,6 @@
     
 }
 
-
--(IBAction)Next
-{
-    //NavController *Navigation = [[NavController alloc] initWithNibName:nil bundle:nil];
-    //[self presentViewController:Navigation animated:YES completion:NULL];
-}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -129,19 +123,8 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return _stories.count;
 }
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-*/
 
 /*
 // Override to support conditional editing of the table view.
