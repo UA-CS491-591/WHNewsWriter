@@ -78,6 +78,7 @@
                 NavController *Navigation = [[NavController alloc] initWithNibName:nil bundle:nil];
                 AuthorInfoViewController *AuthorVC = [[AuthorInfoViewController alloc] initWithNibName:NSStringFromClass([AuthorInfoViewController class]) bundle:nil];
                 UINavigationController *AuthorNavController = [[UINavigationController alloc] init];
+                [AuthorNavController.navigationBar setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"American Typewriter" size:20]}];
                 [AuthorNavController pushViewController:AuthorVC animated:NO];
                 _tabBarController = [[UITabBarController alloc] init];
                 _tabBarController.viewControllers = @[Navigation, AuthorNavController];

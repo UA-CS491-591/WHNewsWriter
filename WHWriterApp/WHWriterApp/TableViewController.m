@@ -64,6 +64,7 @@
     searchDC.searchResultsDataSource = self;
     searchDC.searchResultsDelegate = self;
     [searchDC.searchBar setShowsCancelButton:YES];
+    
 }
 
 -(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
