@@ -63,6 +63,7 @@
     searchDC.searchResultsDataSource = self;
     searchDC.searchResultsDelegate = self;
     
+    
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (tableView == self.searchDisplayController.searchResultsTableView) {
@@ -75,17 +76,23 @@
         cell = [[MainTableViewCell alloc] init];
     }
     
-    cell.cellLbl.text = [_stories[indexPath.row] title];
+    cell.cellLabel.text = [_stories[indexPath.row] title];
     return cell;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return _stories.count;
 }
--(void)didTapMyButton:(UIButton *)sender
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     EditorViewController *vc2 = [[EditorViewController alloc] init];
     [self.navigationController pushViewController:vc2 animated:YES];
+}
+-(void)didTapMyButton:(UIButton *)sender
+{
+    EditorViewController *vc3 = [[EditorViewController alloc] init];
+    [self.navigationController pushViewController:vc3 animated:YES];
 }
 
 -(void)refreshTable{
@@ -112,11 +119,6 @@
 }
 
 
--(IBAction)Next
-{
-    //NavController *Navigation = [[NavController alloc] initWithNibName:nil bundle:nil];
-    //[self presentViewController:Navigation animated:YES completion:NULL];
-}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
