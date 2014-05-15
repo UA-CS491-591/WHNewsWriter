@@ -8,8 +8,15 @@
 
 #import "TableViewController.h"
 #import "EditorViewController.h"
+#import "StoryObject.h"
+#import "NavController.h"
+#import "ViewController.h"
+#import "LoginResponseObject.h"
 
 @interface TableViewController ()
+
+@property NSArray *stories;
+@property NSOperationQueue *operationQueue;
 
 @end
 
@@ -27,6 +34,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _operationQueue = [[NSOperationQueue alloc]init];
+    [self refreshTable];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -36,12 +45,70 @@
     
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
     [self.navigationItem.rightBarButtonItem setAction:@selector(didTapMyButton:)];
+    
+    UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectZero];
+    [searchBar sizeToFit];
+    searchBar.delegate = self;
+    searchBar.placeholder = @"Search";
+    self.tableView.tableHeaderView = searchBar;
+    
+    UISearchDisplayController *searchDC = [[UISearchDisplayController alloc] initWithSearchBar:searchBar contentsController:self];
+    
+    // The above assigns self.searchDisplayController, but without retaining.
+    // Force the read-only property to be set and retained.
+    [self performSelector:@selector(setSearchDisplayController:) withObject:searchDC];
+    
+    searchDC.delegate = self;
+    searchDC.searchResultsDataSource = self;
+    searchDC.searchResultsDelegate = self;
+    
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+         self.tableView.tableViewData = searchResultsData objectatindex...; //array with filtered data
+    } else {
+        ;//tableViewData = defaultData objectatindex...; //array with unfiltered data
+    }
+    return nil;
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        //return searchResultsData.count;
+    } else {
+        // return defaultData.count;
+    }
+    return 0;
 }
 -(void)didTapMyButton:(UIButton *)sender
 {
     EditorViewController *vc2 = [[EditorViewController alloc] init];
     [self.navigationController pushViewController:vc2 animated:YES];
 }
+
+-(void)refreshTable{
+    
+    //Create url
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@%@", @"https://mobileweb.caps.ua.edu/cs491/api//Story/byAuthor?token=", self.user.accessToken, @"&authorId=",self.user.user.Id]];
+    
+    //Create request object
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:5.0];
+    //Let the server know that we want to interact in JSON
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    //Set http method
+    
+    //Send asynchronous request
+    [NSURLConnection sendAsynchronousRequest:request queue:_operationQueue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        //Decode to string
+        _stories = [NSObject arrayOfType:[StoryObject class] FromJSONData:data];
+        //Hop back main thread
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
+    }];
+    
+}
+
 
 -(IBAction)Next
 {
@@ -60,13 +127,6 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
     return 0;
 }
 

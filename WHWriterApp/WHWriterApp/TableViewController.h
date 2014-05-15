@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LoginResponseObject.h"
 
 @interface TableViewController : UITableViewController
+@property LoginResponseObject *user;
 -(void)didTapMyButton:(UIButton *)sender;
 @end
