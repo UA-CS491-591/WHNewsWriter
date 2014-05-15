@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface View : UIView
+@interface LoginView : UIView
 
-@property UITextField *username;
-@property UITextField *password;
-@property UIButton *login;
+@property IBOutlet UITextField *username;
+@property IBOutlet UITextField *password;
+@property IBOutlet UIButton *login;
 
 @end
