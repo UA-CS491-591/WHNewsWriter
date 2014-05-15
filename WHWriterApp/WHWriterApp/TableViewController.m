@@ -82,17 +82,27 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return _stories.count;
+    
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Return YES if you want the specified item to be editable.
+    return YES;
+}
+
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        //add code here for when you hit delete
+    }
+}
+
+-(void)didTapMyButton:(UIButton *)sender
 {
     EditorViewController *vc2 = [[EditorViewController alloc] init];
     [self.navigationController pushViewController:vc2 animated:YES];
-}
--(void)didTapMyButton:(UIButton *)sender
-{
-    EditorViewController *vc3 = [[EditorViewController alloc] init];
-    [self.navigationController pushViewController:vc3 animated:YES];
 }
 
 -(void)refreshTable{
