@@ -12,6 +12,7 @@
 #import "NavController.h"
 #import "ViewController.h"
 #import "LoginResponseObject.h"
+#import "MainTableViewCell.h"
 
 @interface TableViewController ()
 
@@ -69,16 +70,19 @@
     } else {
         ;//tableViewData = defaultData objectatindex...; //array with unfiltered data
     }
+    ItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ItemTableViewCell"];
+    if (!cell) {
+        cell = [[ItemTableViewCell alloc] init];
+    }
+    
+    cell.ItemNameLbel.text = _toDoList[indexPath.row];
+    cell.ItemImageView.image = [UIImage imageNamed:@"cat.jpg"];
+    
     return nil;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (tableView == self.searchDisplayController.searchResultsTableView) {
-        //return searchResultsData.count;
-    } else {
-        // return defaultData.count;
-    }
-    return 0;
+    return _stories.count;
 }
 -(void)didTapMyButton:(UIButton *)sender
 {

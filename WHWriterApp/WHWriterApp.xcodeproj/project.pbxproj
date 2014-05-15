@@ -28,6 +28,8 @@
 		3F0BFE73192164D40062159E /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0BFE72192164D40062159E /* LoginView.m */; };
 		3F0BFE78192191FA0062159E /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0BFE77192191FA0062159E /* TableViewController.m */; };
 		3F0BFE7B192194E50062159E /* NavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0BFE7A192194E50062159E /* NavController.m */; };
+		A023E84B192513EE0031C3B0 /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A023E849192513EE0031C3B0 /* MainTableViewCell.m */; };
+		A023E84C192513EE0031C3B0 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A023E84A192513EE0031C3B0 /* MainTableViewCell.xib */; };
 		A08FB3021922815400A67BD7 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08FB3011922815400A67BD7 /* ViewController.xib */; };
 		A08FB3061922825F00A67BD7 /* EditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A08FB3041922825F00A67BD7 /* EditorViewController.m */; };
 		A08FB3071922825F00A67BD7 /* EditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08FB3051922825F00A67BD7 /* EditorViewController.xib */; };
@@ -82,6 +84,9 @@
 		3F0BFE77192191FA0062159E /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		3F0BFE79192194E50062159E /* NavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavController.h; sourceTree = "<group>"; };
 		3F0BFE7A192194E50062159E /* NavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavController.m; sourceTree = "<group>"; };
+		A023E848192513EE0031C3B0 /* MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
+		A023E849192513EE0031C3B0 /* MainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCell.m; sourceTree = "<group>"; };
+		A023E84A192513EE0031C3B0 /* MainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
 		A08FB3011922815400A67BD7 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		A08FB3031922825F00A67BD7 /* EditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorViewController.h; sourceTree = "<group>"; };
 		A08FB3041922825F00A67BD7 /* EditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorViewController.m; sourceTree = "<group>"; };
@@ -231,6 +236,9 @@
 				3F0BFE71192164D40062159E /* LoginView.h */,
 				A08FB3221923CFC800A67BD7 /* LoginView.xib */,
 				3F0BFE72192164D40062159E /* LoginView.m */,
+				A023E848192513EE0031C3B0 /* MainTableViewCell.h */,
+				A023E849192513EE0031C3B0 /* MainTableViewCell.m */,
+				A023E84A192513EE0031C3B0 /* MainTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -347,6 +355,7 @@
 				A08FB3021922815400A67BD7 /* ViewController.xib in Resources */,
 				3F0BFE521921557D0062159E /* Images.xcassets in Resources */,
 				2F9A66121923C897000A6910 /* Icon29.png in Resources */,
+				A023E84C192513EE0031C3B0 /* MainTableViewCell.xib in Resources */,
 				A08FB3071922825F00A67BD7 /* EditorViewController.xib in Resources */,
 				2F9A66141923C897000A6910 /* Icon60.png in Resources */,
 				A08FB3231923CFC800A67BD7 /* LoginView.xib in Resources */,
@@ -375,6 +384,7 @@
 				3F0BFE7B192194E50062159E /* NavController.m in Sources */,
 				A08FB3181923B5D600A67BD7 /* LoginRequestObject.m in Sources */,
 				3F0BFE7019215F560062159E /* ViewController.m in Sources */,
+				A023E84B192513EE0031C3B0 /* MainTableViewCell.m in Sources */,
 				3F0BFE78192191FA0062159E /* TableViewController.m in Sources */,
 				A08FB3211923BB5A00A67BD7 /* AddDTO.m in Sources */,
 				3F0BFE73192164D40062159E /* LoginView.m in Sources */,
