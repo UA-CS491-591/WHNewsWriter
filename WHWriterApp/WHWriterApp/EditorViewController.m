@@ -36,9 +36,10 @@
     self.title=@"Compose";
     
     _EditorTableItems = [NSMutableArray array];
-    [_EditorTableItems addObject:@"Item 1"];
-    [_EditorTableItems addObject:@"Item 2"];
-    [_EditorTableItems addObject:@"Item 3"];
+    [_EditorTableItems addObject:@"Title"];
+    [_EditorTableItems addObject:@"Category"];
+    [_EditorTableItems addObject:@"Subtitle"];
+    [_EditorTableItems addObject:@"Body"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,8 +52,8 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    	    // Return the number of sections.
-    	    return 1;
+    // Return the number of sections.
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -74,6 +75,8 @@
     }
     
     cell.EditorPreviewLabel.text = _EditorTableItems[indexPath.row];
+    
+    
     
     // Configure the cell...
     /*XYZToDoItem *toDoItem = [self.toDoItems objectAtIndex:indexPath.row];
