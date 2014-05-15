@@ -7,6 +7,7 @@
 //
 
 #import "EditorViewController.h"
+#import "EditorTableViewCell.h"
 
 @interface EditorViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *EditorTableView;
@@ -31,6 +32,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.title=@"Compose";
     
     _EditorTableItems = [NSMutableArray array];
     [_EditorTableItems addObject:@"Item 1"];
@@ -62,9 +65,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"ListPrototypeCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    //static NSString *CellIdentifier = @"ListPrototypeCell";
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
+    EditorTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EditorTableViewCell"];
+    if (!cell) {
+        cell = [[EditorTableViewCell alloc] init];
+    }
+    
+    cell.EditorPreviewLabel.text = _EditorTableItems[indexPath.row];
     
     // Configure the cell...
     /*XYZToDoItem *toDoItem = [self.toDoItems objectAtIndex:indexPath.row];
@@ -87,9 +96,9 @@
 	   
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+/*- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return [indexPath row] * 20;
-}
+}*/
 
 @end

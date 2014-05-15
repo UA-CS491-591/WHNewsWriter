@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface EditorTableViewCell : UITableViewCell
-
+@property (weak, nonatomic) UILabel *EditorPreviewLabel;
 
 @end

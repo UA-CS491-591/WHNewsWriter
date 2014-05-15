@@ -42,6 +42,8 @@
 		A08FB31E1923BAFD00A67BD7 /* EditDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = A08FB31D1923BAFD00A67BD7 /* EditDTO.m */; };
 		A08FB3211923BB5A00A67BD7 /* AddDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = A08FB3201923BB5A00A67BD7 /* AddDTO.m */; };
 		A08FB3231923CFC800A67BD7 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08FB3221923CFC800A67BD7 /* LoginView.xib */; };
+		C3BBF71D19251F0900B26255 /* EditorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3BBF71B19251F0900B26255 /* EditorTableViewCell.m */; };
+		C3BBF71E19251F0900B26255 /* EditorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3BBF71C19251F0900B26255 /* EditorTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,9 +110,9 @@
 		A08FB31F1923BB5A00A67BD7 /* AddDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddDTO.h; sourceTree = "<group>"; };
 		A08FB3201923BB5A00A67BD7 /* AddDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddDTO.m; sourceTree = "<group>"; };
 		A08FB3221923CFC800A67BD7 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
-		C38ACCF51925117000642E92 /* EditorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorTableViewCell.h; sourceTree = "<group>"; };
-		C38ACCF61925117000642E92 /* EditorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorTableViewCell.m; sourceTree = "<group>"; };
-		C38ACCF71925117000642E92 /* EditorTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditorTableViewCell.xib; sourceTree = "<group>"; };
+		C3BBF71A19251F0900B26255 /* EditorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorTableViewCell.h; sourceTree = "<group>"; };
+		C3BBF71B19251F0900B26255 /* EditorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorTableViewCell.m; sourceTree = "<group>"; };
+		C3BBF71C19251F0900B26255 /* EditorTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditorTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +238,7 @@
 			children = (
 				3F0BFE71192164D40062159E /* LoginView.h */,
 				A08FB3221923CFC800A67BD7 /* LoginView.xib */,
+				C3BBF71F19251F1200B26255 /* Editor */,
 				3F0BFE72192164D40062159E /* LoginView.m */,
 				A023E848192513EE0031C3B0 /* MainTableViewCell.h */,
 				A023E849192513EE0031C3B0 /* MainTableViewCell.m */,
@@ -284,12 +287,12 @@
 			name = Editor;
 			sourceTree = "<group>";
 		};
-		C38ACCF41923D7E400642E92 /* Editor */ = {
+		C3BBF71F19251F1200B26255 /* Editor */ = {
 			isa = PBXGroup;
 			children = (
-				C38ACCF51925117000642E92 /* EditorTableViewCell.h */,
-				C38ACCF61925117000642E92 /* EditorTableViewCell.m */,
-				C38ACCF71925117000642E92 /* EditorTableViewCell.xib */,
+				C3BBF71A19251F0900B26255 /* EditorTableViewCell.h */,
+				C3BBF71B19251F0900B26255 /* EditorTableViewCell.m */,
+				C3BBF71C19251F0900B26255 /* EditorTableViewCell.xib */,
 			);
 			name = Editor;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 			files = (
 				2F9A660E1923C46C000A6910 /* Default@2x.png in Resources */,
 				3F0BFE4A1921557D0062159E /* InfoPlist.strings in Resources */,
+				C3BBF71E19251F0900B26255 /* EditorTableViewCell.xib in Resources */,
 				2F9A66131923C897000A6910 /* Icon40.png in Resources */,
 				A08FB3021922815400A67BD7 /* ViewController.xib in Resources */,
 				3F0BFE521921557D0062159E /* Images.xcassets in Resources */,
@@ -400,6 +404,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A08FB31B1923B6AD00A67BD7 /* LoginResponseObject.m in Sources */,
+				C3BBF71D19251F0900B26255 /* EditorTableViewCell.m in Sources */,
 				3F0BFE501921557D0062159E /* AppDelegate.m in Sources */,
 				A08FB3121923B4FD00A67BD7 /* CategoryObject.m in Sources */,
 				3F0BFE7B192194E50062159E /* NavController.m in Sources */,
@@ -410,7 +415,6 @@
 				A08FB3211923BB5A00A67BD7 /* AddDTO.m in Sources */,
 				3F0BFE73192164D40062159E /* LoginView.m in Sources */,
 				3F0BFE4C1921557D0062159E /* main.m in Sources */,
-				C38ACCF81925117000642E92 /* EditorTableViewCell.m in Sources */,
 				A08FB31E1923BAFD00A67BD7 /* EditDTO.m in Sources */,
 				A08FB3111923B4FD00A67BD7 /* AuthorObject.m in Sources */,
 				A08FB3131923B4FD00A67BD7 /* StoryObject.m in Sources */,
