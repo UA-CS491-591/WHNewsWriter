@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EditorViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>;
+@interface EditorViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>;
 
 
 

@@ -33,8 +33,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    
+    /*At load of EditorViewController, only load cells with Priview Labels communicating
+     object to be modified.
+     */
     self.title=@"Compose";
     
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     _EditorTableItems = [NSMutableArray array];
     [_EditorTableItems addObject:@"Title"];
     [_EditorTableItems addObject:@"Category"];
