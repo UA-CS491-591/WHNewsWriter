@@ -75,7 +75,7 @@
         cell = [[MainTableViewCell alloc] init];
     }
     
-    cell.cellLbl.text = _stories[indexPath.row];
+    cell.cellLbl.text = [_stories[indexPath.row] title];
     return cell;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -129,7 +129,7 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return _stories.count;
 }
 
 /*
