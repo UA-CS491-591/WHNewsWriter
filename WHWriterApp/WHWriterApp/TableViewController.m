@@ -70,15 +70,13 @@
     } else {
         ;//tableViewData = defaultData objectatindex...; //array with unfiltered data
     }
-    ItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ItemTableViewCell"];
+    MainTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MainTableViewCell"];
     if (!cell) {
-        cell = [[ItemTableViewCell alloc] init];
+        cell = [[MainTableViewCell alloc] init];
     }
     
-    cell.ItemNameLbel.text = _toDoList[indexPath.row];
-    cell.ItemImageView.image = [UIImage imageNamed:@"cat.jpg"];
-    
-    return nil;
+    cell.cellLbl.text = _stories[indexPath.row];
+    return cell;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
