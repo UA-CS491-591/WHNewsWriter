@@ -65,7 +65,7 @@
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (tableView == self.searchDisplayController.searchResultsTableView) {
-         self.tableView.tableViewData = searchResultsData objectatindex...; //array with filtered data
+        ;//self.tableView.tableViewData = searchResultsData objectatindex...; //array with filtered data
     } else {
         ;//tableViewData = defaultData objectatindex...; //array with unfiltered data
     }
