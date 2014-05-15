@@ -10,6 +10,14 @@
 
 @implementation EditorTableViewCell
 
+-(instancetype)init{
+    self = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([EditorTableViewCell class]) owner:nil options:nil][0];
+    
+    
+    
+    return self;
+}
+
 - (void)awakeFromNib
 {
     // Initialization code

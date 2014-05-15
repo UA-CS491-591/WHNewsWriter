@@ -39,6 +39,8 @@
 		A08FB31B1923B6AD00A67BD7 /* LoginResponseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A08FB31A1923B6AD00A67BD7 /* LoginResponseObject.m */; };
 		A08FB31E1923BAFD00A67BD7 /* EditDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = A08FB31D1923BAFD00A67BD7 /* EditDTO.m */; };
 		A08FB3211923BB5A00A67BD7 /* AddDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = A08FB3201923BB5A00A67BD7 /* AddDTO.m */; };
+		C38ACCF81925117000642E92 /* EditorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C38ACCF61925117000642E92 /* EditorTableViewCell.m */; };
+		C38ACCF91925117000642E92 /* EditorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38ACCF71925117000642E92 /* EditorTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +103,9 @@
 		A08FB31D1923BAFD00A67BD7 /* EditDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditDTO.m; sourceTree = "<group>"; };
 		A08FB31F1923BB5A00A67BD7 /* AddDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddDTO.h; sourceTree = "<group>"; };
 		A08FB3201923BB5A00A67BD7 /* AddDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddDTO.m; sourceTree = "<group>"; };
+		C38ACCF51925117000642E92 /* EditorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorTableViewCell.h; sourceTree = "<group>"; };
+		C38ACCF61925117000642E92 /* EditorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorTableViewCell.m; sourceTree = "<group>"; };
+		C38ACCF71925117000642E92 /* EditorTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditorTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,9 +217,7 @@
 				3F0BFE6E19215F560062159E /* ViewController.h */,
 				3F0BFE6F19215F560062159E /* ViewController.m */,
 				A08FB3011922815400A67BD7 /* ViewController.xib */,
-				A08FB3031922825F00A67BD7 /* EditorViewController.h */,
-				A08FB3041922825F00A67BD7 /* EditorViewController.m */,
-				A08FB3051922825F00A67BD7 /* EditorViewController.xib */,
+				C38ACCF31923D78600642E92 /* Editor */,
 				3F0BFE76192191FA0062159E /* TableViewController.h */,
 				3F0BFE77192191FA0062159E /* TableViewController.m */,
 				3F0BFE79192194E50062159E /* NavController.h */,
@@ -227,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				3F0BFE71192164D40062159E /* View.h */,
+				C38ACCF41923D7E400642E92 /* Editor */,
 				3F0BFE72192164D40062159E /* View.m */,
 			);
 			name = Views;
@@ -260,6 +264,26 @@
 				A08FB3091923B4FD00A67BD7 /* NSObject+ObjectMap.m */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		C38ACCF31923D78600642E92 /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				A08FB3031922825F00A67BD7 /* EditorViewController.h */,
+				A08FB3041922825F00A67BD7 /* EditorViewController.m */,
+				A08FB3051922825F00A67BD7 /* EditorViewController.xib */,
+			);
+			name = Editor;
+			sourceTree = "<group>";
+		};
+		C38ACCF41923D7E400642E92 /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				C38ACCF51925117000642E92 /* EditorTableViewCell.h */,
+				C38ACCF61925117000642E92 /* EditorTableViewCell.m */,
+				C38ACCF71925117000642E92 /* EditorTableViewCell.xib */,
+			);
+			name = Editor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,6 +370,7 @@
 				2F9A66121923C897000A6910 /* Icon29.png in Resources */,
 				A08FB3071922825F00A67BD7 /* EditorViewController.xib in Resources */,
 				2F9A66141923C897000A6910 /* Icon60.png in Resources */,
+				C38ACCF91925117000642E92 /* EditorTableViewCell.xib in Resources */,
 				2F9A660C1923C1F2000A6910 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,6 +400,7 @@
 				A08FB3211923BB5A00A67BD7 /* AddDTO.m in Sources */,
 				3F0BFE73192164D40062159E /* View.m in Sources */,
 				3F0BFE4C1921557D0062159E /* main.m in Sources */,
+				C38ACCF81925117000642E92 /* EditorTableViewCell.m in Sources */,
 				A08FB31E1923BAFD00A67BD7 /* EditDTO.m in Sources */,
 				A08FB3111923B4FD00A67BD7 /* AuthorObject.m in Sources */,
 				A08FB3131923B4FD00A67BD7 /* StoryObject.m in Sources */,
