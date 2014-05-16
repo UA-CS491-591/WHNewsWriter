@@ -76,11 +76,18 @@
     //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     EditorTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EditorTableViewCell"];
+    
+    //Trying to send NSString to a table view cell into a textField
+    cell.EditorPlaceholder = _EditorTableItems[indexPath.row];
+    
     if (!cell) {
         cell = [[EditorTableViewCell alloc] init];
     }
     
-    cell.EditorPreviewLabel.text = _EditorTableItems[indexPath.row];
+    /*if (indexPath.row == 0){
+        NSLog([NSString stringWithFormat:@"%d", indexPath.row]);
+    }*/
+    
     
     
     
