@@ -12,6 +12,7 @@
 #import "LoginResponseObject.h"
 #import "NSObject+ObjectMap.h"
 #import "TokenAuthorIdObject.h"
+#import "AuthorInfoViewController.h"
 
 @interface ViewController ()
 
@@ -74,9 +75,12 @@
         if (_loginResponse.accessToken != nil) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 NavController *Navigation = [[NavController alloc] initWithNibName:nil bundle:nil];
+                AuthorInfoViewController *AuthorVC = [[AuthorInfoViewController alloc] initWithNibName:NSStringFromClass([AuthorInfoViewController class]) bundle:nil];
+                _tabBarController = [[UITabBarController alloc] init];
+                _tabBarController.viewControllers = @[Navigation, AuthorVC];
                 [TokenAuthorIdObject sharedInstance].authorId = _loginResponse.user.Id;
                 [TokenAuthorIdObject sharedInstance].accessToken = _loginResponse.accessToken;
-                [self presentViewController:Navigation animated:YES completion:NULL];
+                [self presentViewController:_tabBarController animated:YES completion:NULL];
             });
         }
     }];

@@ -12,6 +12,6 @@
 @interface ViewController : UIViewController
 
 @property(strong, nonatomic) LoginView *loginView;
--(IBAction)Next;
+@property UITabBarController *tabBarController;
 
 @end

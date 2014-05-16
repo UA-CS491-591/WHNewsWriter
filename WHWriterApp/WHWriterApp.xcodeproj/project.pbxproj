@@ -28,6 +28,8 @@
 		3F0BFE73192164D40062159E /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0BFE72192164D40062159E /* LoginView.m */; };
 		3F0BFE78192191FA0062159E /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0BFE77192191FA0062159E /* TableViewController.m */; };
 		3F0BFE7B192194E50062159E /* NavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0BFE7A192194E50062159E /* NavController.m */; };
+		3F621AF519266401007355B5 /* AuthorInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F621AF319266401007355B5 /* AuthorInfoViewController.m */; };
+		3F621AF619266401007355B5 /* AuthorInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F621AF419266401007355B5 /* AuthorInfoViewController.xib */; };
 		A023E84B192513EE0031C3B0 /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A023E849192513EE0031C3B0 /* MainTableViewCell.m */; };
 		A023E84C192513EE0031C3B0 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A023E84A192513EE0031C3B0 /* MainTableViewCell.xib */; };
 		A023E84F192653910031C3B0 /* TokenAuthorIdObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A023E84E192653910031C3B0 /* TokenAuthorIdObject.m */; };
@@ -87,6 +89,9 @@
 		3F0BFE77192191FA0062159E /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		3F0BFE79192194E50062159E /* NavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavController.h; sourceTree = "<group>"; };
 		3F0BFE7A192194E50062159E /* NavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavController.m; sourceTree = "<group>"; };
+		3F621AF219266401007355B5 /* AuthorInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthorInfoViewController.h; sourceTree = "<group>"; };
+		3F621AF319266401007355B5 /* AuthorInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthorInfoViewController.m; sourceTree = "<group>"; };
+		3F621AF419266401007355B5 /* AuthorInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AuthorInfoViewController.xib; sourceTree = "<group>"; };
 		A023E848192513EE0031C3B0 /* MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
 		A023E849192513EE0031C3B0 /* MainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCell.m; sourceTree = "<group>"; };
 		A023E84A192513EE0031C3B0 /* MainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
@@ -232,6 +237,9 @@
 				3F0BFE77192191FA0062159E /* TableViewController.m */,
 				3F0BFE79192194E50062159E /* NavController.h */,
 				3F0BFE7A192194E50062159E /* NavController.m */,
+				3F621AF219266401007355B5 /* AuthorInfoViewController.h */,
+				3F621AF319266401007355B5 /* AuthorInfoViewController.m */,
+				3F621AF419266401007355B5 /* AuthorInfoViewController.xib */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -390,6 +398,7 @@
 				2F9A66141923C897000A6910 /* Icon60.png in Resources */,
 				A08FB3231923CFC800A67BD7 /* LoginView.xib in Resources */,
 				2F9A660C1923C1F2000A6910 /* Default.png in Resources */,
+				3F621AF619266401007355B5 /* AuthorInfoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +430,7 @@
 				3F0BFE73192164D40062159E /* LoginView.m in Sources */,
 				3F0BFE4C1921557D0062159E /* main.m in Sources */,
 				A08FB31E1923BAFD00A67BD7 /* EditDTO.m in Sources */,
+				3F621AF519266401007355B5 /* AuthorInfoViewController.m in Sources */,
 				A08FB3111923B4FD00A67BD7 /* AuthorObject.m in Sources */,
 				A023E84F192653910031C3B0 /* TokenAuthorIdObject.m in Sources */,
 				A08FB3131923B4FD00A67BD7 /* StoryObject.m in Sources */,
