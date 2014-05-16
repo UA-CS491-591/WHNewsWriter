@@ -12,6 +12,6 @@
 @interface EditorTableViewCell : UITableViewCell
 //@property (weak, nonatomic) IBOutlet UILabel *EditorPreviewLabel;
 @property (weak, nonatomic) NSString *EditorPlaceholder;
-@property JVFloatLabeledTextField *editorTextField;
+//@property JVFloatLabeledTextField *editorTextField;
 
 @end

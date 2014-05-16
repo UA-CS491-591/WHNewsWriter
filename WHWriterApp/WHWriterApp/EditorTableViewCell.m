@@ -30,10 +30,11 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     UIColor *floatingLabelColor = [UIColor grayColor];
     
     // Initialization code
-    /*JVFloatLabeledTextField *titleField = [[JVFloatLabeledTextField alloc] initWithFrame:
-                                           CGRectMake(kJVFieldHMargin, 0, self.frame.size.width - 2 * kJVFieldHMargin, kJVFieldHeight)];*/
-    [[_editorTextField alloc] initWithFrame:
+    JVFloatLabeledTextField *titleField = [[JVFloatLabeledTextField alloc] initWithFrame:
+                                           CGRectMake(kJVFieldHMargin, 0, self.frame.size.width - 2 * kJVFieldHMargin, kJVFieldHeight)];
+    /*[[_editorTextField alloc] initWithFrame:
      CGRectMake(kJVFieldHMargin, 0, self.frame.size.width - 2 * kJVFieldHMargin, kJVFieldHeight)];
+    */
     titleField.placeholder = NSLocalizedString(@"Title", @"");//NSLocalizedString(_EditorPlaceholder, @"");
     titleField.font = [UIFont systemFontOfSize:kJVFieldFontSize];
     titleField.floatingLabel.font = [UIFont boldSystemFontOfSize:kJVFieldFloatingLabelFontSize];
