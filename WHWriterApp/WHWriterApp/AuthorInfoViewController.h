@@ -19,5 +19,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *ObjectEmailLbl;
 @property (weak, nonatomic) IBOutlet UILabel *ObjectPositionLbl;
 @property (weak, nonatomic) IBOutlet UILabel *ObjectImageLbl;
+@property (weak, nonatomic) IBOutlet UIImageView *AuthorImage;
 
 @end
