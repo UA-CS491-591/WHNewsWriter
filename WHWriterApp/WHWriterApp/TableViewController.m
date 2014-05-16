@@ -11,8 +11,8 @@
 #import "StoryObject.h"
 #import "NavController.h"
 #import "ViewController.h"
-#import "LoginResponseObject.h"
 #import "MainTableViewCell.h"
+#import "TokenAuthorIdObject.h"
 
 @interface TableViewController ()
 
@@ -102,7 +102,7 @@
 -(void)refreshTableOnSearch:(NSString *)text{
     
     //Create url
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@%@%@%@", @"https://mobileweb.caps.ua.edu/cs491/api/Story/search?token=", self.user.accessToken, @"&searchString=",text,@"&authorId=",self.user.user.Id]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@%@%@%@", @"https://mobileweb.caps.ua.edu/cs491/api/Story/search?token=", [TokenAuthorIdObject sharedInstance].accessToken, @"&searchString=",text,@"&authorId=",[TokenAuthorIdObject sharedInstance].authorId]];
     
     //Create request object
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:5.0];
@@ -142,7 +142,7 @@
 -(void)refreshTable{
     
     //Create url
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@%@", @"https://mobileweb.caps.ua.edu/cs491/api/Story/byAuthor?token=", self.user.accessToken, @"&authorId=",self.user.user.Id]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@%@", @"https://mobileweb.caps.ua.edu/cs491/api/Story/byAuthor?token=", [TokenAuthorIdObject sharedInstance].accessToken, @"&authorId=",[TokenAuthorIdObject sharedInstance].authorId]];
     
     //Create request object
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:5.0];
@@ -168,14 +168,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return _stories.count;
-}
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

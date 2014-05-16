@@ -11,6 +11,4 @@
 
 @interface NavController : UINavigationController
 
-@property LoginResponseObject *user;
-
 @end

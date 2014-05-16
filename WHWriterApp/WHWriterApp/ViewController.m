@@ -11,6 +11,7 @@
 #import "LoginRequestObject.h"
 #import "LoginResponseObject.h"
 #import "NSObject+ObjectMap.h"
+#import "TokenAuthorIdObject.h"
 
 @interface ViewController ()
 
@@ -73,7 +74,8 @@
         if (_loginResponse.accessToken != nil) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 NavController *Navigation = [[NavController alloc] initWithNibName:nil bundle:nil];
-                Navigation.user = _loginResponse;
+                [TokenAuthorIdObject sharedInstance].authorId = _loginResponse.user.Id;
+                [TokenAuthorIdObject sharedInstance].accessToken = _loginResponse.accessToken;
                 [self presentViewController:Navigation animated:YES completion:NULL];
             });
         }
