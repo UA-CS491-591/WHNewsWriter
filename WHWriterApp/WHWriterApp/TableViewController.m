@@ -102,7 +102,7 @@
 -(void)refreshTableOnSearch:(NSString *)text{
     
     //Create url
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@%@%@%@", @"https://mobileweb.caps.ua.edu/cs491/api/Story/search?token=", [TokenAuthorIdObject sharedInstance].accessToken, @"&searchString=",text,@"&authorId=",[TokenAuthorIdObject sharedInstance].authorId]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@%@%@%@", @"https://mobileweb.caps.ua.edu/cs491/api/Story/search?token=", [TokenAuthorIdObject sharedInstance].accessToken, @"&searchString=",text,@"&authorId=",[TokenAuthorIdObject sharedInstance].user.Id]];
     
     //Create request object
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:5.0];
@@ -142,7 +142,7 @@
 -(void)refreshTable{
     
     //Create url
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@%@", @"https://mobileweb.caps.ua.edu/cs491/api/Story/byAuthor?token=", [TokenAuthorIdObject sharedInstance].accessToken, @"&authorId=",[TokenAuthorIdObject sharedInstance].authorId]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@%@", @"https://mobileweb.caps.ua.edu/cs491/api/Story/byAuthor?token=", [TokenAuthorIdObject sharedInstance].accessToken, @"&authorId=",[TokenAuthorIdObject sharedInstance].user.Id]];
     
     //Create request object
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:5.0];

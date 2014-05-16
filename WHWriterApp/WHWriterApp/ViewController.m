@@ -78,7 +78,7 @@
                 AuthorInfoViewController *AuthorVC = [[AuthorInfoViewController alloc] initWithNibName:NSStringFromClass([AuthorInfoViewController class]) bundle:nil];
                 _tabBarController = [[UITabBarController alloc] init];
                 _tabBarController.viewControllers = @[Navigation, AuthorVC];
-                [TokenAuthorIdObject sharedInstance].authorId = _loginResponse.user.Id;
+                [TokenAuthorIdObject sharedInstance].user = _loginResponse.user;
                 [TokenAuthorIdObject sharedInstance].accessToken = _loginResponse.accessToken;
                 [self presentViewController:_tabBarController animated:YES completion:NULL];
             });

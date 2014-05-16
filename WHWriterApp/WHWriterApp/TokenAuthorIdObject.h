@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AuthorObject.h"
 
 @interface TokenAuthorIdObject : NSObject
 
-@property NSString *authorId;
+@property AuthorObject *user;
 @property NSString *accessToken;
 
 + (instancetype)sharedInstance;
