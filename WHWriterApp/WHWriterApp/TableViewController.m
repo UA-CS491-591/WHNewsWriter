@@ -16,7 +16,7 @@
 
 @interface TableViewController ()
 
-@property NSArray *stories;
+@property NSMutableArray *stories;
 @property NSOperationQueue *operationQueue;
 
 @end
@@ -113,7 +113,7 @@
     //Send asynchronous request
     [NSURLConnection sendAsynchronousRequest:request queue:_operationQueue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         //Decode to string
-        _stories = [NSObject arrayOfType:[StoryObject class] FromJSONData:data];
+        _stories = [[NSMutableArray alloc] initWithArray:[NSObject arrayOfType:[StoryObject class] FromJSONData:data]];
         //Hop back main thread
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.tableView reloadData];
@@ -130,8 +130,10 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         //add code here for when you hit delete
-        [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath, nil] withRowAnimation:UITableViewRowAnimationTop];
         
+        //add webservice delete here *******
+        [_stories removeObjectAtIndex:indexPath.row];
+        [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath, nil] withRowAnimation:UITableViewRowAnimationTop];
     }
 }
 
@@ -155,7 +157,7 @@
     //Send asynchronous request
     [NSURLConnection sendAsynchronousRequest:request queue:_operationQueue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         //Decode to string
-        _stories = [NSObject arrayOfType:[StoryObject class] FromJSONData:data];
+        _stories = [[NSMutableArray alloc] initWithArray:[NSObject arrayOfType:[StoryObject class] FromJSONData:data]];
         //Hop back main thread
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.tableView reloadData];
