@@ -44,8 +44,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    [self.navigationItem.rightBarButtonItem setAction:@selector(didTapMyButton:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(didTapMyButton:)];
     
     UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectZero];
     [searchBar sizeToFit];
