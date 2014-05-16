@@ -31,7 +31,6 @@
     _TableVC = [[TableViewController alloc] initWithNibName:nil bundle:nil];
     _TableVC.title = @"Your Articles";
     [self pushViewController:_TableVC animated:YES];
-    _TableVC.user = self.user;
     
     // Do any additional setup after loading the view.
 }
