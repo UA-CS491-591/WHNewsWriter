@@ -95,6 +95,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     EditorViewController *vc2 =[[EditorViewController alloc] init];
+    vc2.title = @"Edit";
     [self.navigationController pushViewController:vc2 animated:YES];
 }
 
