@@ -76,8 +76,10 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 NavController *Navigation = [[NavController alloc] initWithNibName:nil bundle:nil];
                 AuthorInfoViewController *AuthorVC = [[AuthorInfoViewController alloc] initWithNibName:NSStringFromClass([AuthorInfoViewController class]) bundle:nil];
+                UINavigationController *AuthorNavController = [[UINavigationController alloc] init];
+                [AuthorNavController pushViewController:AuthorVC animated:NO];
                 _tabBarController = [[UITabBarController alloc] init];
-                _tabBarController.viewControllers = @[Navigation, AuthorVC];
+                _tabBarController.viewControllers = @[Navigation, AuthorNavController];
                 [TokenAuthorIdObject sharedInstance].user = _loginResponse.user;
                 [TokenAuthorIdObject sharedInstance].accessToken = _loginResponse.accessToken;
                 [self presentViewController:_tabBarController animated:YES completion:NULL];
