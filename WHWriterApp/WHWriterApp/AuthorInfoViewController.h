@@ -9,5 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @interface AuthorInfoViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *FirstNameLbl;
+@property (weak, nonatomic) IBOutlet UILabel *LastNameLbl;
+@property (weak, nonatomic) IBOutlet UILabel *EmailLbl;
+@property (weak, nonatomic) IBOutlet UILabel *PositionLbl;
+@property (weak, nonatomic) IBOutlet UILabel *ImageLbl;
+@property (weak, nonatomic) IBOutlet UILabel *ObjectFirstNameLbl;
+@property (weak, nonatomic) IBOutlet UILabel *ObjectLastNameLbl;
+@property (weak, nonatomic) IBOutlet UILabel *ObjectEmailLbl;
+@property (weak, nonatomic) IBOutlet UILabel *ObjectPositionLbl;
+@property (weak, nonatomic) IBOutlet UILabel *ObjectImageLbl;
 
 @end
