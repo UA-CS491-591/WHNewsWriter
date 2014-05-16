@@ -24,6 +24,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.title=@"Compose";
     }
     return self;
 }
@@ -37,11 +38,11 @@
     /*At load of EditorViewController, only load cells with Priview Labels communicating
      object to be modified.
      */
-    self.title=@"Compose";
     
-    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    
+    //self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     _EditorTableItems = [NSMutableArray array];
-    [_EditorTableItems addObject:@"Title"];
+    [_EditorTableItems addObject:@"Title\nTitle"];
     [_EditorTableItems addObject:@"Category"];
     [_EditorTableItems addObject:@"Subtitle"];
     [_EditorTableItems addObject:@"Body"];
