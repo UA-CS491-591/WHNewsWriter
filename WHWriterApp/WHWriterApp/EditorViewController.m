@@ -9,6 +9,12 @@
 #import "EditorViewController.h"
 #import "EditorTableViewCell.h"
 
+
+const static CGFloat kJVFieldHeight = 44.0f;
+const static CGFloat kJVFieldHMargin = 10.0f;
+const static CGFloat kJVFieldFontSize = 16.0f;
+const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
+
 @interface EditorViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *EditorTableView;
 @property NSMutableArray *EditorTableItems;
@@ -76,32 +82,24 @@
     //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     EditorTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EditorTableViewCell"];
-    
-    //Trying to send NSString to a table view cell into a textField
-    cell.EditorPlaceholder = _EditorTableItems[indexPath.row];
-    
     if (!cell) {
         cell = [[EditorTableViewCell alloc] init];
     }
     
-    /*if (indexPath.row == 0){
-        NSLog([NSString stringWithFormat:@"%d", indexPath.row]);
-    }*/
     
     
-    
-    
-    // Configure the cell...
-    /*XYZToDoItem *toDoItem = [self.toDoItems objectAtIndex:indexPath.row];
-    cell.textLabel.text=toDoItem.itemName;
-
-    if (toDoItem.completed) {
-    cell.accessoryType = UITableViewCellAccessoryCheckmark;
-    } else {
-        cell.accessoryType = UITableViewCellAccessoryNone;
-    }*/
-    
+    cell.editorTextField.placeholder = _EditorTableItems[indexPath.row];
+    [cell.editorTextField setFrame:CGRectMake(kJVFieldHMargin, 30.0f, cell.editorTextField.frame.size.width - 2 * kJVFieldHMargin, kJVFieldHeight)];
+    cell.editorTextField.font = [UIFont systemFontOfSize:kJVFieldFontSize];
+    cell.editorTextField.floatingLabel.font = [UIFont boldSystemFontOfSize:kJVFieldFloatingLabelFontSize];
+    cell.editorTextField.floatingLabelTextColor = [UIColor grayColor];
+    cell.editorTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
    
+    
+    //Desiring to set first responder after Add feature initiates.
+    if (indexPath.row ==0){
+       // [cell becomeFirstResponder]
+    }
     
     return cell;
 }
@@ -112,9 +110,9 @@
 	   
 }
 
-/*- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return [indexPath row] * 20;
-}*/
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+   
+    return 35.0f;
+}
 
 @end
