@@ -16,7 +16,7 @@
 
 @interface TableViewController ()
 
-@property NSArray *stories;
+@property NSMutableArray *stories;
 @property NSOperationQueue *operationQueue;
 
 @end
@@ -113,7 +113,7 @@
     //Send asynchronous request
     [NSURLConnection sendAsynchronousRequest:request queue:_operationQueue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         //Decode to string
-        _stories = [NSObject arrayOfType:[StoryObject class] FromJSONData:data];
+        _stories = [[NSMutableArray alloc] initWithArray:[NSObject arrayOfType:[StoryObject class] FromJSONData:data]];
         //Hop back main thread
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.tableView reloadData];
@@ -129,7 +129,9 @@
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        //add code here for when you hit delete
+        [self deleteFromTable:[_stories[indexPath.row] storyId]];
+        [_stories removeObjectAtIndex:indexPath.row];
+        [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath, nil] withRowAnimation:UITableViewRowAnimationTop];
     }
 }
 
@@ -153,10 +155,30 @@
     //Send asynchronous request
     [NSURLConnection sendAsynchronousRequest:request queue:_operationQueue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         //Decode to string
-        _stories = [NSObject arrayOfType:[StoryObject class] FromJSONData:data];
+        _stories = [[NSMutableArray alloc] initWithArray:[NSObject arrayOfType:[StoryObject class] FromJSONData:data]];
         //Hop back main thread
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.tableView reloadData];
+        });
+    }];
+}
+
+-(void)deleteFromTable :(NSString *) storyId{
+    
+    //Create url
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@%@", @"https://mobileweb.caps.ua.edu/cs491/api/Story/delete?token=", [TokenAuthorIdObject sharedInstance].accessToken, @"&storyId=",storyId]];
+    
+    //Create request object
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:5.0];
+    //Let the server know that we want to interact in JSON
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    //Set http method
+    
+    //Send asynchronous request
+    [NSURLConnection sendAsynchronousRequest:request queue:_operationQueue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        //Decode to string
+        //Hop back main thread
+        dispatch_async(dispatch_get_main_queue(), ^{
         });
     }];
 }
