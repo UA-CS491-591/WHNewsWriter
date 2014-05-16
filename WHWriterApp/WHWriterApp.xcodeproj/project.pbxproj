@@ -236,10 +236,10 @@
 		3F0BFE75192189B00062159E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3F0BFE72192164D40062159E /* LoginView.m */,
 				3F0BFE71192164D40062159E /* LoginView.h */,
 				A08FB3221923CFC800A67BD7 /* LoginView.xib */,
 				C3BBF71F19251F1200B26255 /* Editor */,
-				3F0BFE72192164D40062159E /* LoginView.m */,
 				A023E848192513EE0031C3B0 /* MainTableViewCell.h */,
 				A023E849192513EE0031C3B0 /* MainTableViewCell.m */,
 				A023E84A192513EE0031C3B0 /* MainTableViewCell.xib */,
