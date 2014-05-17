@@ -45,6 +45,7 @@
 		A08FB31E1923BAFD00A67BD7 /* EditDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = A08FB31D1923BAFD00A67BD7 /* EditDTO.m */; };
 		A08FB3211923BB5A00A67BD7 /* AddDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = A08FB3201923BB5A00A67BD7 /* AddDTO.m */; };
 		A08FB3231923CFC800A67BD7 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08FB3221923CFC800A67BD7 /* LoginView.xib */; };
+		C3B756A019270B47009175B4 /* JVFloatLabeledTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B7569F19270B47009175B4 /* JVFloatLabeledTextView.m */; };
 		C3B7937D19265D6100B4281A /* JVFloatLabeledTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B7937C19265D6100B4281A /* JVFloatLabeledTextField.m */; };
 		C3BBF71D19251F0900B26255 /* EditorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3BBF71B19251F0900B26255 /* EditorTableViewCell.m */; };
 		C3BBF71E19251F0900B26255 /* EditorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3BBF71C19251F0900B26255 /* EditorTableViewCell.xib */; };
@@ -119,6 +120,8 @@
 		A08FB31F1923BB5A00A67BD7 /* AddDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddDTO.h; sourceTree = "<group>"; };
 		A08FB3201923BB5A00A67BD7 /* AddDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddDTO.m; sourceTree = "<group>"; };
 		A08FB3221923CFC800A67BD7 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		C3B7569E19270B47009175B4 /* JVFloatLabeledTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JVFloatLabeledTextView.h; sourceTree = "<group>"; };
+		C3B7569F19270B47009175B4 /* JVFloatLabeledTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JVFloatLabeledTextView.m; sourceTree = "<group>"; };
 		C3B7937B19265D6100B4281A /* JVFloatLabeledTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JVFloatLabeledTextField.h; sourceTree = "<group>"; };
 		C3B7937C19265D6100B4281A /* JVFloatLabeledTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JVFloatLabeledTextField.m; sourceTree = "<group>"; };
 		C3BBF71A19251F0900B26255 /* EditorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorTableViewCell.h; sourceTree = "<group>"; };
@@ -308,6 +311,8 @@
 			children = (
 				C3B7937B19265D6100B4281A /* JVFloatLabeledTextField.h */,
 				C3B7937C19265D6100B4281A /* JVFloatLabeledTextField.m */,
+				C3B7569E19270B47009175B4 /* JVFloatLabeledTextView.h */,
+				C3B7569F19270B47009175B4 /* JVFloatLabeledTextView.m */,
 			);
 			name = TextModify;
 			sourceTree = "<group>";
@@ -447,6 +452,7 @@
 				3F0BFE7019215F560062159E /* ViewController.m in Sources */,
 				C3B7937D19265D6100B4281A /* JVFloatLabeledTextField.m in Sources */,
 				A023E84B192513EE0031C3B0 /* MainTableViewCell.m in Sources */,
+				C3B756A019270B47009175B4 /* JVFloatLabeledTextView.m in Sources */,
 				3F0BFE78192191FA0062159E /* TableViewController.m in Sources */,
 				A08FB3211923BB5A00A67BD7 /* AddDTO.m in Sources */,
 				3F0BFE73192164D40062159E /* LoginView.m in Sources */,

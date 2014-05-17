@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface EditorViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>;
-
+-(void)didTapSave:(UIButton *)sender;
 
 
 @end

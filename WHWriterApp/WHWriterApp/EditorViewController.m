@@ -10,7 +10,7 @@
 #import "EditorTableViewCell.h"
 
 
-const static CGFloat kJVFieldHeight = 38.0f;
+const static CGFloat kJVFieldHeight = 35.0f;
 const static CGFloat kJVFieldHMargin = 0.0f;//10.0f;
 const static CGFloat kJVFieldFontSize = 18.0f;
 const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
@@ -46,6 +46,10 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
      */
     
     
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(didTapSave:)];
+    
+    
+    
     //self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     _EditorTableItems = [NSMutableArray array];
     [_EditorTableItems addObject:@"Title\nTitle"];
@@ -78,9 +82,7 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //static NSString *CellIdentifier = @"ListPrototypeCell";
-    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
+    //Custom Cells
     EditorTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EditorTableViewCell"];
     if (!cell) {
         cell = [[EditorTableViewCell alloc] init];
@@ -92,7 +94,7 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     [cell.editorTextField setFrame:CGRectMake(kJVFieldHMargin, 30.0f, cell.editorTextField.frame.size.width - 2 * kJVFieldHMargin, kJVFieldHeight)];
     cell.editorTextField.font = [UIFont systemFontOfSize:kJVFieldFontSize];
     cell.editorTextField.floatingLabel.font = [UIFont boldSystemFontOfSize:kJVFieldFloatingLabelFontSize];
-    cell.editorTextField.floatingLabelTextColor = [UIColor grayColor];
+    cell.editorTextField.floatingLabelTextColor = [UIColor darkGrayColor];
     cell.editorTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
    
     
@@ -111,8 +113,21 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-   
-    return 35.0f;
+    //CGFloat *height;
+    if(indexPath.row<3){
+        return 35.0f;
+    } else {
+        return 480;
+    }
+    
 }
+
+#pragma mark - Actions to return to "TableViewController"
+-(void)didTapSave:(UIButton *)sender
+{
+    //Still no functionality on Save except to pop the view controller
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 
 @end
