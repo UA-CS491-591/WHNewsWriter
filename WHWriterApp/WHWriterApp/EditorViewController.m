@@ -10,9 +10,9 @@
 #import "EditorTableViewCell.h"
 
 
-const static CGFloat kJVFieldHeight = 44.0f;
-const static CGFloat kJVFieldHMargin = 10.0f;
-const static CGFloat kJVFieldFontSize = 16.0f;
+const static CGFloat kJVFieldHeight = 38.0f;
+const static CGFloat kJVFieldHMargin = 0.0f;//10.0f;
+const static CGFloat kJVFieldFontSize = 18.0f;
 const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
 
 @interface EditorViewController ()
@@ -87,7 +87,7 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     }
     
     
-    
+    //Initial styling for add button.
     cell.editorTextField.placeholder = _EditorTableItems[indexPath.row];
     [cell.editorTextField setFrame:CGRectMake(kJVFieldHMargin, 30.0f, cell.editorTextField.frame.size.width - 2 * kJVFieldHMargin, kJVFieldHeight)];
     cell.editorTextField.font = [UIFont systemFontOfSize:kJVFieldFontSize];
@@ -98,7 +98,7 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     
     //Desiring to set first responder after Add feature initiates.
     if (indexPath.row ==0){
-       // [cell becomeFirstResponder]
+        [cell.editorTextField becomeFirstResponder];
     }
     
     return cell;
