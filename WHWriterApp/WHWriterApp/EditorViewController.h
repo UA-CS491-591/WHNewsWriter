@@ -10,6 +10,6 @@
 
 @interface EditorViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>;
 -(void)didTapSave:(UIButton *)sender;
-
+-(id)initForEdit:(NSString *)storyId;
 
 @end

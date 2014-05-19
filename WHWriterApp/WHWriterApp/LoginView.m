@@ -23,8 +23,9 @@
         _password.placeholder = @"Password";
         _password.borderStyle = UITextBorderStyleRoundedRect;
         
-        _login.backgroundColor = [UIColor redColor];
         [_login setTitle:@"Login" forState:UIControlStateNormal];
+        [_login.layer setBorderWidth:1.0];
+        [_login.layer setBorderColor:[[UIColor blackColor] CGColor]];
         
         [self addSubview:_username];
         [self addSubview:_password];

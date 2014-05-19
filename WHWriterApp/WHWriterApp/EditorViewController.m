@@ -9,6 +9,11 @@
 #import "EditorViewController.h"
 #import "EditorTableViewCell.h"
 #import "EditorTextViewCell.h"
+#import "TokenAuthorIdObject.h"
+#import "StoryObject.h"
+#import "NSObject+ObjectMap.h"
+#import "AddDTO.h"
+#import "EditDTO.h"
 
 const static CGFloat kJVFieldHeight = 35.0f;
 const static CGFloat kJVFieldHMargin = 0.0f;//10.0f;
@@ -18,6 +23,9 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
 @interface EditorViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *EditorTableView;
 @property NSMutableArray *EditorTableItems;
+@property NSString *StoryId;
+@property NSOperationQueue *operationQueue;
+@property StoryObject *Story;
 
 
 
@@ -31,7 +39,25 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     if (self) {
         // Custom initialization
         self.title=@"Compose";
+        _EditorTableItems = [NSMutableArray array];
+        [_EditorTableItems addObject:@"Title\nTitle"];
+        [_EditorTableItems addObject:@"Category"];
+        [_EditorTableItems addObject:@"Subtitle"];
+        [_EditorTableItems addObject:@"Body"];
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(didTapSave:)];
     }
+    return self;
+}
+
+- (id)initForEdit:(NSString *)storyId
+{
+    _operationQueue = [[NSOperationQueue alloc]init];
+    _EditorTableItems = [NSMutableArray array];
+        // Custom initialization
+        _StoryId = storyId;
+        self.title=@"Edit";
+    [self seedData:storyId];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(didTapSaveEdit:)];
     return self;
 }
 
@@ -46,18 +72,44 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     */
     
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(didTapSave:)];
+    
     
     
     
     //self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    _EditorTableItems = [NSMutableArray array];
-    [_EditorTableItems addObject:@"Title"];
+    /*_EditorTableItems = [NSMutableArray array];
+    [_EditorTableItems addObject:@"Title\nTitle"];
     [_EditorTableItems addObject:@"Category"];
     [_EditorTableItems addObject:@"Subtitle"];
-    [_EditorTableItems addObject:@"Body"];
+    [_EditorTableItems addObject:@"Body"];*/
 }
 
+-(void)seedData:(NSString *)StoryID
+{
+    
+    //Create url
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@%@", @"https://mobileweb.caps.ua.edu/cs491/api/Story/byId?token=", [TokenAuthorIdObject sharedInstance].accessToken, @"&storyId=",StoryID]];
+    
+    //Create request object
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:5.0];
+    //Let the server know that we want to interact in JSON
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    //Set http method
+    [request setHTTPMethod:@"GET"];
+    //Send asynchronous request
+    [NSURLConnection sendAsynchronousRequest:request queue:_operationQueue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        //Decode to string
+        _Story = [[StoryObject alloc]initWithJSONData:data];
+        //Hop back main thread
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [_EditorTableItems addObject:_Story.title];
+            [_EditorTableItems addObject:@"Category"];
+            [_EditorTableItems addObject:@"Subtitle"];
+            [_EditorTableItems addObject:@"Body"];
+        });
+    }];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -150,12 +202,55 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
 
 #pragma mark - TextViewDelegate
 
-
 #pragma mark - Actions to return to "TableViewController"
 -(void)didTapSave:(UIButton *)sender
 {
+    [self SaveNewStory];
     //Still no functionality on Save except to pop the view controller
     [self.navigationController popToRootViewControllerAnimated:YES];
+}
+-(void)didTapSaveEdit:(UIButton *)sender
+{
+    //Still no functionality on Save except to pop the view controller
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+-(void)SaveNewStory
+{
+    
+    //Create url
+    
+    NSURL *url = [NSURL URLWithString:@"https://mobileweb.caps.ua.edu/cs491/api/Story/add"];    
+    //Create request object
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:5.0];
+    //Let the server know that we want to interact in JSON
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    //Set http method
+    [request setHTTPMethod:@"POST"];
+    AddDTO *addStory = [[AddDTO alloc]init];
+    addStory.title = _EditorTableItems[0];
+    addStory.subtitle = _EditorTableItems[2];
+    addStory.body = _EditorTableItems[3];
+    addStory.authorId = [TokenAuthorIdObject sharedInstance].user.Id;
+    addStory.lat = [[NSNumber alloc] initWithDouble:1.1];
+    addStory.lng = [[NSNumber alloc] initWithDouble:1.1];
+    addStory.categoryId = @"bc6af052-6c8e-4893-9c82-224d002add06";
+    addStory.accessToken = [TokenAuthorIdObject sharedInstance].accessToken;
+    //Specify the string to get sent to the server
+    
+    //Make that string into raw data
+    NSData *storyData = [addStory JSONData];
+    //Set that raw data as the HTTP Body for the request
+    [request setHTTPBody:storyData];
+    
+    //Send asynchronous request
+    [NSURLConnection sendAsynchronousRequest:request queue:_operationQueue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        //Decode to string
+        StoryObject *storyResponse = [[StoryObject alloc]initWithJSONData:data];
+        if (storyResponse != nil) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+            });
+        }
+    }];
 }
 
 

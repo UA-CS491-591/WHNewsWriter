@@ -47,20 +47,22 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(didTapMyButton:)];
     
     UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectZero];
+    
+    
+    UISearchDisplayController *searchDC = [[UISearchDisplayController alloc] initWithSearchBar:searchBar contentsController:self];
     [searchBar sizeToFit];
     searchBar.delegate = self;
     searchBar.placeholder = @"Search";
     self.tableView.tableHeaderView = searchBar;
     
-    UISearchDisplayController *searchDC = [[UISearchDisplayController alloc] initWithSearchBar:searchBar contentsController:self];
-    
     // The above assigns self.searchDisplayController, but without retaining.
     // Force the read-only property to be set and retained.
-    [self performSelector:@selector(setSearchDisplayController:) withObject:searchDC];
+    //[self performSelector:@selector(setSearchDisplayController:) withObject:searchDC];
     
-    //searchDC.delegate = self;
-    //searchDC.searchResultsDataSource = self;
-    //searchDC.searchResultsDelegate = self;
+    searchDC.delegate = self;
+    searchDC.searchResultsDataSource = self;
+    searchDC.searchResultsDelegate = self;
+    
     
     
 }
@@ -94,8 +96,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    EditorViewController *vc2 =[[EditorViewController alloc] init];
-    vc2.title = @"Edit";
+    EditorViewController *vc2 =[[EditorViewController alloc] initForEdit:[_stories[indexPath.row] storyId]];
     [self.navigationController pushViewController:vc2 animated:YES];
 }
 
