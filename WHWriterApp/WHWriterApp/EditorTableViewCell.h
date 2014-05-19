@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "JVFloatLabeledTextField.h"
 
-@interface EditorTableViewCell : UITableViewCell
+@interface EditorTableViewCell : UITableViewCell <UITextFieldDelegate>
 //@property (weak, nonatomic) IBOutlet UILabel *EditorPreviewLabel;
-@property (weak, nonatomic) NSString *EditorPlaceholder;
-//@property JVFloatLabeledTextField *editorTextField;
-@property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *editorTextField;
+//@property (weak, nonatomic) NSString *EditorPlaceholder;
+@property JVFloatLabeledTextField *editorTextField;
+//@property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *editorTextField;
 
 @end

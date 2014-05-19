@@ -124,7 +124,7 @@
     CGRect textRect = [self textRect];
     
     _placeholderLabel.alpha = [self.text length] > 0 ? 0.0f : 1.0f;
-    _placeholderLabel.frame = CGRectMake(textRect.origin.x, textRect.origin.y,
+    _placeholderLabel.frame = CGRectMake(textRect.origin.x-3.0f, textRect.origin.y-8.0f,
                                          _placeholderLabel.frame.size.width, _placeholderLabel.frame.size.height);
     [self setLabelOriginForTextAlignment];
     
