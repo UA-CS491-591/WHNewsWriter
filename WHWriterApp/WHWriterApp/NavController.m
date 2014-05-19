@@ -21,6 +21,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        
     }
     return self;
 }
@@ -30,7 +31,16 @@
     [super viewDidLoad];
     _TableVC = [[TableViewController alloc] initWithNibName:nil bundle:nil];
     _TableVC.title = @"Your Articles";
+    
+    //self.tabBarItem.image = [UIImage imageNamed:@"yourArticlesIcon35"];
+    
+    [[[self.tabBarController.viewControllers objectAtIndex:0] tabBarItem]setFinishedSelectedImage:[UIImage imageNamed:@"yourArticlesIcon35"] withFinishedUnselectedImage:[UIImage imageNamed:@"yourArticlesIcon35"]];
+    
+    //UIImage *image = [UIImage imageNamed:@"yourArticlesIcon35.png"];
+    //self.tabBarItem = [[[UITabBarItem alloc] initWithTitle:@"string" image:image tag:0] self];
+    
     [self pushViewController:_TableVC animated:YES];
+    
     
     // Do any additional setup after loading the view.
 }
