@@ -64,24 +64,7 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    
-    
-    /*At load of EditorViewController, only load cells with Preview Labels communicating
-     object to be modified.
-    */
-    
-    
-    
-    
-    
-    
-    //self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    /*_EditorTableItems = [NSMutableArray array];
-    [_EditorTableItems addObject:@"Title\nTitle"];
-    [_EditorTableItems addObject:@"Category"];
-    [_EditorTableItems addObject:@"Subtitle"];
-    [_EditorTableItems addObject:@"Body"];*/
+    [_EditorTableView reloadData];
 }
 
 -(void)seedData:(NSString *)StoryID
@@ -117,12 +100,6 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
 }
 
 #pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    // Return the number of sections.
-    return 1;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
