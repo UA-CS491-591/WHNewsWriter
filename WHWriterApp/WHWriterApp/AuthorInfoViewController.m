@@ -30,6 +30,11 @@
     [super viewDidLoad];
     //UINavigationController *AuthorNavController = [[UINavigationController alloc] init];
     // Do any additional setup after loading the view from its nib.
+    
+    //TabBarIcon
+    //[[[self.tabBarController.viewControllers objectAtIndex:1] tabBarItem]setFinishedSelectedImage:[UIImage imageNamed:@"authorProfileIcon35S.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"authorProfileIcon35.png"]];
+    
+    
     _ObjectFirstNameLbl.text = [TokenAuthorIdObject sharedInstance].user.firstName;
     _ObjectLastNameLbl.text = [TokenAuthorIdObject sharedInstance].user.lastName;
     _ObjectEmailLbl.text = [TokenAuthorIdObject sharedInstance].user.email;
