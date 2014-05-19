@@ -41,9 +41,9 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     // Do any additional setup after loading the view from its nib.
     
     
-    /*At load of EditorViewController, only load cells with Priview Labels communicating
+    /*At load of EditorViewController, only load cells with Preview Labels communicating
      object to be modified.
-     */
+    */
     
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(didTapSave:)];
@@ -117,10 +117,12 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     if(indexPath.row<3){
         return 35.0f;
     } else {
-        return 480;
+        return 320;
     }
     
 }
+
+#pragma mark - TextViewDelegate
 
 #pragma mark - Actions to return to "TableViewController"
 -(void)didTapSave:(UIButton *)sender
