@@ -33,7 +33,6 @@
     _TableVC.title = @"Your Articles";
     
     //self.tabBarItem.image = [UIImage imageNamed:@"yourArticlesIcon35"];
-    
     [[[self.tabBarController.viewControllers objectAtIndex:0] tabBarItem]setFinishedSelectedImage:[UIImage imageNamed:@"yourArticlesIcon35"] withFinishedUnselectedImage:[UIImage imageNamed:@"yourArticlesIcon35"]];
     
     //UIImage *image = [UIImage imageNamed:@"yourArticlesIcon35.png"];
