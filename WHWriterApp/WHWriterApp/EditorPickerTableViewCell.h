@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Categories.h"
+#import "StoryToEdit.h"
 
-@interface EditorPickerTableViewCell : UITableViewCell
+@interface EditorPickerTableViewCell : UITableViewCell <UIPickerViewDataSource,UIPickerViewDelegate>
 @property (weak, nonatomic) IBOutlet UIPickerView *picker;
 
 @end

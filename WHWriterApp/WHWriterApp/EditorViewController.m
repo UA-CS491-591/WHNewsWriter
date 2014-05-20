@@ -239,7 +239,7 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     [request setHTTPMethod:@"PUT"];
     
     EditDTO *editStory = [[EditDTO alloc]init];
-    editStory.accessToken =[ TokenAuthorIdObject sharedInstance].accessToken;
+    editStory.accessToken =[TokenAuthorIdObject sharedInstance].accessToken;
     editStory.story.title = _EditorTableItems[0];
     editStory.story.subtitle = _EditorTableItems[2];
     editStory.story.body = _EditorTableItems[3];
