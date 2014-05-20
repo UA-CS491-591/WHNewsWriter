@@ -7,6 +7,7 @@
 //
 
 #import "EditorTextViewCell.h"
+#import "StoryToEdit.h"
 
 @implementation EditorTextViewCell
 
@@ -27,7 +28,15 @@
 
 - (void)textViewDidEndEditing:(UITextView *)textView{
     _textViewFinalText = textView.text;
+    [StoryToEdit sharedInstance].body= textView.text;
     
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textView
+{
+    //[StoryToEdit sharedInstance].body= textView.text;
+    //[textView resignFirstResponder];
+    return YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

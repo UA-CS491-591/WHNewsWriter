@@ -15,6 +15,6 @@
 @property JVFloatLabeledTextField *editorTextField;
 //@property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *editorTextField;
 @property NSString *textFieldFinalText;
-
+@property bool title;
 
 @end

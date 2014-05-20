@@ -7,6 +7,7 @@
 //
 
 #import "EditorTableViewCell.h"
+#import "StoryToEdit.h"
 
 @implementation EditorTableViewCell
 
@@ -26,7 +27,20 @@
 
 - (void)textFieldDidEndEditing:(UITextField *)textField{
     _textFieldFinalText = textField.text;
+    if (_title){
+        [StoryToEdit sharedInstance].title= textField.text;
+    }
+    else   {
+        [StoryToEdit sharedInstance].subtitle= textField.text;}
+    }
+
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    _textFieldFinalText = textField.text;
+    [textField nextResponder];
     
+    return YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

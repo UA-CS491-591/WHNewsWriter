@@ -9,6 +9,7 @@
 #import "EditorViewController.h"
 #import "EditorTableViewCell.h"
 #import "EditorTextViewCell.h"
+#import "EditorPickerTableViewCell.h"
 #import "TokenAuthorIdObject.h"
 #import "StoryObject.h"
 #import "NSObject+ObjectMap.h"
@@ -115,32 +116,68 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     
     if(indexPath.row<3){
         if(indexPath.row==1){
+            EditorPickerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EditorPickerTableViewCell"];
+            if(!cell){
+                cell = [[EditorPickerTableViewCell alloc] init];
+            }
             
+            return cell;
         }
-        //Custom Cells
-        EditorTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EditorTableViewCell"];
-        if (!cell) {
-            cell = [[EditorTableViewCell alloc] init];
+        else if (indexPath.row==0){
+            
+            //Custom Cells
+            EditorTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EditorTableViewCell"];
+            if (!cell) {
+                cell = [[EditorTableViewCell alloc] init];
+            }
+            
+            cell.title = YES;
+            //Initial styling for add button.
+            cell.editorTextField.placeholder = _EditorTableItems[indexPath.row];
+            [cell.editorTextField setFrame:CGRectMake(kJVFieldHMargin, 30.0f, cell.editorTextField.frame.size.width - 2 * kJVFieldHMargin, kJVFieldHeight)];
+            cell.editorTextField.font = [UIFont systemFontOfSize:kJVFieldFontSize];
+            cell.editorTextField.floatingLabel.font = [UIFont boldSystemFontOfSize:kJVFieldFloatingLabelFontSize];
+            cell.editorTextField.floatingLabelTextColor = [UIColor darkGrayColor];
+            cell.editorTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
+            cell.editorTextField.returnKeyType = UIReturnKeyNext;
+            //[cell addSubview:cell.editorTextField];
+            
+            //Set Title field as firstResponder
+            
+            if (indexPath.row ==0){ // STILL NEED TO ADD CONDITION BASED ON NAV CONTROLLER INSTANCE ("Edit" or "Add")
+                [cell.editorTextField becomeFirstResponder];
+            }
+            return cell;
         }
-        
-        
-        //Initial styling for add button.
-        cell.editorTextField.placeholder = _EditorTableItems[indexPath.row];
-        [cell.editorTextField setFrame:CGRectMake(kJVFieldHMargin, 30.0f, cell.editorTextField.frame.size.width - 2 * kJVFieldHMargin, kJVFieldHeight)];
-        cell.editorTextField.font = [UIFont systemFontOfSize:kJVFieldFontSize];
-        cell.editorTextField.floatingLabel.font = [UIFont boldSystemFontOfSize:kJVFieldFloatingLabelFontSize];
-        cell.editorTextField.floatingLabelTextColor = [UIColor darkGrayColor];
-        cell.editorTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
-        //[cell addSubview:cell.editorTextField];
-        
-        //Set Title field as firstResponder
-        
-        if (indexPath.row ==0){ // STILL NEED TO ADD CONDITION BASED ON NAV CONTROLLER INSTANCE ("Edit" or "Add")
-            [cell.editorTextField becomeFirstResponder];
+        else {
+            
+            //Custom Cells
+            EditorTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EditorTableViewCell"];
+            if (!cell) {
+                cell = [[EditorTableViewCell alloc] init];
+            }
+            
+            cell.title = NO;
+            //Initial styling for add button.
+            cell.editorTextField.placeholder = _EditorTableItems[indexPath.row];
+            [cell.editorTextField setFrame:CGRectMake(kJVFieldHMargin, 30.0f, cell.editorTextField.frame.size.width - 2 * kJVFieldHMargin, kJVFieldHeight)];
+            cell.editorTextField.font = [UIFont systemFontOfSize:kJVFieldFontSize];
+            cell.editorTextField.floatingLabel.font = [UIFont boldSystemFontOfSize:kJVFieldFloatingLabelFontSize];
+            cell.editorTextField.floatingLabelTextColor = [UIColor darkGrayColor];
+            cell.editorTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
+            cell.editorTextField.returnKeyType = UIReturnKeyNext;
+            //[cell addSubview:cell.editorTextField];
+            
+            //Set Title field as firstResponder
+            
+            if (indexPath.row ==0){ // STILL NEED TO ADD CONDITION BASED ON NAV CONTROLLER INSTANCE ("Edit" or "Add")
+                [cell.editorTextField becomeFirstResponder];
+            }
+            return cell;
         }
-        return cell;
     }
     else { //Body Text View instantiating
+        
         EditorTextViewCell *cell =[tableView dequeueReusableCellWithIdentifier:@"EditorTextViewCell"];
         if (!cell) {
             //It's at least instantiating the cell!
