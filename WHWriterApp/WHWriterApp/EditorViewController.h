@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EditorViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>;
+@interface EditorViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>;
 -(void)didTapSave:(UIButton *)sender;
 -(id)initForEdit:(NSString *)storyId;
 
