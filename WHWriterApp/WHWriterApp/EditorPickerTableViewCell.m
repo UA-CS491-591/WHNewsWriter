@@ -10,6 +10,7 @@
 
 @implementation EditorPickerTableViewCell
 
+
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
     return 1;
@@ -32,7 +33,13 @@
 
 - (void)awakeFromNib
 {
-    // Initialization code
+    [[Categories sharedInstance].List enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        if ([((CategoryObject *)obj).categoryId isEqualToString:[StoryToEdit sharedInstance].category.categoryId]) {
+            [_picker selectRow:idx inComponent:0 animated:NO];
+            *stop = YES;
+        }
+    }];
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

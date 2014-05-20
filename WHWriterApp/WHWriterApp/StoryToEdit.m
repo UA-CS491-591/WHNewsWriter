@@ -16,6 +16,8 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[self alloc] init];
+        CategoryObject *_category = [[CategoryObject alloc] init];
+        AuthorObject *_author = [[AuthorObject alloc] init];
     });
     
     return sharedInstance;
