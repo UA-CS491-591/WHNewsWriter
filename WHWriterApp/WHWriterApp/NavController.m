@@ -33,22 +33,15 @@
     _TableVC.title = @"Your Articles";
     
     //TabBarIcon
-    //self.tabBarItem.image = [UIImage imageNamed:@"yourArticlesIcon35"];
-    UIImage *img1 = [UIImage imageNamed:@"yourArticlesIcon35.png"];
-    UIImage *img2 = [UIImage imageNamed:@"yourArticlesIcon35S.png"];
-    UIImage *img3 = [UIImage imageNamed:@"authorProfileIcon35.png"];
-    UIImage *img4 = [UIImage imageNamed:@"authorProfileIcon35S.png"];
+    UIImage *img1 = [UIImage imageNamed:@"articlesIcon.png"];
+    UIImage *img2 = [UIImage imageNamed:@"authorIcon.png"];
     img1 = [img1 imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     img2 = [img2 imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    img3 = [img3 imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    img4 = [img4 imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    
-    [[[[self.tabBarController.viewControllers objectAtIndex:0] tabBarItem]initWithTitle:@"Your Articles" image:img1 selectedImage:img2] image];
-    [[[[self.tabBarController.viewControllers objectAtIndex:1] tabBarItem]initWithTitle:@"Author Profile" image:img3 selectedImage:img4] image];
+    [[[[self.tabBarController.viewControllers objectAtIndex:0] tabBarItem]initWithTitle:@"Your Articles" image:img1 tag:0] image];
+    [[[[self.tabBarController.viewControllers objectAtIndex:1] tabBarItem]initWithTitle:@"Author Profile" image:img2 tag:1] image];
     
     //[[[self.tabBarController.viewControllers objectAtIndex:0] tabBarItem]setFinishedSelectedImage:img2 withFinishedUnselectedImage:img1];
     //[[[self.tabBarController.viewControllers objectAtIndex:1] tabBarItem]setFinishedSelectedImage:img4 withFinishedUnselectedImage:img3];
-    
     //UIImage *image = [UIImage imageNamed:@"yourArticlesIcon35.png"];
     //self.tabBarItem = [[[UITabBarItem alloc] initWithTitle:@"string" image:image tag:0] self];
     
