@@ -18,6 +18,7 @@
 
 @property NSMutableArray *stories;
 @property NSOperationQueue *operationQueue;
+@property UISearchDisplayController *searchController;
 
 @end
 
@@ -38,16 +39,9 @@
     _operationQueue = [[NSOperationQueue alloc]init];
     [self refreshTable];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(didTapMyButton:)];
     
     UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectZero];
-    
     
     UISearchDisplayController *searchDC = [[UISearchDisplayController alloc] initWithSearchBar:searchBar contentsController:self];
     [searchBar sizeToFit];
@@ -55,17 +49,11 @@
     searchBar.placeholder = @"Search";
     self.tableView.tableHeaderView = searchBar;
     
-    // The above assigns self.searchDisplayController, but without retaining.
-    // Force the read-only property to be set and retained.
-    //[self performSelector:@selector(setSearchDisplayController:) withObject:searchDC];
-    
     searchDC.delegate = self;
     searchDC.searchResultsDataSource = self;
     searchDC.searchResultsDelegate = self;
-    
-    
-    
 }
+
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
     if ([searchText  isEqual: @""]) {
         [self refreshTable];
@@ -76,11 +64,6 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (tableView == self.searchDisplayController.searchResultsTableView) {
-        ;//self.tableView.tableViewData = searchResultsData objectatindex...; //array with filtered data
-    } else {
-        ;//tableViewData = defaultData objectatindex...; //array with unfiltered data
-    }
     MainTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MainTableViewCell"];
     if (!cell) {
         cell = [[MainTableViewCell alloc] init];
@@ -98,28 +81,6 @@
 {
     EditorViewController *vc2 =[[EditorViewController alloc] initForEdit:[_stories[indexPath.row] storyId]];
     [self.navigationController pushViewController:vc2 animated:YES];
-}
-
--(void)refreshTableOnSearch:(NSString *)text{
-    
-    //Create url
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@%@%@%@", @"https://mobileweb.caps.ua.edu/cs491/api/Story/search?token=", [TokenAuthorIdObject sharedInstance].accessToken, @"&searchString=",text,@"&authorId=",[TokenAuthorIdObject sharedInstance].user.Id]];
-    
-    //Create request object
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:5.0];
-    //Let the server know that we want to interact in JSON
-    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    //Set http method
-    
-    //Send asynchronous request
-    [NSURLConnection sendAsynchronousRequest:request queue:_operationQueue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-        //Decode to string
-        _stories = [[NSMutableArray alloc] initWithArray:[NSObject arrayOfType:[StoryObject class] FromJSONData:data]];
-        //Hop back main thread
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.tableView reloadData];
-        });
-    }];
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -142,8 +103,29 @@
     [self.navigationController pushViewController:vc3 animated:YES];
 }
 
--(void)refreshTable{
+-(void)refreshTableOnSearch:(NSString *)text{
     
+    //Create url
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@%@%@%@", @"https://mobileweb.caps.ua.edu/cs491/api/Story/search?token=", [TokenAuthorIdObject sharedInstance].accessToken, @"&searchString=",text,@"&authorId=",[TokenAuthorIdObject sharedInstance].user.Id]];
+    
+    //Create request object
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:5.0];
+    //Let the server know that we want to interact in JSON
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    //Set http method
+    [request setHTTPMethod:@"GET"];
+    //Send asynchronous request
+    [NSURLConnection sendAsynchronousRequest:request queue:_operationQueue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        //Decode to string
+        _stories = [[NSMutableArray alloc] initWithArray:[NSObject arrayOfType:[StoryObject class] FromJSONData:data]];
+        //Hop back main thread
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
+    }];
+}
+
+-(void)refreshTable{
     //Create url
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@%@", @"https://mobileweb.caps.ua.edu/cs491/api/Story/byAuthor?token=", [TokenAuthorIdObject sharedInstance].accessToken, @"&authorId=",[TokenAuthorIdObject sharedInstance].user.Id]];
     
@@ -152,7 +134,7 @@
     //Let the server know that we want to interact in JSON
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     //Set http method
-    
+    [request setHTTPMethod:@"GET"];
     //Send asynchronous request
     [NSURLConnection sendAsynchronousRequest:request queue:_operationQueue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         //Decode to string
@@ -174,7 +156,7 @@
     //Let the server know that we want to interact in JSON
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     //Set http method
-    
+    [request setHTTPMethod:@"DELETE"];
     //Send asynchronous request
     [NSURLConnection sendAsynchronousRequest:request queue:_operationQueue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         //Decode to string
@@ -183,7 +165,6 @@
         });
     }];
 }
-
 
 - (void)didReceiveMemoryWarning
 {

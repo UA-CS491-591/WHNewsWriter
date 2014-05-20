@@ -14,6 +14,7 @@
 #import "NSObject+ObjectMap.h"
 #import "AddDTO.h"
 #import "EditDTO.h"
+#import "Categories.h"
 
 const static CGFloat kJVFieldHeight = 35.0f;
 const static CGFloat kJVFieldHMargin = 0.0f;//10.0f;
@@ -183,19 +184,16 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
 -(void)didTapSave:(UIButton *)sender
 {
     [self SaveNewStory];
-    //Still no functionality on Save except to pop the view controller
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 -(void)didTapSaveEdit:(UIButton *)sender
 {
-    //Still no functionality on Save except to pop the view controller
+    [self SaveEditedStory];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 -(void)SaveNewStory
 {
-    
     //Create url
-    
     NSURL *url = [NSURL URLWithString:@"https://mobileweb.caps.ua.edu/cs491/api/Story/add"];    
     //Create request object
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:5.0];
@@ -223,6 +221,44 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     [NSURLConnection sendAsynchronousRequest:request queue:_operationQueue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         //Decode to string
         StoryObject *storyResponse = [[StoryObject alloc]initWithJSONData:data];
+        if (storyResponse != nil) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+            });
+        }
+    }];
+}
+-(void)SaveEditedStory
+{
+    //Create url
+    NSURL *url = [NSURL URLWithString:@"https://mobileweb.caps.ua.edu/cs491/api/Story/edit"];
+    //Create request object
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:5.0];
+    //Let the server know that we want to interact in JSON
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    //Set http method
+    [request setHTTPMethod:@"PUT"];
+    
+    EditDTO *editStory = [[EditDTO alloc]init];
+    editStory.accessToken =[ TokenAuthorIdObject sharedInstance].accessToken;
+    editStory.story.title = _EditorTableItems[0];
+    editStory.story.subtitle = _EditorTableItems[2];
+    editStory.story.body = _EditorTableItems[3];
+    editStory.story.author = [TokenAuthorIdObject sharedInstance].user;
+    editStory.story.lat = [[NSNumber alloc] initWithDouble:1.1];
+    editStory.story.lng = [[NSNumber alloc] initWithDouble:1.1];
+    editStory.story.category = [Categories sharedInstance].List[0];
+    editStory.story.datePublished = _Story.datePublished;
+    //Specify the string to get sent to the server
+    
+    //Make that string into raw data
+    NSData *storyData = [editStory JSONData];
+    //Set that raw data as the HTTP Body for the request
+    [request setHTTPBody:storyData];
+    
+    //Send asynchronous request
+    [NSURLConnection sendAsynchronousRequest:request queue:_operationQueue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        //Decode to string
+        NSString *storyResponse = [[NSString alloc] initWithJSONData:data];
         if (storyResponse != nil) {
             dispatch_async(dispatch_get_main_queue(), ^{
             });

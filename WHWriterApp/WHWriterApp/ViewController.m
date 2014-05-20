@@ -13,13 +13,13 @@
 #import "NSObject+ObjectMap.h"
 #import "TokenAuthorIdObject.h"
 #import "AuthorInfoViewController.h"
+#import "Categories.h"
 
 @interface ViewController ()
 
 @property NSOperationQueue *operationQueue;
 @property LoginRequestObject *loginRequest;
 @property LoginResponseObject *loginResponse;
-
 
 @end
 
@@ -82,12 +82,31 @@
                 _tabBarController.viewControllers = @[Navigation, AuthorNavController];
                 [TokenAuthorIdObject sharedInstance].user = _loginResponse.user;
                 [TokenAuthorIdObject sharedInstance].accessToken = _loginResponse.accessToken;
-                [self presentViewController:_tabBarController animated:YES completion:NULL];
+                [self loadCategories];
             });
         }
     }];
 }
 
+-(void)loadCategories
+{
+    //Create url
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", @"https://mobileweb.caps.ua.edu/cs491/api/Story/byAuthor?token=", [TokenAuthorIdObject sharedInstance].accessToken]];
+    //Create request object
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:5.0];
+    //Let the server know that we want to interact in JSON
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    //Set http method
+    [request setHTTPMethod:@"GET"];
+    //Send asynchronous request
+    [NSURLConnection sendAsynchronousRequest:request queue:_operationQueue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        //Decode to string
+        [Categories sharedInstance].List = [NSObject arrayOfType:[CategoryObject class] FromJSONData:data];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self presentViewController:_tabBarController animated:YES completion:NULL];
+        });
+    }];
+}
 
 - (void)didReceiveMemoryWarning
 {
