@@ -114,6 +114,9 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
 {
     
     if(indexPath.row<3){
+        if(indexPath.row==1){
+            
+        }
         //Custom Cells
         EditorTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EditorTableViewCell"];
         if (!cell) {
@@ -157,6 +160,9 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
         cell.editorTextView.font = [UIFont systemFontOfSize:kJVFieldFontSize];
         cell.editorTextView.floatingLabel.font = [UIFont boldSystemFontOfSize:kJVFieldFloatingLabelFontSize];
         cell.editorTextView.floatingLabelTextColor = [UIColor darkGrayColor];
+       // cell.editorTextView.delegate = self;
+        //valTxtField.returnKeyType = UIReturnKeyDone;
+        
         return cell;
     }
     
@@ -178,7 +184,8 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     
 }
 
-#pragma mark - TextViewDelegate
+
+
 
 #pragma mark - Actions to return to "TableViewController"
 -(void)didTapSave:(UIButton *)sender

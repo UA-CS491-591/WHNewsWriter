@@ -21,6 +21,13 @@
 - (void)awakeFromNib
 {
     // Initialization code
+     _editorTextView.delegate = self;
+    
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView{
+    _textViewFinalText = textView.text;
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
