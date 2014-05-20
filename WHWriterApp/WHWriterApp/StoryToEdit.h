@@ -13,7 +13,7 @@
 @interface StoryToEdit : NSObject
 
 @property NSString *storyId;
-@property NSString *title;
+@property (copy) NSString *title;
 @property NSString *subtitle;
 @property NSString *body;
 @property NSDate *datePublished;

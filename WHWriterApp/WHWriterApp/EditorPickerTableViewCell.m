@@ -10,7 +10,12 @@
 
 @implementation EditorPickerTableViewCell
 
+-(instancetype)init
+{
+    self = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([EditorPickerTableViewCell class]) owner:nil options:nil][0];
 
+    return self;
+}
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
     return 1;
@@ -33,13 +38,13 @@
 
 - (void)awakeFromNib
 {
+    [_picker reloadAllComponents];
     [[Categories sharedInstance].List enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         if ([((CategoryObject *)obj).categoryId isEqualToString:[StoryToEdit sharedInstance].category.categoryId]) {
             [_picker selectRow:idx inComponent:0 animated:NO];
             *stop = YES;
         }
     }];
-    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
