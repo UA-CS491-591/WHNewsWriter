@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F406B05192A5C6200510D89 /* yourArticlesIcon35.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F406B04192A5C6200510D89 /* yourArticlesIcon35.png */; };
-		2F406B07192A5D3B00510D89 /* authorProfileIcon35.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F406B06192A5D3B00510D89 /* authorProfileIcon35.png */; };
-		2F406B0A192A5DEE00510D89 /* authorProfileIcon35S.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F406B08192A5DEE00510D89 /* authorProfileIcon35S.png */; };
-		2F406B0D192A5FCE00510D89 /* yourArticlesIcon35S.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F406B0C192A5FCE00510D89 /* yourArticlesIcon35S.png */; };
+		2F8FCF2F192BA773001B2A2B /* articlesIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F8FCF2D192BA773001B2A2B /* articlesIcon.png */; };
+		2F8FCF30192BA773001B2A2B /* authorIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F8FCF2E192BA773001B2A2B /* authorIcon.png */; };
+		2F8FCF32192BA906001B2A2B /* Icon76.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F8FCF31192BA906001B2A2B /* Icon76.png */; };
 		2F9A660C1923C1F2000A6910 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A660B1923C1F2000A6910 /* Default.png */; };
 		2F9A660E1923C46C000A6910 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A660D1923C46C000A6910 /* Default@2x.png */; };
 		2F9A66121923C897000A6910 /* Icon29.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A660F1923C897000A6910 /* Icon29.png */; };
@@ -40,6 +39,7 @@
 		A08BF5C3192B9AEC00065044 /* Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = A08BF5C2192B9AEC00065044 /* Categories.m */; };
 		A08BF5CD192BA20F00065044 /* EditorPickerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A08BF5CB192BA20F00065044 /* EditorPickerTableViewCell.m */; };
 		A08BF5CE192BA20F00065044 /* EditorPickerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08BF5CC192BA20F00065044 /* EditorPickerTableViewCell.xib */; };
+		A08BF5D1192BA99500065044 /* StoryToEdit.m in Sources */ = {isa = PBXBuildFile; fileRef = A08BF5D0192BA99500065044 /* StoryToEdit.m */; };
 		A08FB3021922815400A67BD7 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08FB3011922815400A67BD7 /* ViewController.xib */; };
 		A08FB3061922825F00A67BD7 /* EditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A08FB3041922825F00A67BD7 /* EditorViewController.m */; };
 		A08FB3071922825F00A67BD7 /* EditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08FB3051922825F00A67BD7 /* EditorViewController.xib */; };
@@ -71,10 +71,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2F406B04192A5C6200510D89 /* yourArticlesIcon35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yourArticlesIcon35.png; sourceTree = "<group>"; };
-		2F406B06192A5D3B00510D89 /* authorProfileIcon35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = authorProfileIcon35.png; sourceTree = "<group>"; };
-		2F406B08192A5DEE00510D89 /* authorProfileIcon35S.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = authorProfileIcon35S.png; sourceTree = "<group>"; };
-		2F406B0C192A5FCE00510D89 /* yourArticlesIcon35S.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yourArticlesIcon35S.png; sourceTree = "<group>"; };
+		2F8FCF2D192BA773001B2A2B /* articlesIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = articlesIcon.png; sourceTree = "<group>"; };
+		2F8FCF2E192BA773001B2A2B /* authorIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = authorIcon.png; sourceTree = "<group>"; };
+		2F8FCF31192BA906001B2A2B /* Icon76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon76.png; sourceTree = "<group>"; };
 		2F9A660B1923C1F2000A6910 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		2F9A660D1923C46C000A6910 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		2F9A660F1923C897000A6910 /* Icon29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon29.png; sourceTree = "<group>"; };
@@ -117,6 +116,8 @@
 		A08BF5CA192BA20F00065044 /* EditorPickerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorPickerTableViewCell.h; sourceTree = "<group>"; };
 		A08BF5CB192BA20F00065044 /* EditorPickerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorPickerTableViewCell.m; sourceTree = "<group>"; };
 		A08BF5CC192BA20F00065044 /* EditorPickerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditorPickerTableViewCell.xib; sourceTree = "<group>"; };
+		A08BF5CF192BA99500065044 /* StoryToEdit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryToEdit.h; sourceTree = "<group>"; };
+		A08BF5D0192BA99500065044 /* StoryToEdit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryToEdit.m; sourceTree = "<group>"; };
 		A08FB3011922815400A67BD7 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		A08FB3031922825F00A67BD7 /* EditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorViewController.h; sourceTree = "<group>"; };
 		A08FB3041922825F00A67BD7 /* EditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorViewController.m; sourceTree = "<group>"; };
@@ -222,10 +223,9 @@
 		3F0BFE461921557D0062159E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2F406B0C192A5FCE00510D89 /* yourArticlesIcon35S.png */,
-				2F406B08192A5DEE00510D89 /* authorProfileIcon35S.png */,
-				2F406B06192A5D3B00510D89 /* authorProfileIcon35.png */,
-				2F406B04192A5C6200510D89 /* yourArticlesIcon35.png */,
+				2F8FCF31192BA906001B2A2B /* Icon76.png */,
+				2F8FCF2D192BA773001B2A2B /* articlesIcon.png */,
+				2F8FCF2E192BA773001B2A2B /* authorIcon.png */,
 				2F9A660F1923C897000A6910 /* Icon29.png */,
 				2F9A66101923C897000A6910 /* Icon40.png */,
 				2F9A66111923C897000A6910 /* Icon60.png */,
@@ -320,6 +320,8 @@
 				A023E84E192653910031C3B0 /* TokenAuthorIdObject.m */,
 				A08BF5C1192B9AEC00065044 /* Categories.h */,
 				A08BF5C2192B9AEC00065044 /* Categories.m */,
+				A08BF5CF192BA99500065044 /* StoryToEdit.h */,
+				A08BF5D0192BA99500065044 /* StoryToEdit.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -470,10 +472,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F9A660E1923C46C000A6910 /* Default@2x.png in Resources */,
-				2F406B07192A5D3B00510D89 /* authorProfileIcon35.png in Resources */,
-				2F406B0D192A5FCE00510D89 /* yourArticlesIcon35S.png in Resources */,
 				3F0BFE4A1921557D0062159E /* InfoPlist.strings in Resources */,
-				2F406B0A192A5DEE00510D89 /* authorProfileIcon35S.png in Resources */,
 				C3BBF71E19251F0900B26255 /* EditorTableViewCell.xib in Resources */,
 				2F9A66131923C897000A6910 /* Icon40.png in Resources */,
 				A08FB3021922815400A67BD7 /* ViewController.xib in Resources */,
@@ -482,12 +481,14 @@
 				A023E84C192513EE0031C3B0 /* MainTableViewCell.xib in Resources */,
 				A08FB3071922825F00A67BD7 /* EditorViewController.xib in Resources */,
 				2F9A66141923C897000A6910 /* Icon60.png in Resources */,
-				2F406B05192A5C6200510D89 /* yourArticlesIcon35.png in Resources */,
 				A08BF5CE192BA20F00065044 /* EditorPickerTableViewCell.xib in Resources */,
+				2F8FCF2F192BA773001B2A2B /* articlesIcon.png in Resources */,
+				2F8FCF30192BA773001B2A2B /* authorIcon.png in Resources */,
 				A08FB3231923CFC800A67BD7 /* LoginView.xib in Resources */,
 				2F9A660C1923C1F2000A6910 /* Default.png in Resources */,
 				C3B756A9192A53BB009175B4 /* EditorTextViewCell.xib in Resources */,
 				3F621AF619266401007355B5 /* AuthorInfoViewController.xib in Resources */,
+				2F8FCF32192BA906001B2A2B /* Icon76.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +520,7 @@
 				A023E84B192513EE0031C3B0 /* MainTableViewCell.m in Sources */,
 				C3B756A019270B47009175B4 /* JVFloatLabeledTextView.m in Sources */,
 				3F0BFE78192191FA0062159E /* TableViewController.m in Sources */,
+				A08BF5D1192BA99500065044 /* StoryToEdit.m in Sources */,
 				A08FB3211923BB5A00A67BD7 /* AddDTO.m in Sources */,
 				A08BF5CD192BA20F00065044 /* EditorPickerTableViewCell.m in Sources */,
 				3F0BFE73192164D40062159E /* LoginView.m in Sources */,

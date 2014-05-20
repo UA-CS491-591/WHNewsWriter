@@ -10,6 +10,26 @@
 
 @implementation EditorPickerTableViewCell
 
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+
+// returns the # of rows in each component..
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent: (NSInteger)component
+{
+    return [Categories sharedInstance].List.count;
+}
+
+-(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row   forComponent:(NSInteger)component
+{
+    return [[[Categories sharedInstance].List objectAtIndex:row] name];
+}
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row   inComponent:(NSInteger)component
+{
+    [StoryToEdit sharedInstance].category = [[Categories sharedInstance].List objectAtIndex:row];
+}
+
 - (void)awakeFromNib
 {
     // Initialization code
