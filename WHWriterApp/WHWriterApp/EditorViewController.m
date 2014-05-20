@@ -194,7 +194,7 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
         cell.editorTextView.placeholder = _EditorTableItems[indexPath.row];
         cell.editorTextView.font = [UIFont systemFontOfSize:kJVFieldFontSize];
         cell.editorTextView.floatingLabel.font = [UIFont boldSystemFontOfSize:kJVFieldFloatingLabelFontSize];
-        cell.editorTextView.floatingLabelTextColor = [UIColor darkGrayColor];
+        cell.editorTextView.floatingLabelTextColor = [UIColor grayColor];
        // cell.editorTextView.delegate = self;
         //valTxtField.returnKeyType = UIReturnKeyDone;
         

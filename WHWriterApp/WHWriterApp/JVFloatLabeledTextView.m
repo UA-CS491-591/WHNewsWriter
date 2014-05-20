@@ -62,7 +62,7 @@
 	
     // some basic default fonts/colors
     _floatingLabel.font = [UIFont boldSystemFontOfSize:12.0f];
-    _floatingLabelTextColor = [UIColor grayColor];
+    _floatingLabelTextColor = [UIColor lightGrayColor];
     _animateEvenIfNotFirstResponder = NO;
     _floatingLabelShowAnimationDuration = kFloatingLabelShowAnimationDuration;
     _floatingLabelHideAnimationDuration = kFloatingLabelHideAnimationDuration;

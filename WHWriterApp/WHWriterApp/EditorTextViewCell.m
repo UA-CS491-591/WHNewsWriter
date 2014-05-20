@@ -26,8 +26,13 @@
     
 }
 
+- (void)textViewDidChange:(UITextView *)textView {
+   
+    [StoryToEdit sharedInstance].body= textView.text;
+}
+
 - (void)textViewDidEndEditing:(UITextView *)textView{
-    _textViewFinalText = textView.text;
+   
     [StoryToEdit sharedInstance].body= textView.text;
     
 }

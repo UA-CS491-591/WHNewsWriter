@@ -25,6 +25,15 @@
     
 }
 
+- (void)textFieldDidChange:(UITextView *)textField {
+    
+    if (_title){
+        [StoryToEdit sharedInstance].title= textField.text;
+    }
+    else   {
+        [StoryToEdit sharedInstance].subtitle= textField.text;}
+}
+
 - (void)textFieldDidEndEditing:(UITextField *)textField{
     _textFieldFinalText = textField.text;
     if (_title){
@@ -33,7 +42,6 @@
     else   {
         [StoryToEdit sharedInstance].subtitle= textField.text;}
     }
-
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
