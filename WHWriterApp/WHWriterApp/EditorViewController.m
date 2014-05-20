@@ -39,14 +39,12 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        _operationQueue = [[NSOperationQueue alloc]init];
         // Custom initialization
         self.title=@"Compose";
         _EditorTableItems = [NSMutableArray array];
-        [_EditorTableItems addObject:@"Title\nTitle"];
-        [_EditorTableItems addObject:@"Category"];
-        [_EditorTableItems addObject:@"Subtitle"];
-        [_EditorTableItems addObject:@"Body"];
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(didTapSave:)];
+        [_EditorTableView reloadData];
     }
     return self;
 }
@@ -66,7 +64,7 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [_EditorTableView reloadData];
+    //[_EditorTableView reloadData];
 }
 
 -(void)seedData:(NSString *)StoryID
@@ -90,6 +88,7 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
             [StoryToEdit sharedInstance].category = _Story.category;
             [StoryToEdit sharedInstance].subtitle = _Story.subtitle;
             [StoryToEdit sharedInstance].body = _Story.body;
+            [_EditorTableView reloadData];
         });
     }];
 }
@@ -105,7 +104,7 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
 {
     
     // Return the number of rows in the section.
-    return self.EditorTableItems.count;
+    return 4;
 }
 
 
@@ -131,13 +130,16 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
             
             cell.title = YES;
             //Initial styling for add button.
-            cell.editorTextField.placeholder = _EditorTableItems[indexPath.row];
+            cell.editorTextField.placeholder = @"Title";
             [cell.editorTextField setFrame:CGRectMake(kJVFieldHMargin, 30.0f, cell.editorTextField.frame.size.width - 2 * kJVFieldHMargin, kJVFieldHeight)];
             cell.editorTextField.font = [UIFont systemFontOfSize:kJVFieldFontSize];
             cell.editorTextField.floatingLabel.font = [UIFont boldSystemFontOfSize:kJVFieldFloatingLabelFontSize];
             cell.editorTextField.floatingLabelTextColor = [UIColor darkGrayColor];
             cell.editorTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
             cell.editorTextField.returnKeyType = UIReturnKeyNext;
+            [cell.editorTextField setText:[StoryToEdit sharedInstance].title];
+            NSString *temp = cell.editorTextField.text;
+            NSString *temp2 = [StoryToEdit sharedInstance].title;
             //[cell addSubview:cell.editorTextField];
             
             //Set Title field as firstResponder
@@ -157,7 +159,7 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
             
             cell.title = NO;
             //Initial styling for add button.
-            cell.editorTextField.placeholder = _EditorTableItems[indexPath.row];
+            cell.editorTextField.placeholder = @"Subtitle";
             [cell.editorTextField setFrame:CGRectMake(kJVFieldHMargin, 30.0f, cell.editorTextField.frame.size.width - 2 * kJVFieldHMargin, kJVFieldHeight)];
             cell.editorTextField.font = [UIFont systemFontOfSize:kJVFieldFontSize];
             cell.editorTextField.floatingLabel.font = [UIFont boldSystemFontOfSize:kJVFieldFloatingLabelFontSize];
@@ -165,6 +167,7 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
             cell.editorTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
             cell.editorTextField.returnKeyType = UIReturnKeyNext;
             //[cell addSubview:cell.editorTextField];
+            [cell.editorTextField setText:[StoryToEdit sharedInstance].subtitle];
             
             //Set Title field as firstResponder
             
@@ -191,10 +194,11 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
                                      kJVFieldHeight*3);*/
         
         [cell.editorTextView setFrame:CGRectMake(kJVFieldHMargin - cell.editorTextView.textContainer.lineFragmentPadding, 30.0f, cell.editorTextView.frame.size.width - 2 * kJVFieldHMargin, kJVFieldHeight)];
-        cell.editorTextView.placeholder = _EditorTableItems[indexPath.row];
+        cell.editorTextView.placeholder = @"Body";
         cell.editorTextView.font = [UIFont systemFontOfSize:kJVFieldFontSize];
         cell.editorTextView.floatingLabel.font = [UIFont boldSystemFontOfSize:kJVFieldFloatingLabelFontSize];
         cell.editorTextView.floatingLabelTextColor = [UIColor darkGrayColor];
+        cell.editorTextView.text = [StoryToEdit sharedInstance].body;
        // cell.editorTextView.delegate = self;
         //valTxtField.returnKeyType = UIReturnKeyDone;
         
@@ -211,7 +215,10 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     //CGFloat *height;
-    if(indexPath.row<3){
+    if(indexPath.row == 1){
+        return 168;
+    }
+    else if(indexPath.row<3){
         return 35.0f;
     } else {
         return 320;

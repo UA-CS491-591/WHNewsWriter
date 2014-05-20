@@ -6,7 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditorViewController">
             <connections>
-                <outlet property="view" destination="6Nl-kA-vP9" id="am6-UM-TcZ"/>
+                <outlet property="EditorTableView" destination="6Nl-kA-vP9" id="KCo-Kx-A4O"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="BjR-vZ-qKF"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

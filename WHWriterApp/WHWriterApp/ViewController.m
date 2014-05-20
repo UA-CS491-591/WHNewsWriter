@@ -91,7 +91,7 @@
 -(void)loadCategories
 {
     //Create url
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", @"https://mobileweb.caps.ua.edu/cs491/api/Story/byAuthor?token=", [TokenAuthorIdObject sharedInstance].accessToken]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", @"https://mobileweb.caps.ua.edu/cs491/api/Category/categories?token=", [TokenAuthorIdObject sharedInstance].accessToken]];
     //Create request object
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:5.0];
     //Let the server know that we want to interact in JSON
@@ -102,6 +102,7 @@
     [NSURLConnection sendAsynchronousRequest:request queue:_operationQueue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         //Decode to string
         [Categories sharedInstance].List = [NSObject arrayOfType:[CategoryObject class] FromJSONData:data];
+        NSArray *ar = [Categories sharedInstance].List;
         dispatch_async(dispatch_get_main_queue(), ^{
             [self presentViewController:_tabBarController animated:YES completion:NULL];
         });
