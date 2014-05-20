@@ -21,6 +21,12 @@
 {
     //Initialization Code
     _editorTextField.delegate = self;
+    
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    _textFieldFinalText = textField.text;
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
