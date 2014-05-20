@@ -69,8 +69,7 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
 }
 
 -(void)seedData:(NSString *)StoryID
-{
-    
+{    
     //Create url
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@%@", @"https://mobileweb.caps.ua.edu/cs491/api/Story/byId?token=", [TokenAuthorIdObject sharedInstance].accessToken, @"&storyId=",StoryID]];
     
@@ -86,11 +85,10 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
         _Story = [[StoryObject alloc]initWithJSONData:data];
         //Hop back main thread
         dispatch_async(dispatch_get_main_queue(), ^{
-            
-            [_EditorTableItems addObject:_Story.title];
-            [_EditorTableItems addObject:@"Category"];
-            [_EditorTableItems addObject:@"Subtitle"];
-            [_EditorTableItems addObject:@"Body"];
+            [StoryToEdit sharedInstance].title = _Story.title;
+            [StoryToEdit sharedInstance].category = _Story.category;
+            [StoryToEdit sharedInstance].subtitle = _Story.subtitle;
+            [StoryToEdit sharedInstance].body = _Story.body;
         });
     }];
 }
@@ -202,13 +200,13 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     //Set http method
     [request setHTTPMethod:@"POST"];
     AddDTO *addStory = [[AddDTO alloc]init];
-    addStory.title = _EditorTableItems[0];
-    addStory.subtitle = _EditorTableItems[2];
-    addStory.body = _EditorTableItems[3];
+    addStory.title = [StoryToEdit sharedInstance].title;
+    addStory.subtitle = [StoryToEdit sharedInstance].subtitle;
+    addStory.body = [StoryToEdit sharedInstance].body;
     addStory.authorId = [TokenAuthorIdObject sharedInstance].user.Id;
     addStory.lat = [[NSNumber alloc] initWithDouble:1.1];
     addStory.lng = [[NSNumber alloc] initWithDouble:1.1];
-    addStory.categoryId = @"bc6af052-6c8e-4893-9c82-224d002add06";
+    addStory.categoryId = [StoryToEdit sharedInstance].category.categoryId;
     addStory.accessToken = [TokenAuthorIdObject sharedInstance].accessToken;
     //Specify the string to get sent to the server
     
@@ -240,13 +238,13 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     
     EditDTO *editStory = [[EditDTO alloc]init];
     editStory.accessToken =[TokenAuthorIdObject sharedInstance].accessToken;
-    editStory.story.title = _EditorTableItems[0];
-    editStory.story.subtitle = _EditorTableItems[2];
-    editStory.story.body = _EditorTableItems[3];
+    editStory.story.title = [StoryToEdit sharedInstance].title;
+    editStory.story.subtitle = [StoryToEdit sharedInstance].subtitle;
+    editStory.story.body = [StoryToEdit sharedInstance].body;
     editStory.story.author = [TokenAuthorIdObject sharedInstance].user;
     editStory.story.lat = [[NSNumber alloc] initWithDouble:1.1];
     editStory.story.lng = [[NSNumber alloc] initWithDouble:1.1];
-    editStory.story.category = [Categories sharedInstance].List[0];
+    editStory.story.category = [StoryToEdit sharedInstance].category;
     editStory.story.datePublished = _Story.datePublished;
     //Specify the string to get sent to the server
     

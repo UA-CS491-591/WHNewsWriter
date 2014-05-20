@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StoryToEdit.h"
 
 @interface EditorViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>;
 -(void)didTapSave:(UIButton *)sender;
