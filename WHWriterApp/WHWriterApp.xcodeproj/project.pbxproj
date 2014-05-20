@@ -38,6 +38,8 @@
 		A023E84C192513EE0031C3B0 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A023E84A192513EE0031C3B0 /* MainTableViewCell.xib */; };
 		A023E84F192653910031C3B0 /* TokenAuthorIdObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A023E84E192653910031C3B0 /* TokenAuthorIdObject.m */; };
 		A08BF5C3192B9AEC00065044 /* Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = A08BF5C2192B9AEC00065044 /* Categories.m */; };
+		A08BF5CD192BA20F00065044 /* EditorPickerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A08BF5CB192BA20F00065044 /* EditorPickerTableViewCell.m */; };
+		A08BF5CE192BA20F00065044 /* EditorPickerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08BF5CC192BA20F00065044 /* EditorPickerTableViewCell.xib */; };
 		A08FB3021922815400A67BD7 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08FB3011922815400A67BD7 /* ViewController.xib */; };
 		A08FB3061922825F00A67BD7 /* EditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A08FB3041922825F00A67BD7 /* EditorViewController.m */; };
 		A08FB3071922825F00A67BD7 /* EditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08FB3051922825F00A67BD7 /* EditorViewController.xib */; };
@@ -112,6 +114,9 @@
 		A023E84E192653910031C3B0 /* TokenAuthorIdObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TokenAuthorIdObject.m; sourceTree = "<group>"; };
 		A08BF5C1192B9AEC00065044 /* Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
 		A08BF5C2192B9AEC00065044 /* Categories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categories.m; sourceTree = "<group>"; };
+		A08BF5CA192BA20F00065044 /* EditorPickerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorPickerTableViewCell.h; sourceTree = "<group>"; };
+		A08BF5CB192BA20F00065044 /* EditorPickerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorPickerTableViewCell.m; sourceTree = "<group>"; };
+		A08BF5CC192BA20F00065044 /* EditorPickerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditorPickerTableViewCell.xib; sourceTree = "<group>"; };
 		A08FB3011922815400A67BD7 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		A08FB3031922825F00A67BD7 /* EditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorViewController.h; sourceTree = "<group>"; };
 		A08FB3041922825F00A67BD7 /* EditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorViewController.m; sourceTree = "<group>"; };
@@ -284,6 +289,16 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		A08BF5C4192B9FA700065044 /* Picker Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A08BF5CA192BA20F00065044 /* EditorPickerTableViewCell.h */,
+				A08BF5CB192BA20F00065044 /* EditorPickerTableViewCell.m */,
+				A08BF5CC192BA20F00065044 /* EditorPickerTableViewCell.xib */,
+			);
+			name = "Picker Cell";
+			sourceTree = "<group>";
+		};
 		A08FB3141923B54C00A67BD7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -362,6 +377,7 @@
 		C3B7937E19265D7A00B4281A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				A08BF5C4192B9FA700065044 /* Picker Cell */,
 				C3B756A4192A5357009175B4 /* TextView Cell */,
 				C3B756A2192A5320009175B4 /* TextField Cell */,
 			);
@@ -467,6 +483,7 @@
 				A08FB3071922825F00A67BD7 /* EditorViewController.xib in Resources */,
 				2F9A66141923C897000A6910 /* Icon60.png in Resources */,
 				2F406B05192A5C6200510D89 /* yourArticlesIcon35.png in Resources */,
+				A08BF5CE192BA20F00065044 /* EditorPickerTableViewCell.xib in Resources */,
 				A08FB3231923CFC800A67BD7 /* LoginView.xib in Resources */,
 				2F9A660C1923C1F2000A6910 /* Default.png in Resources */,
 				C3B756A9192A53BB009175B4 /* EditorTextViewCell.xib in Resources */,
@@ -503,6 +520,7 @@
 				C3B756A019270B47009175B4 /* JVFloatLabeledTextView.m in Sources */,
 				3F0BFE78192191FA0062159E /* TableViewController.m in Sources */,
 				A08FB3211923BB5A00A67BD7 /* AddDTO.m in Sources */,
+				A08BF5CD192BA20F00065044 /* EditorPickerTableViewCell.m in Sources */,
 				3F0BFE73192164D40062159E /* LoginView.m in Sources */,
 				3F0BFE4C1921557D0062159E /* main.m in Sources */,
 				A08FB31E1923BAFD00A67BD7 /* EditDTO.m in Sources */,
