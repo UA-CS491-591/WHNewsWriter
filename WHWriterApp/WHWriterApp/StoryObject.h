@@ -17,7 +17,7 @@
 @property NSString *title;
 @property NSString *subtitle;
 @property NSString *body;
-@property NSString *datePublished;
+@property NSDate *datePublished;
 @property AuthorObject *author;
 @property NSNumber *lat;
 @property NSNumber *lng;
