@@ -72,10 +72,11 @@
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
+    /* Swipe
     UISwipeGestureRecognizer *swipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeDownDetected:)];
     swipeRecognizer.direction = UISwipeGestureRecognizerDirectionDown;
     [self.view addGestureRecognizer:swipeRecognizer];
-    //[swipeRecognizer release];
+    [swipeRecognizer release]; */
     
     if ([searchText  isEqual: @""]) {
         [self refreshTable];
