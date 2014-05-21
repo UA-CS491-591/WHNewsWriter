@@ -62,6 +62,10 @@
         [self refreshTableOnSearch:searchText];
     }
 }
+- (void) viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self refreshTable];
+}
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MainTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MainTableViewCell"];
