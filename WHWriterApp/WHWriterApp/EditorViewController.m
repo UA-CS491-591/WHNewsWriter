@@ -95,7 +95,7 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
             [StoryToEdit sharedInstance].subtitle = _Story.subtitle;
             [StoryToEdit sharedInstance].body = _Story.body;
             [StoryToEdit sharedInstance].storyId = _Story.storyId;
-            [StoryToEdit sharedInstance].storyId = _Story.imageUrl;
+            [StoryToEdit sharedInstance].imageUrl = _Story.imageUrl;
             [_EditorTableView reloadData];
         });
     }];
@@ -304,7 +304,7 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     editStory.story.lng = [[NSNumber alloc] initWithDouble:1.1];
     editStory.story.category = [StoryToEdit sharedInstance].category;
     editStory.story.datePublished = _Story.datePublished;
-    editStory.story.imageUrl = _Story.imageUrl;
+    editStory.story.imageUrl = [StoryToEdit sharedInstance].imageUrl;
     //Specify the string to get sent to the server
     
     //Make that string into raw data
