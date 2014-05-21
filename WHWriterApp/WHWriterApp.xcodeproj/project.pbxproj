@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F0E0FDE192D3B6A00C57C19 /* WHheader.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F0E0FDD192D3B6A00C57C19 /* WHheader.png */; };
+		2F0E0FE4192D41B600C57C19 /* pages.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F0E0FE3192D41B600C57C19 /* pages.png */; };
 		2F8FCF2F192BA773001B2A2B /* articlesIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F8FCF2D192BA773001B2A2B /* articlesIcon.png */; };
 		2F8FCF30192BA773001B2A2B /* authorIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F8FCF2E192BA773001B2A2B /* authorIcon.png */; };
 		2F8FCF36192BAB26001B2A2B /* Icon29.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F8FCF33192BAB26001B2A2B /* Icon29.png */; };
@@ -73,6 +75,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F0E0FDD192D3B6A00C57C19 /* WHheader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WHheader.png; sourceTree = "<group>"; };
+		2F0E0FE3192D41B600C57C19 /* pages.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pages.png; sourceTree = "<group>"; };
 		2F8FCF2D192BA773001B2A2B /* articlesIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = articlesIcon.png; sourceTree = "<group>"; };
 		2F8FCF2E192BA773001B2A2B /* authorIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = authorIcon.png; sourceTree = "<group>"; };
 		2F8FCF33192BAB26001B2A2B /* Icon29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon29.png; sourceTree = "<group>"; };
@@ -227,6 +231,8 @@
 		3F0BFE461921557D0062159E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2F0E0FE3192D41B600C57C19 /* pages.png */,
+				2F0E0FDD192D3B6A00C57C19 /* WHheader.png */,
 				2F8FCF39192BACA9001B2A2B /* Icon29-2.png */,
 				2F8FCF3A192BACA9001B2A2B /* Icon40-2.png */,
 				2F8FCF3B192BACA9001B2A2B /* Icon76-2.png */,
@@ -486,10 +492,12 @@
 				A08FB3021922815400A67BD7 /* ViewController.xib in Resources */,
 				3F0BFE521921557D0062159E /* Images.xcassets in Resources */,
 				A023E84C192513EE0031C3B0 /* MainTableViewCell.xib in Resources */,
+				2F0E0FDE192D3B6A00C57C19 /* WHheader.png in Resources */,
 				A08FB3071922825F00A67BD7 /* EditorViewController.xib in Resources */,
 				A08BF5CE192BA20F00065044 /* EditorPickerTableViewCell.xib in Resources */,
 				2F8FCF2F192BA773001B2A2B /* articlesIcon.png in Resources */,
 				2F8FCF37192BAB26001B2A2B /* Icon40.png in Resources */,
+				2F0E0FE4192D41B600C57C19 /* pages.png in Resources */,
 				2F8FCF30192BA773001B2A2B /* authorIcon.png in Resources */,
 				A08FB3231923CFC800A67BD7 /* LoginView.xib in Resources */,
 				2F8FCF3D192BACA9001B2A2B /* Icon40-2.png in Resources */,
