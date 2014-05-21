@@ -25,13 +25,21 @@
     
 }
 
-- (void)textFieldDidChange:(UITextView *)textField {
+
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
     
+    [self performSelector:@selector(evaluateText) withObject:nil afterDelay:0.1];
+    
+    return YES;
+}
+
+-(void)evaluateText{
     if (_title){
-        [StoryToEdit sharedInstance].storyTitle= textField.text;
+        [StoryToEdit sharedInstance].storyTitle= _editorTextField.text;
     }
     else   {
-        [StoryToEdit sharedInstance].subtitle= textField.text;}
+        [StoryToEdit sharedInstance].subtitle= _editorTextField.text;
+    }
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField{

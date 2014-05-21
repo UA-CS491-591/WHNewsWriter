@@ -139,7 +139,7 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
             cell.title = YES;
             //Initial styling for add button.
             cell.editorTextField.placeholder = @"Title";
-            [cell.editorTextField setFrame:CGRectMake(kJVFieldHMargin, 30.0f, cell.editorTextField.frame.size.width - 2 * kJVFieldHMargin, kJVFieldHeight)];
+            [cell.editorTextField setFrame:CGRectMake(kJVFieldHMargin, 0, cell.editorTextField.frame.size.width - 2 * kJVFieldHMargin, kJVFieldHeight)];
             cell.editorTextField.font = [UIFont systemFontOfSize:kJVFieldFontSize];
             cell.editorTextField.floatingLabel.font = [UIFont boldSystemFontOfSize:kJVFieldFloatingLabelFontSize];
             cell.editorTextField.floatingLabelTextColor = [UIColor darkGrayColor];
