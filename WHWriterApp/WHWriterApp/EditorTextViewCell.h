@@ -11,6 +11,7 @@
 
 @interface EditorTextViewCell : UITableViewCell <UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet JVFloatLabeledTextView *editorTextView;
+@property (weak, nonatomic) IBOutlet UIButton *editButton;
 
 
 @end

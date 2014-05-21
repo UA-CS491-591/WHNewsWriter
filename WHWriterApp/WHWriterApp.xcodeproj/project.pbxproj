@@ -57,6 +57,9 @@
 		C3B756A019270B47009175B4 /* JVFloatLabeledTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B7569F19270B47009175B4 /* JVFloatLabeledTextView.m */; };
 		C3B756A8192A53BB009175B4 /* EditorTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B756A6192A53BB009175B4 /* EditorTextViewCell.m */; };
 		C3B756A9192A53BB009175B4 /* EditorTextViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B756A7192A53BB009175B4 /* EditorTextViewCell.xib */; };
+		C3B756C1192D2110009175B4 /* CategoryButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B756BF192D2110009175B4 /* CategoryButtonCell.m */; };
+		C3B756C2192D2110009175B4 /* CategoryButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B756C0192D2110009175B4 /* CategoryButtonCell.xib */; };
+		C3B756C4192D2CDE009175B4 /* editButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B756C3192D2CDE009175B4 /* editButton.png */; };
 		C3B7937D19265D6100B4281A /* JVFloatLabeledTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B7937C19265D6100B4281A /* JVFloatLabeledTextField.m */; };
 		C3BBF71D19251F0900B26255 /* EditorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3BBF71B19251F0900B26255 /* EditorTableViewCell.m */; };
 		C3BBF71E19251F0900B26255 /* EditorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3BBF71C19251F0900B26255 /* EditorTableViewCell.xib */; };
@@ -148,6 +151,10 @@
 		C3B756A5192A53BB009175B4 /* EditorTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorTextViewCell.h; sourceTree = "<group>"; };
 		C3B756A6192A53BB009175B4 /* EditorTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorTextViewCell.m; sourceTree = "<group>"; };
 		C3B756A7192A53BB009175B4 /* EditorTextViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditorTextViewCell.xib; sourceTree = "<group>"; };
+		C3B756BE192D2110009175B4 /* CategoryButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryButtonCell.h; sourceTree = "<group>"; };
+		C3B756BF192D2110009175B4 /* CategoryButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryButtonCell.m; sourceTree = "<group>"; };
+		C3B756C0192D2110009175B4 /* CategoryButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryButtonCell.xib; sourceTree = "<group>"; };
+		C3B756C3192D2CDE009175B4 /* editButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = editButton.png; sourceTree = "<group>"; };
 		C3B7937B19265D6100B4281A /* JVFloatLabeledTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JVFloatLabeledTextField.h; sourceTree = "<group>"; };
 		C3B7937C19265D6100B4281A /* JVFloatLabeledTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JVFloatLabeledTextField.m; sourceTree = "<group>"; };
 		C3BBF71A19251F0900B26255 /* EditorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorTableViewCell.h; sourceTree = "<group>"; };
@@ -228,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				2F8FCF39192BACA9001B2A2B /* Icon29-2.png */,
+				C3B756C3192D2CDE009175B4 /* editButton.png */,
 				2F8FCF3A192BACA9001B2A2B /* Icon40-2.png */,
 				2F8FCF3B192BACA9001B2A2B /* Icon76-2.png */,
 				2F8FCF33192BAB26001B2A2B /* Icon29.png */,
@@ -295,14 +303,17 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
-		A08BF5C4192B9FA700065044 /* Picker Cell */ = {
+		A08BF5C4192B9FA700065044 /* Category Cell */ = {
 			isa = PBXGroup;
 			children = (
 				A08BF5CA192BA20F00065044 /* EditorPickerTableViewCell.h */,
 				A08BF5CB192BA20F00065044 /* EditorPickerTableViewCell.m */,
 				A08BF5CC192BA20F00065044 /* EditorPickerTableViewCell.xib */,
+				C3B756BE192D2110009175B4 /* CategoryButtonCell.h */,
+				C3B756BF192D2110009175B4 /* CategoryButtonCell.m */,
+				C3B756C0192D2110009175B4 /* CategoryButtonCell.xib */,
 			);
-			name = "Picker Cell";
+			name = "Category Cell";
 			sourceTree = "<group>";
 		};
 		A08FB3141923B54C00A67BD7 /* Models */ = {
@@ -385,7 +396,7 @@
 		C3B7937E19265D7A00B4281A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				A08BF5C4192B9FA700065044 /* Picker Cell */,
+				A08BF5C4192B9FA700065044 /* Category Cell */,
 				C3B756A4192A5357009175B4 /* TextView Cell */,
 				C3B756A2192A5320009175B4 /* TextField Cell */,
 			);
@@ -483,6 +494,7 @@
 				3F0BFE4A1921557D0062159E /* InfoPlist.strings in Resources */,
 				C3BBF71E19251F0900B26255 /* EditorTableViewCell.xib in Resources */,
 				2F8FCF36192BAB26001B2A2B /* Icon29.png in Resources */,
+				C3B756C2192D2110009175B4 /* CategoryButtonCell.xib in Resources */,
 				A08FB3021922815400A67BD7 /* ViewController.xib in Resources */,
 				3F0BFE521921557D0062159E /* Images.xcassets in Resources */,
 				A023E84C192513EE0031C3B0 /* MainTableViewCell.xib in Resources */,
@@ -492,6 +504,7 @@
 				2F8FCF37192BAB26001B2A2B /* Icon40.png in Resources */,
 				2F8FCF30192BA773001B2A2B /* authorIcon.png in Resources */,
 				A08FB3231923CFC800A67BD7 /* LoginView.xib in Resources */,
+				C3B756C4192D2CDE009175B4 /* editButton.png in Resources */,
 				2F8FCF3D192BACA9001B2A2B /* Icon40-2.png in Resources */,
 				2F8FCF3E192BACA9001B2A2B /* Icon76-2.png in Resources */,
 				2F9A660C1923C1F2000A6910 /* Default.png in Resources */,
@@ -540,6 +553,7 @@
 				A08FB3131923B4FD00A67BD7 /* StoryObject.m in Sources */,
 				A08FB3061922825F00A67BD7 /* EditorViewController.m in Sources */,
 				A08FB3101923B4FD00A67BD7 /* NSObject+ObjectMap.m in Sources */,
+				C3B756C1192D2110009175B4 /* CategoryButtonCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

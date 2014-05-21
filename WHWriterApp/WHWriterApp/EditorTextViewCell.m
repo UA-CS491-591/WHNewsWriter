@@ -26,6 +26,7 @@
     
 }
 
+#pragma mark - TextView Delegate Methods
 - (void)textViewDidChange:(UITextView *)textView {
    
     [StoryToEdit sharedInstance].body= textView.text;
@@ -41,7 +42,7 @@
 {
     //[StoryToEdit sharedInstance].body= textView.text;
     //[textView resignFirstResponder];
-    return YES;
+   return YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
