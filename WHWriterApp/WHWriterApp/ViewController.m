@@ -102,7 +102,6 @@
     [NSURLConnection sendAsynchronousRequest:request queue:_operationQueue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         //Decode to string
         [Categories sharedInstance].List = [NSObject arrayOfType:[CategoryObject class] FromJSONData:data];
-        NSArray *ar = [Categories sharedInstance].List;
         dispatch_async(dispatch_get_main_queue(), ^{
             [self presentViewController:_tabBarController animated:YES completion:NULL];
         });

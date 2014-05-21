@@ -77,6 +77,10 @@
         [self refreshTableOnSearch:searchText];
     }
 }
+- (void) viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self refreshTable];
+}
 
 -(IBAction)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
     

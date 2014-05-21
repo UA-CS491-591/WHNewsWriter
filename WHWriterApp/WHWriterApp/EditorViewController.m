@@ -84,10 +84,11 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
         _Story = [[StoryObject alloc]initWithJSONData:data];
         //Hop back main thread
         dispatch_async(dispatch_get_main_queue(), ^{
-            [StoryToEdit sharedInstance].title = _Story.title;
+            [StoryToEdit sharedInstance].storyTitle = _Story.title;
             [StoryToEdit sharedInstance].category = _Story.category;
             [StoryToEdit sharedInstance].subtitle = _Story.subtitle;
             [StoryToEdit sharedInstance].body = _Story.body;
+            [StoryToEdit sharedInstance].storyId = _Story.storyId;
             [_EditorTableView reloadData];
         });
     }];
@@ -137,9 +138,8 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
             cell.editorTextField.floatingLabelTextColor = [UIColor darkGrayColor];
             cell.editorTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
             cell.editorTextField.returnKeyType = UIReturnKeyNext;
-            [cell.editorTextField setText:[StoryToEdit sharedInstance].title];
-            NSString *temp = cell.editorTextField.text;
-            NSString *temp2 = [StoryToEdit sharedInstance].title;
+            [cell.editorTextField setText:_Story.title];
+            [StoryToEdit sharedInstance].storyTitle = cell.editorTextField.text;
             //[cell addSubview:cell.editorTextField];
             
             //Set Title field as firstResponder
@@ -168,6 +168,7 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
             cell.editorTextField.returnKeyType = UIReturnKeyNext;
             //[cell addSubview:cell.editorTextField];
             [cell.editorTextField setText:[StoryToEdit sharedInstance].subtitle];
+            [StoryToEdit sharedInstance].subtitle = _Story.subtitle;
             
             //Set Title field as firstResponder
             
@@ -226,9 +227,6 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     
 }
 
-
-
-
 #pragma mark - Actions to return to "TableViewController"
 -(void)didTapSave:(UIButton *)sender
 {
@@ -251,7 +249,7 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     //Set http method
     [request setHTTPMethod:@"POST"];
     AddDTO *addStory = [[AddDTO alloc]init];
-    addStory.title = [StoryToEdit sharedInstance].title;
+    addStory.title = [StoryToEdit sharedInstance].storyTitle;
     addStory.subtitle = [StoryToEdit sharedInstance].subtitle;
     addStory.body = [StoryToEdit sharedInstance].body;
     addStory.authorId = [TokenAuthorIdObject sharedInstance].user.Id;
@@ -288,8 +286,10 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     [request setHTTPMethod:@"PUT"];
     
     EditDTO *editStory = [[EditDTO alloc]init];
+    editStory.story = [[StoryObject alloc]init];
+    editStory.story.storyId =[StoryToEdit sharedInstance].storyId;
     editStory.accessToken =[TokenAuthorIdObject sharedInstance].accessToken;
-    editStory.story.title = [StoryToEdit sharedInstance].title;
+    editStory.story.title = [StoryToEdit sharedInstance].storyTitle;
     editStory.story.subtitle = [StoryToEdit sharedInstance].subtitle;
     editStory.story.body = [StoryToEdit sharedInstance].body;
     editStory.story.author = [TokenAuthorIdObject sharedInstance].user;
@@ -297,6 +297,7 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     editStory.story.lng = [[NSNumber alloc] initWithDouble:1.1];
     editStory.story.category = [StoryToEdit sharedInstance].category;
     editStory.story.datePublished = _Story.datePublished;
+    editStory.story.imageUrl = _Story.imageUrl;
     //Specify the string to get sent to the server
     
     //Make that string into raw data

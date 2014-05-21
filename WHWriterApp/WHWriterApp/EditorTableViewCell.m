@@ -28,7 +28,7 @@
 - (void)textFieldDidChange:(UITextView *)textField {
     
     if (_title){
-        [StoryToEdit sharedInstance].title= textField.text;
+        [StoryToEdit sharedInstance].storyTitle= textField.text;
     }
     else   {
         [StoryToEdit sharedInstance].subtitle= textField.text;}
@@ -37,7 +37,7 @@
 - (void)textFieldDidEndEditing:(UITextField *)textField{
     _textFieldFinalText = textField.text;
     if (_title){
-        [StoryToEdit sharedInstance].title= textField.text;
+        [StoryToEdit sharedInstance].storyTitle= textField.text;
     }
     else   {
         [StoryToEdit sharedInstance].subtitle= textField.text;}
