@@ -200,7 +200,6 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
         cell.editorTextView.floatingLabel.font = [UIFont boldSystemFontOfSize:kJVFieldFloatingLabelFontSize];
         cell.editorTextView.floatingLabelTextColor = [UIColor darkGrayColor];
         cell.editorTextView.text = [StoryToEdit sharedInstance].body;
-        NSString *temp1 = [StoryToEdit sharedInstance].body;
        // cell.editorTextView.delegate = self;
         //valTxtField.returnKeyType = UIReturnKeyDone;
         
@@ -298,6 +297,7 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     editStory.story.lng = [[NSNumber alloc] initWithDouble:1.1];
     editStory.story.category = [StoryToEdit sharedInstance].category;
     editStory.story.datePublished = _Story.datePublished;
+    editStory.story.imageUrl = _Story.imageUrl;
     //Specify the string to get sent to the server
     
     //Make that string into raw data
