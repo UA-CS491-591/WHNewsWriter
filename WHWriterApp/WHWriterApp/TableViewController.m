@@ -52,7 +52,14 @@
     searchDC.delegate = self;
     searchDC.searchResultsDataSource = self;
     searchDC.searchResultsDelegate = self;
+    [searchDC.searchBar setShowsCancelButton:YES];
     
+}
+
+-(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+    [searchBar resignFirstResponder];
+    searchBar.text = @"";
+    [self refreshTable];
 }
 
 - (IBAction)swipeDownDetected:(UIGestureRecognizer *)sender {
@@ -65,10 +72,11 @@
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
+    /* Swipe
     UISwipeGestureRecognizer *swipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeDownDetected:)];
     swipeRecognizer.direction = UISwipeGestureRecognizerDirectionDown;
     [self.view addGestureRecognizer:swipeRecognizer];
-    //[swipeRecognizer release];
+    [swipeRecognizer release]; */
     
     if ([searchText  isEqual: @""]) {
         [self refreshTable];
@@ -80,10 +88,6 @@
 - (void) viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     [self refreshTable];
-}
-
--(IBAction)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
-    
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
