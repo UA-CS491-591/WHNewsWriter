@@ -52,15 +52,34 @@
     searchDC.delegate = self;
     searchDC.searchResultsDataSource = self;
     searchDC.searchResultsDelegate = self;
+    
+}
+
+- (IBAction)swipeDownDetected:(UIGestureRecognizer *)sender {
+    //UIViewController *second2 =[[UIViewController alloc] initWithNibName:@"UIViewController" bundle:nil];
+    //second2.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    //[self presentModalViewController:second2 animated:YES];
+    //[second2 release];
+    //[super viewDidLoad];
+    //[self.view resignFirstResponder];
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
+    UISwipeGestureRecognizer *swipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeDownDetected:)];
+    swipeRecognizer.direction = UISwipeGestureRecognizerDirectionDown;
+    [self.view addGestureRecognizer:swipeRecognizer];
+    //[swipeRecognizer release];
+    
     if ([searchText  isEqual: @""]) {
         [self refreshTable];
     }
     else {
         [self refreshTableOnSearch:searchText];
     }
+}
+
+-(IBAction)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
+    
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
