@@ -13,5 +13,6 @@
 @property IBOutlet UITextField *username;
 @property IBOutlet UITextField *password;
 @property IBOutlet UIButton *login;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
 
 @end
