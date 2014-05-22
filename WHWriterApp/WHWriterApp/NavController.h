@@ -10,5 +10,4 @@
 #import "LoginResponseObject.h"
 
 @interface NavController : UINavigationController
-
 @end

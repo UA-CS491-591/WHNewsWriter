@@ -8,6 +8,7 @@
 
 #import "NavController.h"
 #import "TableViewController.h"
+#import "CustomFontLabel.h"
 
 @interface NavController ()
 @property TableViewController *TableVC;
@@ -36,8 +37,8 @@
     //TabBarIcon
     UIImage *img1 = [UIImage imageNamed:@"articlesIcon1.png"];
     UIImage *img2 = [UIImage imageNamed:@"authorIcon1.png"];
-    UIImage *img3 = [UIImage imageNamed:@"articlesIcon22.png"];
-    UIImage *img4 = [UIImage imageNamed:@"authorIcon22.png"];
+    UIImage *img3 = [UIImage imageNamed:@"articlesIcon2.png"];
+    UIImage *img4 = [UIImage imageNamed:@"authorIcon2.png"];
     img1 = [img1 imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     img2 = [img2 imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     [[[[self.tabBarController.viewControllers objectAtIndex:0] tabBarItem]initWithTitle:@"Your Articles" image:img1 selectedImage:img3] image];
@@ -71,3 +72,5 @@
 */
 
 @end
+
+
