@@ -67,6 +67,7 @@
 		C362A8C1192D90280073873C /* categArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = C362A8C0192D90280073873C /* categArrow.png */; };
 		C362A8C5192D9DD50073873C /* TextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C362A8C3192D9DD50073873C /* TextViewController.m */; };
 		C362A8C6192D9DD50073873C /* TextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C362A8C4192D9DD50073873C /* TextViewController.xib */; };
+		C396DA73192E5D590047A2D6 /* zbarnes.png in Resources */ = {isa = PBXBuildFile; fileRef = C396DA72192E5D590047A2D6 /* zbarnes.png */; };
 		C3B756A019270B47009175B4 /* JVFloatLabeledTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B7569F19270B47009175B4 /* JVFloatLabeledTextView.m */; };
 		C3B756A8192A53BB009175B4 /* EditorTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B756A6192A53BB009175B4 /* EditorTextViewCell.m */; };
 		C3B756A9192A53BB009175B4 /* EditorTextViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B756A7192A53BB009175B4 /* EditorTextViewCell.xib */; };
@@ -174,6 +175,7 @@
 		C362A8C2192D9DD50073873C /* TextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewController.h; sourceTree = "<group>"; };
 		C362A8C3192D9DD50073873C /* TextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewController.m; sourceTree = "<group>"; };
 		C362A8C4192D9DD50073873C /* TextViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextViewController.xib; sourceTree = "<group>"; };
+		C396DA72192E5D590047A2D6 /* zbarnes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zbarnes.png; sourceTree = "<group>"; };
 		C3B7569E19270B47009175B4 /* JVFloatLabeledTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JVFloatLabeledTextView.h; sourceTree = "<group>"; };
 		C3B7569F19270B47009175B4 /* JVFloatLabeledTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JVFloatLabeledTextView.m; sourceTree = "<group>"; };
 		C3B756A5192A53BB009175B4 /* EditorTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorTextViewCell.h; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 				2FBEE51A192E4F7B005F5BED /* authorIcon1.png */,
 				2FBEE51B192E4F7B005F5BED /* authorIcon2.png */,
 				2F0E0FE5192D52C100C57C19 /* articlesH.png */,
+				C396DA72192E5D590047A2D6 /* zbarnes.png */,
 				C362A8C0192D90280073873C /* categArrow.png */,
 				2F0E0FE3192D41B600C57C19 /* pages.png */,
 				2F0E0FDD192D3B6A00C57C19 /* WHheader.png */,
@@ -554,6 +557,7 @@
 				2F0E0FE4192D41B600C57C19 /* pages.png in Resources */,
 				2F0E0FE6192D52C100C57C19 /* articlesH.png in Resources */,
 				2F8FCF30192BA773001B2A2B /* authorIcon.png in Resources */,
+				C396DA73192E5D590047A2D6 /* zbarnes.png in Resources */,
 				A08FB3231923CFC800A67BD7 /* LoginView.xib in Resources */,
 				C3B756C4192D2CDE009175B4 /* editButton.png in Resources */,
 				2F8FCF3D192BACA9001B2A2B /* Icon40-2.png in Resources */,

@@ -32,6 +32,7 @@
     [_editorTextView becomeFirstResponder];
     // Do any additional setup after loading the view from its nib.
     if([_fieldName isEqual:@"Title"]){
+        [_editorTextView setFont:[UIFont fontWithName:@"DIN Alternated Bold" size:50.0f]];
         [_editorTextView setText:[StoryToEdit sharedInstance].storyTitle];
     }
     else if([_fieldName isEqual:@"Subtitle"]){
@@ -55,7 +56,7 @@
 }
 
 #pragma mark - Text View Delegate Methods
-- (void)textViewDidBeginEditing:(UITextView *)textView {
+/*- (void)textViewDidBeginEditing:(UITextView *)textView {
     CGRect textViewFrame = CGRectInset(self.view.bounds, 20.0, 20.0);
     textViewFrame.size.height -= 216;
     textView.frame = textViewFrame;
@@ -66,7 +67,7 @@
     _editorTextView.frame = textViewFrame;
     [_editorTextView endEditing:YES];
     [super touchesBegan:touches withEvent:event];
-}
+}*/
 
 
 #pragma mark - Button Actions
