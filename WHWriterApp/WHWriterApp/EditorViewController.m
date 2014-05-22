@@ -165,6 +165,7 @@ const static CGFloat kJVFieldFontSize = 14.0f;
             cell = [[CategoryButtonCell alloc] init];
         }
         cell.categoryLabel.text=@"category";
+        cell.categoryName.text = [StoryToEdit sharedInstance].category.name;
         
         return cell;
     }

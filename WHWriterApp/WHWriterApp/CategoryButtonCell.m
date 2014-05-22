@@ -7,8 +7,14 @@
 //
 
 #import "CategoryButtonCell.h"
+#import "StoryToEdit.h"
 
 @implementation CategoryButtonCell
+
+- (instancetype)init{
+    self = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([CategoryButtonCell class]) owner:nil options:nil][0];
+    return self;
+}
 
 - (void)awakeFromNib
 {

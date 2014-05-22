@@ -11,5 +11,6 @@
 @interface CategoryButtonCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
 @property (weak, nonatomic) IBOutlet UIButton *categoryButton;
+@property (weak, nonatomic) IBOutlet UILabel *categoryName;
 
 @end
