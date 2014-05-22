@@ -292,6 +292,7 @@
     addStory.lng = [[NSNumber alloc] initWithDouble:1.1];
     addStory.categoryId = [StoryToEdit sharedInstance].category.categoryId;
     addStory.accessToken = [TokenAuthorIdObject sharedInstance].accessToken;
+    addStory.imageUrl = [StoryToEdit sharedInstance].imageUrl;
     //Specify the string to get sent to the server
     
     //Make that string into raw data
