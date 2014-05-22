@@ -19,9 +19,9 @@
 #import "Categories.h"
 #import "PickerViewController.h"
 
-const static CGFloat kJVFieldHeight = 35.0f;
-const static CGFloat kJVFieldHMargin = 0.0f;//10.0f;
-const static CGFloat kJVFieldFontSize = 14.0f;
+//const static CGFloat kJVFieldHeight = 35.0f;
+//const static CGFloat kJVFieldHMargin = 0.0f;//10.0f;
+//const static CGFloat kJVFieldFontSize = 14.0f;
 //const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
 
 @interface EditorViewController ()
