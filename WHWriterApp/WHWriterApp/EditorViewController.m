@@ -19,9 +19,9 @@
 #import "Categories.h"
 #import "PickerViewController.h"
 
-const static CGFloat kJVFieldHeight = 35.0f;
-const static CGFloat kJVFieldHMargin = 0.0f;//10.0f;
-const static CGFloat kJVFieldFontSize = 14.0f;
+//const static CGFloat kJVFieldHeight = 35.0f;
+//const static CGFloat kJVFieldHMargin = 0.0f;//10.0f;
+//const static CGFloat kJVFieldFontSize = 14.0f;
 //const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
 
 @interface EditorViewController ()
@@ -199,8 +199,11 @@ const static CGFloat kJVFieldFontSize = 14.0f;
         }
         
         cell.textViewLabel.text=@"body";
-        cell.scrollText.text=[StoryToEdit sharedInstance].body;
+        //cell.scrollText.numberOfLines = 0;
+        //cell.scrollText.text=[StoryToEdit sharedInstance].body;
         //Still need to figure out to resize label!
+        
+        cell.editorTextView.text=[StoryToEdit sharedInstance].body;
         
         return cell;
     }
@@ -289,6 +292,7 @@ const static CGFloat kJVFieldFontSize = 14.0f;
     addStory.lng = [[NSNumber alloc] initWithDouble:1.1];
     addStory.categoryId = [StoryToEdit sharedInstance].category.categoryId;
     addStory.accessToken = [TokenAuthorIdObject sharedInstance].accessToken;
+    addStory.imageUrl = [StoryToEdit sharedInstance].imageUrl;
     //Specify the string to get sent to the server
     
     //Make that string into raw data

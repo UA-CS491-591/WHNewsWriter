@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NSObject+ObjectMap.h"
 
 @interface AddDTO : NSObject
 
@@ -19,5 +18,6 @@
 @property NSNumber *lng;
 @property NSString *categoryId;
 @property NSString *accessToken;
+@property NSString *imageUrl;
 
 @end

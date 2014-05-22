@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NSObject+ObjectMap.h"
 
 @interface LoginRequestObject : NSObject
 
