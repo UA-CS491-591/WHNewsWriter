@@ -39,8 +39,7 @@
     _ObjectLastNameLbl.text = [TokenAuthorIdObject sharedInstance].user.lastName;
     _ObjectEmailLbl.text = [TokenAuthorIdObject sharedInstance].user.email;
     _ObjectPositionLbl.text = [TokenAuthorIdObject sharedInstance].user.position;
-    _ObjectImageLbl.text = [TokenAuthorIdObject sharedInstance].user.imageUrl;
-    _AuthorImage.image = [[UIImage alloc] initWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:_ObjectImageLbl.text]]];
+    _AuthorImage.image = [[UIImage alloc] initWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[TokenAuthorIdObject sharedInstance].user.imageUrl]]];
 }
 
 - (void)didReceiveMemoryWarning
