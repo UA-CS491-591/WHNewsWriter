@@ -15,7 +15,6 @@
 #import "TokenAuthorIdObject.h"
 #import "NSObject+ObjectMap.h"
 #import "NSString+URLEncoding.h"
-#import "CustomFontLabel.h"
 
 @interface TableViewController ()
 
