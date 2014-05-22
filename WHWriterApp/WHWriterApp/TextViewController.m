@@ -54,33 +54,19 @@
 }
 
 #pragma mark - Text View Delegate Methods
-
-- (void)textViewDidEndEditing:(UITextView *)textView{
-    
-   /* if([_fieldName isEqual:@"Title"]){
-        [_editorTextView setText:[StoryToEdit sharedInstance].storyTitle];
-    }
-    else if([_fieldName isEqual:@"Subtitle"]){
-        [_editorTextView setText:[StoryToEdit sharedInstance].subtitle];
-    }*/
+- (void)textViewDidBeginEditing:(UITextView *)textView {
+    CGRect textViewFrame = CGRectInset(self.view.bounds, 20.0, 20.0);
+    textViewFrame.size.height -= 216;
+    textView.frame = textViewFrame;
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textView
-{
-    //[StoryToEdit sharedInstance].body= textView.text;
-    /*if([_fieldName isEqual:@"Title"]){
-        [_editorTextView setText:[StoryToEdit sharedInstance].storyTitle];
-    }
-    else if([_fieldName isEqual:@"Subtitle"]){
-        [_editorTextView setText:[StoryToEdit sharedInstance].subtitle];
-    }
-    else if([_fieldName isEqual:@"Body"]){
-        [_editorTextView setText:[StoryToEdit sharedInstance].body];
-    }*/
-    //[textView resignFirstResponder];
-    //[self.navigationController popViewControllerAnimated:YES];
-    return YES;
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    CGRect textViewFrame = CGRectInset(self.view.bounds, 20.0, 20.0);
+    _editorTextView.frame = textViewFrame;
+    [_editorTextView endEditing:YES];
+    [super touchesBegan:touches withEvent:event];
 }
+
 
 #pragma mark - Button Actions
 -(void)didTapDone:(UIButton *)sender
