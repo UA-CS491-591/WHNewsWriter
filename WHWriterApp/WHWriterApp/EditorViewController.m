@@ -199,8 +199,11 @@ const static CGFloat kJVFieldFontSize = 14.0f;
         }
         
         cell.textViewLabel.text=@"body";
+        cell.scrollText.numberOfLines = 0;
         cell.scrollText.text=[StoryToEdit sharedInstance].body;
         //Still need to figure out to resize label!
+        
+        
         
         return cell;
     }

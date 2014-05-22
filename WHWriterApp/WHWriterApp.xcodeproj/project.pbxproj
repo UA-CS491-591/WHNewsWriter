@@ -62,13 +62,13 @@
 		C362A8C6192D9DD50073873C /* TextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C362A8C4192D9DD50073873C /* TextViewController.xib */; };
 		C3B756A019270B47009175B4 /* JVFloatLabeledTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B7569F19270B47009175B4 /* JVFloatLabeledTextView.m */; };
 		C3B756A8192A53BB009175B4 /* EditorTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B756A6192A53BB009175B4 /* EditorTextViewCell.m */; };
-		C3B756A9192A53BB009175B4 /* EditorTextViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B756A7192A53BB009175B4 /* EditorTextViewCell.xib */; };
 		C3B756C1192D2110009175B4 /* CategoryButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B756BF192D2110009175B4 /* CategoryButtonCell.m */; };
 		C3B756C2192D2110009175B4 /* CategoryButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B756C0192D2110009175B4 /* CategoryButtonCell.xib */; };
 		C3B756C4192D2CDE009175B4 /* editButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B756C3192D2CDE009175B4 /* editButton.png */; };
 		C3B7937D19265D6100B4281A /* JVFloatLabeledTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B7937C19265D6100B4281A /* JVFloatLabeledTextField.m */; };
 		C3BBF71D19251F0900B26255 /* EditorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3BBF71B19251F0900B26255 /* EditorTableViewCell.m */; };
 		C3BBF71E19251F0900B26255 /* EditorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3BBF71C19251F0900B26255 /* EditorTableViewCell.xib */; };
+		C3E2F3EA192E4A64007B6BB9 /* EditorTextViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3E2F3E9192E4A64007B6BB9 /* EditorTextViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,7 +163,6 @@
 		C3B7569F19270B47009175B4 /* JVFloatLabeledTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JVFloatLabeledTextView.m; sourceTree = "<group>"; };
 		C3B756A5192A53BB009175B4 /* EditorTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorTextViewCell.h; sourceTree = "<group>"; };
 		C3B756A6192A53BB009175B4 /* EditorTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorTextViewCell.m; sourceTree = "<group>"; };
-		C3B756A7192A53BB009175B4 /* EditorTextViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditorTextViewCell.xib; sourceTree = "<group>"; };
 		C3B756BE192D2110009175B4 /* CategoryButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryButtonCell.h; sourceTree = "<group>"; };
 		C3B756BF192D2110009175B4 /* CategoryButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryButtonCell.m; sourceTree = "<group>"; };
 		C3B756C0192D2110009175B4 /* CategoryButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryButtonCell.xib; sourceTree = "<group>"; };
@@ -173,6 +172,7 @@
 		C3BBF71A19251F0900B26255 /* EditorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorTableViewCell.h; sourceTree = "<group>"; };
 		C3BBF71B19251F0900B26255 /* EditorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorTableViewCell.m; sourceTree = "<group>"; };
 		C3BBF71C19251F0900B26255 /* EditorTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditorTableViewCell.xib; sourceTree = "<group>"; };
+		C3E2F3E9192E4A64007B6BB9 /* EditorTextViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditorTextViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -397,7 +397,7 @@
 			children = (
 				C3B756A5192A53BB009175B4 /* EditorTextViewCell.h */,
 				C3B756A6192A53BB009175B4 /* EditorTextViewCell.m */,
-				C3B756A7192A53BB009175B4 /* EditorTextViewCell.xib */,
+				C3E2F3E9192E4A64007B6BB9 /* EditorTextViewCell.xib */,
 			);
 			name = "TextView Cell";
 			sourceTree = "<group>";
@@ -509,6 +509,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F8FCF3C192BACA9001B2A2B /* Icon29-2.png in Resources */,
+				C3E2F3EA192E4A64007B6BB9 /* EditorTextViewCell.xib in Resources */,
 				2F9A660E1923C46C000A6910 /* Default@2x.png in Resources */,
 				2F8FCF38192BAB26001B2A2B /* Icon76.png in Resources */,
 				3F0BFE4A1921557D0062159E /* InfoPlist.strings in Resources */,
@@ -533,7 +534,6 @@
 				2F8FCF3D192BACA9001B2A2B /* Icon40-2.png in Resources */,
 				2F8FCF3E192BACA9001B2A2B /* Icon76-2.png in Resources */,
 				2F9A660C1923C1F2000A6910 /* Default.png in Resources */,
-				C3B756A9192A53BB009175B4 /* EditorTextViewCell.xib in Resources */,
 				3F621AF619266401007355B5 /* AuthorInfoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
