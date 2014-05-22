@@ -53,7 +53,6 @@
     searchDC.searchResultsDataSource = self;
     searchDC.searchResultsDelegate = self;
     [searchDC.searchBar setShowsCancelButton:YES];
-    
 }
 
 -(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
@@ -96,7 +95,7 @@
         cell = [[MainTableViewCell alloc] init];
     }
     
-    cell.cellLabel.text = [_stories[indexPath.row] title];
+    cell.cellLabel.text = [NSString stringWithFormat:@"%@%@", @"   ", [_stories[indexPath.row] title]];
     return cell;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
