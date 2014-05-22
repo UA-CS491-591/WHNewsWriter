@@ -42,9 +42,9 @@
 		A023E84C192513EE0031C3B0 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A023E84A192513EE0031C3B0 /* MainTableViewCell.xib */; };
 		A023E84F192653910031C3B0 /* TokenAuthorIdObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A023E84E192653910031C3B0 /* TokenAuthorIdObject.m */; };
 		A08BF5C3192B9AEC00065044 /* Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = A08BF5C2192B9AEC00065044 /* Categories.m */; };
-		A08BF5CD192BA20F00065044 /* EditorPickerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A08BF5CB192BA20F00065044 /* EditorPickerTableViewCell.m */; };
-		A08BF5CE192BA20F00065044 /* EditorPickerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08BF5CC192BA20F00065044 /* EditorPickerTableViewCell.xib */; };
 		A08BF5D1192BA99500065044 /* StoryToEdit.m in Sources */ = {isa = PBXBuildFile; fileRef = A08BF5D0192BA99500065044 /* StoryToEdit.m */; };
+		A08BF5D5192E48A800065044 /* PickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A08BF5D3192E48A800065044 /* PickerViewController.m */; };
+		A08BF5D6192E48A800065044 /* PickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08BF5D4192E48A800065044 /* PickerViewController.xib */; };
 		A08FB3021922815400A67BD7 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08FB3011922815400A67BD7 /* ViewController.xib */; };
 		A08FB3061922825F00A67BD7 /* EditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A08FB3041922825F00A67BD7 /* EditorViewController.m */; };
 		A08FB3071922825F00A67BD7 /* EditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08FB3051922825F00A67BD7 /* EditorViewController.xib */; };
@@ -129,11 +129,11 @@
 		A023E84E192653910031C3B0 /* TokenAuthorIdObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TokenAuthorIdObject.m; sourceTree = "<group>"; };
 		A08BF5C1192B9AEC00065044 /* Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
 		A08BF5C2192B9AEC00065044 /* Categories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categories.m; sourceTree = "<group>"; };
-		A08BF5CA192BA20F00065044 /* EditorPickerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorPickerTableViewCell.h; sourceTree = "<group>"; };
-		A08BF5CB192BA20F00065044 /* EditorPickerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorPickerTableViewCell.m; sourceTree = "<group>"; };
-		A08BF5CC192BA20F00065044 /* EditorPickerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditorPickerTableViewCell.xib; sourceTree = "<group>"; };
 		A08BF5CF192BA99500065044 /* StoryToEdit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryToEdit.h; sourceTree = "<group>"; };
 		A08BF5D0192BA99500065044 /* StoryToEdit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryToEdit.m; sourceTree = "<group>"; };
+		A08BF5D2192E48A800065044 /* PickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerViewController.h; sourceTree = "<group>"; };
+		A08BF5D3192E48A800065044 /* PickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerViewController.m; sourceTree = "<group>"; };
+		A08BF5D4192E48A800065044 /* PickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PickerViewController.xib; sourceTree = "<group>"; };
 		A08FB3011922815400A67BD7 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		A08FB3031922825F00A67BD7 /* EditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorViewController.h; sourceTree = "<group>"; };
 		A08FB3041922825F00A67BD7 /* EditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorViewController.m; sourceTree = "<group>"; };
@@ -323,9 +323,6 @@
 		A08BF5C4192B9FA700065044 /* Category Cell */ = {
 			isa = PBXGroup;
 			children = (
-				A08BF5CA192BA20F00065044 /* EditorPickerTableViewCell.h */,
-				A08BF5CB192BA20F00065044 /* EditorPickerTableViewCell.m */,
-				A08BF5CC192BA20F00065044 /* EditorPickerTableViewCell.xib */,
 				C3B756BE192D2110009175B4 /* CategoryButtonCell.h */,
 				C3B756BF192D2110009175B4 /* CategoryButtonCell.m */,
 				C3B756C0192D2110009175B4 /* CategoryButtonCell.xib */,
@@ -378,6 +375,9 @@
 				C362A8C2192D9DD50073873C /* TextViewController.h */,
 				C362A8C3192D9DD50073873C /* TextViewController.m */,
 				C362A8C4192D9DD50073873C /* TextViewController.xib */,
+				A08BF5D2192E48A800065044 /* PickerViewController.h */,
+				A08BF5D3192E48A800065044 /* PickerViewController.m */,
+				A08BF5D4192E48A800065044 /* PickerViewController.xib */,
 			);
 			name = Editor;
 			sourceTree = "<group>";
@@ -522,7 +522,6 @@
 				2F0E0FDE192D3B6A00C57C19 /* WHheader.png in Resources */,
 				A08FB3071922825F00A67BD7 /* EditorViewController.xib in Resources */,
 				C362A8C1192D90280073873C /* categArrow.png in Resources */,
-				A08BF5CE192BA20F00065044 /* EditorPickerTableViewCell.xib in Resources */,
 				2F8FCF2F192BA773001B2A2B /* articlesIcon.png in Resources */,
 				2F8FCF37192BAB26001B2A2B /* Icon40.png in Resources */,
 				2F0E0FE4192D41B600C57C19 /* pages.png in Resources */,
@@ -534,6 +533,7 @@
 				2F8FCF3E192BACA9001B2A2B /* Icon76-2.png in Resources */,
 				2F9A660C1923C1F2000A6910 /* Default.png in Resources */,
 				C3B756A9192A53BB009175B4 /* EditorTextViewCell.xib in Resources */,
+				A08BF5D6192E48A800065044 /* PickerViewController.xib in Resources */,
 				3F621AF619266401007355B5 /* AuthorInfoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -568,7 +568,6 @@
 				3F0BFE78192191FA0062159E /* TableViewController.m in Sources */,
 				A08BF5D1192BA99500065044 /* StoryToEdit.m in Sources */,
 				A08FB3211923BB5A00A67BD7 /* AddDTO.m in Sources */,
-				A08BF5CD192BA20F00065044 /* EditorPickerTableViewCell.m in Sources */,
 				3F0BFE73192164D40062159E /* LoginView.m in Sources */,
 				3F0BFE4C1921557D0062159E /* main.m in Sources */,
 				C362A8C5192D9DD50073873C /* TextViewController.m in Sources */,
@@ -579,6 +578,7 @@
 				A08FB3131923B4FD00A67BD7 /* StoryObject.m in Sources */,
 				A08FB3061922825F00A67BD7 /* EditorViewController.m in Sources */,
 				A08FB3101923B4FD00A67BD7 /* NSObject+ObjectMap.m in Sources */,
+				A08BF5D5192E48A800065044 /* PickerViewController.m in Sources */,
 				C3B756C1192D2110009175B4 /* CategoryButtonCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
