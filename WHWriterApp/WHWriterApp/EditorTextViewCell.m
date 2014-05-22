@@ -22,7 +22,7 @@
 - (void)awakeFromNib
 {
     // Initialization code
-     _editorTextView.delegate = self;
+    _editorTextView.delegate = self;
     
 }
 
@@ -41,7 +41,7 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textView
 {
     //[StoryToEdit sharedInstance].body= textView.text;
-    //[textView resignFirstResponder];
+    [textView resignFirstResponder];
    return YES;
 }
 

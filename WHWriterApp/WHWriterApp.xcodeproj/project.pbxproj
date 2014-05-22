@@ -57,6 +57,9 @@
 		A08FB31E1923BAFD00A67BD7 /* EditDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = A08FB31D1923BAFD00A67BD7 /* EditDTO.m */; };
 		A08FB3211923BB5A00A67BD7 /* AddDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = A08FB3201923BB5A00A67BD7 /* AddDTO.m */; };
 		A08FB3231923CFC800A67BD7 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08FB3221923CFC800A67BD7 /* LoginView.xib */; };
+		C362A8C1192D90280073873C /* categArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = C362A8C0192D90280073873C /* categArrow.png */; };
+		C362A8C5192D9DD50073873C /* TextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C362A8C3192D9DD50073873C /* TextViewController.m */; };
+		C362A8C6192D9DD50073873C /* TextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C362A8C4192D9DD50073873C /* TextViewController.xib */; };
 		C3B756A019270B47009175B4 /* JVFloatLabeledTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B7569F19270B47009175B4 /* JVFloatLabeledTextView.m */; };
 		C3B756A8192A53BB009175B4 /* EditorTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B756A6192A53BB009175B4 /* EditorTextViewCell.m */; };
 		C3B756A9192A53BB009175B4 /* EditorTextViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B756A7192A53BB009175B4 /* EditorTextViewCell.xib */; };
@@ -152,6 +155,10 @@
 		A08FB31F1923BB5A00A67BD7 /* AddDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddDTO.h; sourceTree = "<group>"; };
 		A08FB3201923BB5A00A67BD7 /* AddDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddDTO.m; sourceTree = "<group>"; };
 		A08FB3221923CFC800A67BD7 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		C362A8C0192D90280073873C /* categArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = categArrow.png; sourceTree = "<group>"; };
+		C362A8C2192D9DD50073873C /* TextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewController.h; sourceTree = "<group>"; };
+		C362A8C3192D9DD50073873C /* TextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewController.m; sourceTree = "<group>"; };
+		C362A8C4192D9DD50073873C /* TextViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextViewController.xib; sourceTree = "<group>"; };
 		C3B7569E19270B47009175B4 /* JVFloatLabeledTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JVFloatLabeledTextView.h; sourceTree = "<group>"; };
 		C3B7569F19270B47009175B4 /* JVFloatLabeledTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JVFloatLabeledTextView.m; sourceTree = "<group>"; };
 		C3B756A5192A53BB009175B4 /* EditorTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorTextViewCell.h; sourceTree = "<group>"; };
@@ -241,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				2F0E0FE5192D52C100C57C19 /* articlesH.png */,
+				C362A8C0192D90280073873C /* categArrow.png */,
 				2F0E0FE3192D41B600C57C19 /* pages.png */,
 				2F0E0FDD192D3B6A00C57C19 /* WHheader.png */,
 				2F8FCF39192BACA9001B2A2B /* Icon29-2.png */,
@@ -367,6 +375,9 @@
 				A08FB3031922825F00A67BD7 /* EditorViewController.h */,
 				A08FB3041922825F00A67BD7 /* EditorViewController.m */,
 				A08FB3051922825F00A67BD7 /* EditorViewController.xib */,
+				C362A8C2192D9DD50073873C /* TextViewController.h */,
+				C362A8C3192D9DD50073873C /* TextViewController.m */,
+				C362A8C4192D9DD50073873C /* TextViewController.xib */,
 			);
 			name = Editor;
 			sourceTree = "<group>";
@@ -506,9 +517,11 @@
 				C3B756C2192D2110009175B4 /* CategoryButtonCell.xib in Resources */,
 				A08FB3021922815400A67BD7 /* ViewController.xib in Resources */,
 				3F0BFE521921557D0062159E /* Images.xcassets in Resources */,
+				C362A8C6192D9DD50073873C /* TextViewController.xib in Resources */,
 				A023E84C192513EE0031C3B0 /* MainTableViewCell.xib in Resources */,
 				2F0E0FDE192D3B6A00C57C19 /* WHheader.png in Resources */,
 				A08FB3071922825F00A67BD7 /* EditorViewController.xib in Resources */,
+				C362A8C1192D90280073873C /* categArrow.png in Resources */,
 				A08BF5CE192BA20F00065044 /* EditorPickerTableViewCell.xib in Resources */,
 				2F8FCF2F192BA773001B2A2B /* articlesIcon.png in Resources */,
 				2F8FCF37192BAB26001B2A2B /* Icon40.png in Resources */,
@@ -558,6 +571,7 @@
 				A08BF5CD192BA20F00065044 /* EditorPickerTableViewCell.m in Sources */,
 				3F0BFE73192164D40062159E /* LoginView.m in Sources */,
 				3F0BFE4C1921557D0062159E /* main.m in Sources */,
+				C362A8C5192D9DD50073873C /* TextViewController.m in Sources */,
 				A08FB31E1923BAFD00A67BD7 /* EditDTO.m in Sources */,
 				3F621AF519266401007355B5 /* AuthorInfoViewController.m in Sources */,
 				A08FB3111923B4FD00A67BD7 /* AuthorObject.m in Sources */,

@@ -9,7 +9,6 @@
 #import "EditorViewController.h"
 #import "EditorTableViewCell.h"
 #import "EditorTextViewCell.h"
-#import "TextViewController.h"
 #import "EditorPickerTableViewCell.h"
 #import "CategoryButtonCell.h"
 #import "TokenAuthorIdObject.h"
@@ -21,8 +20,8 @@
 
 const static CGFloat kJVFieldHeight = 35.0f;
 const static CGFloat kJVFieldHMargin = 0.0f;//10.0f;
-const static CGFloat kJVFieldFontSize = 14.0f;
-//const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
+const static CGFloat kJVFieldFontSize = 18.0f;
+const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
 
 @interface EditorViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *EditorTableView;
@@ -75,11 +74,6 @@ const static CGFloat kJVFieldFontSize = 14.0f;
     //[_EditorTableView reloadData];
 }
 
-- (void)viewDidAppear:(BOOL)animated{
-    [_EditorTableView reloadData];
-}
-
-
 -(void)seedData:(NSString *)StoryID
 {    
     //Create url
@@ -131,29 +125,57 @@ const static CGFloat kJVFieldFontSize = 14.0f;
         if (!cell) {
             cell = [[EditorTableViewCell alloc] init];
         }
+<<<<<<< HEAD
         cell.title = YES; //Knowing which object to update for the
                           //two instances of TextField
         
-        cell.fieldLabel.text=@"title";
-        cell.field.text =[StoryToEdit sharedInstance].storyTitle;
-        /*
+        
         //Styling for text field
-        
-        //cell.textLabel=[StoryToEdit sharedInstance].storyTitle;
-        
-        cell.editorTextField.placeholder = @"";
+        cell.editorTextField.placeholder = @"Title";
         [cell.editorTextField setFrame:CGRectMake(kJVFieldHMargin, 30.0f, cell.editorTextField.frame.size.width - 2 * kJVFieldHMargin, kJVFieldHeight)];
         cell.editorTextField.font = [UIFont systemFontOfSize:kJVFieldFontSize];
+        cell.editorTextField.floatingLabel.font = [UIFont boldSystemFontOfSize:kJVFieldFloatingLabelFontSize];
+        cell.editorTextField.floatingLabelTextColor = [UIColor blackColor];
         cell.editorTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
+        cell.editorTextField.returnKeyType = UIReturnKeyNext;
+        [cell.editorTextField setText:_Story.title];
+        [StoryToEdit sharedInstance].storyTitle = cell.editorTextField.text;
         
-        [cell.editorTextField setText:[StoryToEdit sharedInstance].storyTitle];
-        */
-        NSLog(@"%@", cell.editorTextField.text);
-        //[StoryToEdit sharedInstance].storyTitle = cell.editorTextField.text;
-        NSLog(@"%@", [StoryToEdit sharedInstance].storyTitle );
         
-        //jas;elfk[StoryToEdit sharedInstance].subtitle = _Story.subtitle;
-        
+        //Set Title field as firstResponder
+        if (indexPath.row ==0){ // STILL NEED TO ADD CONDITION BASED ON NAV CONTROLLER INSTANCE ("Edit" or "Add")
+            [cell.editorTextField becomeFirstResponder];
+=======
+        else if (indexPath.row==0){
+            
+            //Custom Cells
+            EditorTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EditorTableViewCell"];
+            if (!cell) {
+                cell = [[EditorTableViewCell alloc] init];
+            }
+            
+            cell.title = YES;
+            //Initial styling for add button.
+            cell.editorTextField.placeholder = @"Title";
+            [cell.editorTextField setFrame:CGRectMake(kJVFieldHMargin, 0, cell.editorTextField.frame.size.width - 2 * kJVFieldHMargin, kJVFieldHeight)];
+            cell.editorTextField.font = [UIFont systemFontOfSize:kJVFieldFontSize];
+            //NSLog(@"%@", cell.editorTextField.textColor);
+            cell.editorTextField.floatingLabel.font = [UIFont boldSystemFontOfSize:kJVFieldFloatingLabelFontSize];
+            cell.editorTextField.floatingLabelTextColor = [UIColor darkGrayColor];
+            cell.editorTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
+            cell.editorTextField.returnKeyType = UIReturnKeyNext;
+            [cell.editorTextField setText:_Story.title];
+            [StoryToEdit sharedInstance].storyTitle = cell.editorTextField.text;
+            //[cell addSubview:cell.editorTextField];
+            
+            //Set Title field as firstResponder
+            
+            if (indexPath.row ==0){ // STILL NEED TO ADD CONDITION BASED ON NAV CONTROLLER INSTANCE ("Edit" or "Add")
+                [cell.editorTextField becomeFirstResponder];
+            }
+            return cell;
+>>>>>>> ef951f8b48dde19e2f529b3a1a45c32cd5f353ba
+        }
         return cell;
         
     }
@@ -164,7 +186,6 @@ const static CGFloat kJVFieldFontSize = 14.0f;
         if(!cell){
             cell = [[CategoryButtonCell alloc] init];
         }
-        cell.categoryLabel.text=@"category";
         
         return cell;
     }
@@ -175,15 +196,19 @@ const static CGFloat kJVFieldFontSize = 14.0f;
         if (!cell) {
             cell = [[EditorTableViewCell alloc] init];
         }
-        //cell.title = NO; //Knowing which object to update for the
+        cell.title = NO; //Knowing which object to update for the
         //two instances of TextField
         
-        
-        cell.fieldLabel.text=@"subtitle";
-        cell.field.text =[StoryToEdit sharedInstance].subtitle;
-        
-    
-        //[StoryToEdit sharedInstance].subtitle = _Story.subtitle;
+        //Styling for text field
+        cell.editorTextField.placeholder = @"Subtitle";
+        [cell.editorTextField setFrame:CGRectMake(kJVFieldHMargin, 30.0f, cell.editorTextField.frame.size.width - 2 * kJVFieldHMargin, kJVFieldHeight)];
+        cell.editorTextField.font = [UIFont systemFontOfSize:kJVFieldFontSize];
+        cell.editorTextField.floatingLabel.font = [UIFont boldSystemFontOfSize:kJVFieldFloatingLabelFontSize];
+        cell.editorTextField.floatingLabelTextColor = [UIColor blackColor];
+        cell.editorTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
+        cell.editorTextField.returnKeyType = UIReturnKeyNext;
+        [cell.editorTextField setText:[StoryToEdit sharedInstance].subtitle];
+        [StoryToEdit sharedInstance].subtitle = _Story.subtitle;
     
         return cell;
     }
@@ -197,9 +222,16 @@ const static CGFloat kJVFieldFontSize = 14.0f;
             cell = [[EditorTextViewCell alloc] init];
         }
         
-        cell.textViewLabel.text=@"body";
-        cell.scrollText.text=[StoryToEdit sharedInstance].body;
-        //Still need to figure out to resize label!
+        
+        //Initial styling for text view
+        [cell.editorTextView setFrame:CGRectMake(kJVFieldHMargin - cell.editorTextView.textContainer.lineFragmentPadding, 30.0f, cell.editorTextView.frame.size.width - 2 * kJVFieldHMargin, kJVFieldHeight)];
+        cell.editorTextView.placeholder = @"Body";
+        cell.editorTextView.font = [UIFont systemFontOfSize:kJVFieldFontSize];
+        cell.editorTextView.floatingLabel.font = [UIFont boldSystemFontOfSize:kJVFieldFloatingLabelFontSize];
+        cell.editorTextView.floatingLabelTextColor = [UIColor blackColor];
+        cell.editorTextView.text = [StoryToEdit sharedInstance].body;
+        // cell.editorTextView.delegate = self;
+        //valTxtField.returnKeyType = UIReturnKeyDone;
         
         return cell;
     }
@@ -209,39 +241,7 @@ const static CGFloat kJVFieldFontSize = 14.0f;
 
 #pragma mark - Table Delegate Methods
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-	//Title
-    if(indexPath.row==0) {
-        TextViewController *vc4 = [[TextViewController alloc] init];
-        vc4.title = @"Title";
-        vc4.fieldName= vc4.title;
-        [self.navigationController pushViewController:vc4 animated:YES];
-        
-    }
-    
-    //Category
-    else if(indexPath.row==1){
-        TextViewController *vc5 = [[TextViewController alloc] init];
-        [self.navigationController pushViewController:vc5 animated:YES];
-        vc5.title = @"Category";
-    }
-    
-    //Subtitle
-    else if(indexPath.row==2){
-        TextViewController *vc6 = [[TextViewController alloc] init];
-        vc6.title = @"Subtitle";
-        vc6.fieldName = vc6.title;
-        [self.navigationController pushViewController:vc6 animated:YES];
-    }
-    
-    //Body
-    else if(indexPath.row==3){
-        TextViewController *vc7 = [[TextViewController alloc] init];
-        vc7.title = @"Body";
-        vc7.fieldName = vc7.title;
-        [self.navigationController pushViewController:vc7 animated:YES];
-        
-    }
-    
+	   
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -253,7 +253,7 @@ const static CGFloat kJVFieldFontSize = 14.0f;
     else if(indexPath.row<3){
         return 35.0f;
     } else {
-        return 340;
+        return 320;
     }
     
 }

@@ -10,8 +10,12 @@
 #import "JVFloatLabeledTextView.h"
 
 @interface EditorTextViewCell : UITableViewCell <UITextViewDelegate>
-@property (weak, nonatomic) IBOutlet JVFloatLabeledTextView *editorTextView;
-@property (weak, nonatomic) IBOutlet UIButton *editButton;
+@property (weak, nonatomic) IBOutlet UILabel *textViewLabel;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UILabel *scrollText;
+@property (weak, nonatomic) IBOutlet UITextView *editorTextView;
+//@property (weak, nonatomic) IBOutlet JVFloatLabeledTextView *editorTextView;
+//@property (weak, nonatomic) IBOutlet UIButton *editButton;
 
 
 @end

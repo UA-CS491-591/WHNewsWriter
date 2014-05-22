@@ -11,7 +11,7 @@
 
 @implementation EditorTableViewCell
 
--(instancetype)init{
+- (instancetype)init{
     self = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([EditorTableViewCell class]) owner:nil options:nil][0];
     
     
@@ -26,14 +26,14 @@
 }
 
 
--(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
     
     [self performSelector:@selector(evaluateText) withObject:nil afterDelay:0.1];
     
     return YES;
 }
 
--(void)evaluateText{
+- (void)evaluateText{
     if (_title){
         [StoryToEdit sharedInstance].storyTitle= _editorTextField.text;
     }
@@ -48,13 +48,13 @@
         [StoryToEdit sharedInstance].storyTitle= textField.text;
     }
     else   {
-        [StoryToEdit sharedInstance].subtitle= textField.text;}
+        [StoryToEdit sharedInstance].subtitle= textField.text;
     }
+}
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    _textFieldFinalText = textField.text;
-    [textField nextResponder];
+    [textField resignFirstResponder];
     
     return YES;
 }

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TextViewController : UIViewController
+@interface TextViewController : UIViewController <UITextViewDelegate>
+@property (weak, nonatomic) IBOutlet UITextView *editorTextView;
+@property NSString *fieldName;
+
 
 @end

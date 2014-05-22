@@ -12,7 +12,10 @@
 @interface EditorTableViewCell : UITableViewCell <UITextFieldDelegate>
 //@property (weak, nonatomic) IBOutlet UILabel *EditorPreviewLabel;
 //@property (weak, nonatomic) NSString *EditorPlaceholder;
-@property JVFloatLabeledTextField *editorTextField;
+@property (weak, nonatomic) IBOutlet UILabel *fieldLabel;
+@property (weak, nonatomic) IBOutlet UILabel *field;
+@property (weak, nonatomic) IBOutlet UITextField *editorTextField;
+//@property JVFloatLabeledTextField *editorTextField;
 //@property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *editorTextField;
 @property NSString *textFieldFinalText;
 @property bool title;

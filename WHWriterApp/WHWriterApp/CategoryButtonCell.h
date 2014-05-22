@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface CategoryButtonCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
 @property (weak, nonatomic) IBOutlet UIButton *categoryButton;
 
 @end
