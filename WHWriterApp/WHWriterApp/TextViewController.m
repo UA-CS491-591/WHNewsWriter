@@ -37,6 +37,9 @@
     else if([_fieldName isEqual:@"Subtitle"]){
         [_editorTextView setText:[StoryToEdit sharedInstance].subtitle];
     }
+    else if([_fieldName isEqual:@"ImageUrl"]){
+        [_editorTextView setText:[StoryToEdit sharedInstance].imageUrl];
+    }
     else if([_fieldName isEqual:@"Body"]){
         [_editorTextView setText:[StoryToEdit sharedInstance].body];
     }
@@ -93,6 +96,10 @@
     else if([_fieldName isEqual:@"Subtitle"]){
         [StoryToEdit sharedInstance].subtitle= _editorTextView.text;
         NSLog(@"%@", [StoryToEdit sharedInstance].subtitle);
+    }
+    else if([_fieldName isEqual:@"ImageUrl"]){
+        [StoryToEdit sharedInstance].imageUrl= _editorTextView.text;
+        NSLog(@"%@", [StoryToEdit sharedInstance].imageUrl);
     }
     else if([_fieldName isEqual:@"Body"]){
         [StoryToEdit sharedInstance].body= _editorTextView.text;
