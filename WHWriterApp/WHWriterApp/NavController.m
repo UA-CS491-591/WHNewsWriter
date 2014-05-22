@@ -8,7 +8,6 @@
 
 #import "NavController.h"
 #import "TableViewController.h"
-#import "CustomFontLabel.h"
 
 @interface NavController ()
 @property TableViewController *TableVC;
