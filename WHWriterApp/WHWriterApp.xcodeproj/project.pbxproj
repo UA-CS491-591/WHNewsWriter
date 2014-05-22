@@ -26,6 +26,7 @@
 		2FBEE51F192E4F7B005F5BED /* authorIcon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FBEE51B192E4F7B005F5BED /* authorIcon2.png */; };
 		2FBEE522192E52B2005F5BED /* articlesIcon22.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FBEE520192E52B2005F5BED /* articlesIcon22.png */; };
 		2FBEE523192E52B2005F5BED /* authorIcon22.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FBEE521192E52B2005F5BED /* authorIcon22.png */; };
+		2FBEE528192E5A20005F5BED /* CustomFontLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBEE527192E5A20005F5BED /* CustomFontLabel.m */; };
 		3F0BFE401921557D0062159E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0BFE3F1921557D0062159E /* Foundation.framework */; };
 		3F0BFE421921557D0062159E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0BFE411921557D0062159E /* CoreGraphics.framework */; };
 		3F0BFE441921557D0062159E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0BFE431921557D0062159E /* UIKit.framework */; };
@@ -52,6 +53,8 @@
 		A08BF5D5192E48A800065044 /* PickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A08BF5D3192E48A800065044 /* PickerViewController.m */; };
 		A08BF5D6192E48A800065044 /* PickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08BF5D4192E48A800065044 /* PickerViewController.xib */; };
 		A08BF5DA192E507200065044 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = A08BF5D9192E507200065044 /* NSString+URLEncoding.m */; };
+		A08BF5DE192E586000065044 /* ImageEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A08BF5DC192E586000065044 /* ImageEditViewController.m */; };
+		A08BF5DF192E586000065044 /* ImageEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08BF5DD192E586000065044 /* ImageEditViewController.xib */; };
 		A08FB3021922815400A67BD7 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08FB3011922815400A67BD7 /* ViewController.xib */; };
 		A08FB3061922825F00A67BD7 /* EditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A08FB3041922825F00A67BD7 /* EditorViewController.m */; };
 		A08FB3071922825F00A67BD7 /* EditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08FB3051922825F00A67BD7 /* EditorViewController.xib */; };
@@ -109,6 +112,8 @@
 		2FBEE51B192E4F7B005F5BED /* authorIcon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = authorIcon2.png; sourceTree = "<group>"; };
 		2FBEE520192E52B2005F5BED /* articlesIcon22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = articlesIcon22.png; sourceTree = "<group>"; };
 		2FBEE521192E52B2005F5BED /* authorIcon22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = authorIcon22.png; sourceTree = "<group>"; };
+		2FBEE526192E5A20005F5BED /* CustomFontLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomFontLabel.h; sourceTree = "<group>"; };
+		2FBEE527192E5A20005F5BED /* CustomFontLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomFontLabel.m; sourceTree = "<group>"; };
 		3F0BFE3C1921557D0062159E /* WHWriterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WHWriterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F0BFE3F1921557D0062159E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3F0BFE411921557D0062159E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -150,6 +155,9 @@
 		A08BF5D4192E48A800065044 /* PickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PickerViewController.xib; sourceTree = "<group>"; };
 		A08BF5D8192E507200065044 /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
 		A08BF5D9192E507200065044 /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncoding.m"; sourceTree = "<group>"; };
+		A08BF5DB192E586000065044 /* ImageEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageEditViewController.h; sourceTree = "<group>"; };
+		A08BF5DC192E586000065044 /* ImageEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageEditViewController.m; sourceTree = "<group>"; };
+		A08BF5DD192E586000065044 /* ImageEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageEditViewController.xib; sourceTree = "<group>"; };
 		A08FB3011922815400A67BD7 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		A08FB3031922825F00A67BD7 /* EditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorViewController.h; sourceTree = "<group>"; };
 		A08FB3041922825F00A67BD7 /* EditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorViewController.m; sourceTree = "<group>"; };
@@ -377,6 +385,8 @@
 				A08BF5C2192B9AEC00065044 /* Categories.m */,
 				A08BF5CF192BA99500065044 /* StoryToEdit.h */,
 				A08BF5D0192BA99500065044 /* StoryToEdit.m */,
+				2FBEE526192E5A20005F5BED /* CustomFontLabel.h */,
+				2FBEE527192E5A20005F5BED /* CustomFontLabel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -404,6 +414,9 @@
 				A08BF5D2192E48A800065044 /* PickerViewController.h */,
 				A08BF5D3192E48A800065044 /* PickerViewController.m */,
 				A08BF5D4192E48A800065044 /* PickerViewController.xib */,
+				A08BF5DB192E586000065044 /* ImageEditViewController.h */,
+				A08BF5DC192E586000065044 /* ImageEditViewController.m */,
+				A08BF5DD192E586000065044 /* ImageEditViewController.xib */,
 			);
 			name = Editor;
 			sourceTree = "<group>";
@@ -563,6 +576,7 @@
 				2F8FCF3D192BACA9001B2A2B /* Icon40-2.png in Resources */,
 				2F8FCF3E192BACA9001B2A2B /* Icon76-2.png in Resources */,
 				2F9A660C1923C1F2000A6910 /* Default.png in Resources */,
+				A08BF5DF192E586000065044 /* ImageEditViewController.xib in Resources */,
 				C3B756A9192A53BB009175B4 /* EditorTextViewCell.xib in Resources */,
 				2FBEE51C192E4F7B005F5BED /* articlesIcon1.png in Resources */,
 				A08BF5D6192E48A800065044 /* PickerViewController.xib in Resources */,
@@ -611,8 +625,10 @@
 				A08FB3131923B4FD00A67BD7 /* StoryObject.m in Sources */,
 				A08FB3061922825F00A67BD7 /* EditorViewController.m in Sources */,
 				A08FB3101923B4FD00A67BD7 /* NSObject+ObjectMap.m in Sources */,
+				A08BF5DE192E586000065044 /* ImageEditViewController.m in Sources */,
 				A08BF5D5192E48A800065044 /* PickerViewController.m in Sources */,
 				A08BF5DA192E507200065044 /* NSString+URLEncoding.m in Sources */,
+				2FBEE528192E5A20005F5BED /* CustomFontLabel.m in Sources */,
 				C3B756C1192D2110009175B4 /* CategoryButtonCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

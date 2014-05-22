@@ -18,6 +18,7 @@
 #import "EditDTO.h"
 #import "Categories.h"
 #import "PickerViewController.h"
+#import "ImageEditViewController.h"
 
 //const static CGFloat kJVFieldHeight = 35.0f;
 //const static CGFloat kJVFieldHMargin = 0.0f;//10.0f;
@@ -119,7 +120,7 @@
 {
     
     // Return the number of rows in the section.
-    return 4;
+    return 5;
 }
 
 
@@ -159,7 +160,7 @@
     }
     
     //Category
-    else if(indexPath.row==1){
+    else if(indexPath.row==2){
         CategoryButtonCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CategoryButtonCell"];
         if(!cell){
             cell = [[CategoryButtonCell alloc] init];
@@ -171,7 +172,7 @@
     }
     
     //Subtitle
-    else if(indexPath.row==2){
+    else if(indexPath.row==1){
         EditorTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EditorTableViewCell"];
         if (!cell) {
             cell = [[EditorTableViewCell alloc] init];
@@ -188,7 +189,23 @@
     
         return cell;
     }
-    
+    else if(indexPath.row==3){
+        EditorTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EditorTableViewCell"];
+        if (!cell) {
+            cell = [[EditorTableViewCell alloc] init];
+        }
+        //cell.title = NO; //Knowing which object to update for the
+        //two instances of TextField
+        
+        
+        cell.fieldLabel.text=@"image";
+        cell.field.text =[StoryToEdit sharedInstance].imageUrl;
+        
+        
+        //[StoryToEdit sharedInstance].subtitle = _Story.subtitle;
+        
+        return cell;
+    }
     //Body
     else {
         
@@ -223,22 +240,31 @@
     }
     
     //Category
-    else if(indexPath.row==1){
+    else if(indexPath.row==2){
         PickerViewController *vc5 = [[PickerViewController alloc] init];
         [self.navigationController pushViewController:vc5 animated:YES];
         vc5.title = @"Category";
     }
     
     //Subtitle
-    else if(indexPath.row==2){
+    else if(indexPath.row==1){
         TextViewController *vc6 = [[TextViewController alloc] init];
         vc6.title = @"Subtitle";
         vc6.fieldName = vc6.title;
         [self.navigationController pushViewController:vc6 animated:YES];
     }
     
-    //Body
+    //ImageURL
     else if(indexPath.row==3){
+        ImageEditViewController *vc8 = [[ImageEditViewController alloc] initWithNibName:@"ImageEditViewController" bundle:nil];
+        vc8.title = @"ImageUrl";
+        vc8.fieldName = vc8.title;
+        [self.navigationController pushViewController:vc8 animated:YES];
+        
+    }
+    
+    //Body
+    else if(indexPath.row==4){
         TextViewController *vc7 = [[TextViewController alloc] init];
         vc7.title = @"Body";
         vc7.fieldName = vc7.title;
@@ -250,11 +276,11 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     //CGFloat *height;
-    if(indexPath.row == 1){
+    if(indexPath.row == 2){
         //return 168;
         return 35.0f;
     }
-    else if(indexPath.row<3){
+    else if(indexPath.row<4){
         return 35.0f;
     } else {
         return 340;

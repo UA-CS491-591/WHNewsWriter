@@ -21,7 +21,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        
+        //[self.navigationBar setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"American Typewriter" size:20]}];
     }
     return self;
 }
@@ -36,8 +36,8 @@
     //TabBarIcon
     UIImage *img1 = [UIImage imageNamed:@"articlesIcon1.png"];
     UIImage *img2 = [UIImage imageNamed:@"authorIcon1.png"];
-    UIImage *img3 = [UIImage imageNamed:@"articlesIcon22.png"];
-    UIImage *img4 = [UIImage imageNamed:@"authorIcon22.png"];
+    UIImage *img3 = [UIImage imageNamed:@"articlesIcon2.png"];
+    UIImage *img4 = [UIImage imageNamed:@"authorIcon2.png"];
     img1 = [img1 imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     img2 = [img2 imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     [[[[self.tabBarController.viewControllers objectAtIndex:0] tabBarItem]initWithTitle:@"Your Articles" image:img1 selectedImage:img3] image];
@@ -71,3 +71,5 @@
 */
 
 @end
+
+
