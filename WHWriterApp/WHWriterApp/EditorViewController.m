@@ -18,6 +18,7 @@
 #import "EditDTO.h"
 #import "Categories.h"
 #import "PickerViewController.h"
+#import "ImageEditViewController.h"
 
 //const static CGFloat kJVFieldHeight = 35.0f;
 //const static CGFloat kJVFieldHMargin = 0.0f;//10.0f;
@@ -255,7 +256,7 @@
     
     //ImageURL
     else if(indexPath.row==3){
-        TextViewController *vc8 = [[TextViewController alloc] init];
+        ImageEditViewController *vc8 = [[ImageEditViewController alloc] initWithNibName:@"ImageEditViewController" bundle:nil];
         vc8.title = @"ImageUrl";
         vc8.fieldName = vc8.title;
         [self.navigationController pushViewController:vc8 animated:YES];
