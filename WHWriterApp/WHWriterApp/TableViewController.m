@@ -95,7 +95,7 @@
         cell = [[MainTableViewCell alloc] init];
     }
     
-    cell.cellLabel.text = [NSString stringWithFormat:@"%@%@", @"   ", [_stories[indexPath.row] title]];
+    cell.cellLabel.text = [_stories[indexPath.row] title];
     return cell;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
