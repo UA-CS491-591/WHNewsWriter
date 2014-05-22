@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "AuthorObject.h"
 #import "CategoryObject.h"
-#import "NSObject+ObjectMap.h"
 
 @interface StoryObject : NSObject
 

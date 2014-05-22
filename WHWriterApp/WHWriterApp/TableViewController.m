@@ -13,6 +13,8 @@
 #import "ViewController.h"
 #import "MainTableViewCell.h"
 #import "TokenAuthorIdObject.h"
+#import "NSObject+ObjectMap.h"
+#import "NSString+URLEncoding.h"
 
 @interface TableViewController ()
 
@@ -49,7 +51,7 @@
     searchBar.placeholder = @"Search";
     self.tableView.tableHeaderView = searchBar;
     
-    searchDC.delegate = self;
+    //searchDC.delegate = self;
     searchDC.searchResultsDataSource = self;
     searchDC.searchResultsDelegate = self;
     [searchDC.searchBar setShowsCancelButton:YES];
@@ -130,9 +132,8 @@
 }
 
 -(void)refreshTableOnSearch:(NSString *)text{
-    
     //Create url
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@%@%@%@", @"https://mobileweb.caps.ua.edu/cs491/api/Story/search?token=", [TokenAuthorIdObject sharedInstance].accessToken, @"&searchString=",text,@"&authorId=",[TokenAuthorIdObject sharedInstance].user.Id]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@%@%@%@", @"https://mobileweb.caps.ua.edu/cs491/api/Story/search?token=", [TokenAuthorIdObject sharedInstance].accessToken, @"&searchString=",[text urlEncode],@"&authorId=",[TokenAuthorIdObject sharedInstance].user.Id]];
     
     //Create request object
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:5.0];

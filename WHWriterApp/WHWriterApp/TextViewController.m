@@ -31,10 +31,6 @@
     
     [_editorTextView becomeFirstResponder];
     // Do any additional setup after loading the view from its nib.
-}
-
-- (void)viewDidAppear:(BOOL)animated{
-    
     if([_fieldName isEqual:@"Title"]){
         [_editorTextView setText:[StoryToEdit sharedInstance].storyTitle];
     }
@@ -44,6 +40,11 @@
     else if([_fieldName isEqual:@"Body"]){
         [_editorTextView setText:[StoryToEdit sharedInstance].body];
     }
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    
+    
 }
 
 

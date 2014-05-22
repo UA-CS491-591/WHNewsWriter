@@ -20,6 +20,12 @@
 		2F8FCF3E192BACA9001B2A2B /* Icon76-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F8FCF3B192BACA9001B2A2B /* Icon76-2.png */; };
 		2F9A660C1923C1F2000A6910 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A660B1923C1F2000A6910 /* Default.png */; };
 		2F9A660E1923C46C000A6910 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A660D1923C46C000A6910 /* Default@2x.png */; };
+		2FBEE51C192E4F7B005F5BED /* articlesIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FBEE518192E4F7B005F5BED /* articlesIcon1.png */; };
+		2FBEE51D192E4F7B005F5BED /* articlesIcon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FBEE519192E4F7B005F5BED /* articlesIcon2.png */; };
+		2FBEE51E192E4F7B005F5BED /* authorIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FBEE51A192E4F7B005F5BED /* authorIcon1.png */; };
+		2FBEE51F192E4F7B005F5BED /* authorIcon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FBEE51B192E4F7B005F5BED /* authorIcon2.png */; };
+		2FBEE522192E52B2005F5BED /* articlesIcon22.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FBEE520192E52B2005F5BED /* articlesIcon22.png */; };
+		2FBEE523192E52B2005F5BED /* authorIcon22.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FBEE521192E52B2005F5BED /* authorIcon22.png */; };
 		3F0BFE401921557D0062159E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0BFE3F1921557D0062159E /* Foundation.framework */; };
 		3F0BFE421921557D0062159E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0BFE411921557D0062159E /* CoreGraphics.framework */; };
 		3F0BFE441921557D0062159E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0BFE431921557D0062159E /* UIKit.framework */; };
@@ -45,6 +51,7 @@
 		A08BF5D1192BA99500065044 /* StoryToEdit.m in Sources */ = {isa = PBXBuildFile; fileRef = A08BF5D0192BA99500065044 /* StoryToEdit.m */; };
 		A08BF5D5192E48A800065044 /* PickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A08BF5D3192E48A800065044 /* PickerViewController.m */; };
 		A08BF5D6192E48A800065044 /* PickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08BF5D4192E48A800065044 /* PickerViewController.xib */; };
+		A08BF5DA192E507200065044 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = A08BF5D9192E507200065044 /* NSString+URLEncoding.m */; };
 		A08FB3021922815400A67BD7 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08FB3011922815400A67BD7 /* ViewController.xib */; };
 		A08FB3061922825F00A67BD7 /* EditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A08FB3041922825F00A67BD7 /* EditorViewController.m */; };
 		A08FB3071922825F00A67BD7 /* EditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08FB3051922825F00A67BD7 /* EditorViewController.xib */; };
@@ -95,6 +102,12 @@
 		2F8FCF3B192BACA9001B2A2B /* Icon76-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon76-2.png"; sourceTree = "<group>"; };
 		2F9A660B1923C1F2000A6910 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		2F9A660D1923C46C000A6910 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		2FBEE518192E4F7B005F5BED /* articlesIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = articlesIcon1.png; sourceTree = "<group>"; };
+		2FBEE519192E4F7B005F5BED /* articlesIcon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = articlesIcon2.png; sourceTree = "<group>"; };
+		2FBEE51A192E4F7B005F5BED /* authorIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = authorIcon1.png; sourceTree = "<group>"; };
+		2FBEE51B192E4F7B005F5BED /* authorIcon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = authorIcon2.png; sourceTree = "<group>"; };
+		2FBEE520192E52B2005F5BED /* articlesIcon22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = articlesIcon22.png; sourceTree = "<group>"; };
+		2FBEE521192E52B2005F5BED /* authorIcon22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = authorIcon22.png; sourceTree = "<group>"; };
 		3F0BFE3C1921557D0062159E /* WHWriterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WHWriterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F0BFE3F1921557D0062159E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3F0BFE411921557D0062159E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -134,6 +147,8 @@
 		A08BF5D2192E48A800065044 /* PickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerViewController.h; sourceTree = "<group>"; };
 		A08BF5D3192E48A800065044 /* PickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerViewController.m; sourceTree = "<group>"; };
 		A08BF5D4192E48A800065044 /* PickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PickerViewController.xib; sourceTree = "<group>"; };
+		A08BF5D8192E507200065044 /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
+		A08BF5D9192E507200065044 /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncoding.m"; sourceTree = "<group>"; };
 		A08FB3011922815400A67BD7 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		A08FB3031922825F00A67BD7 /* EditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorViewController.h; sourceTree = "<group>"; };
 		A08FB3041922825F00A67BD7 /* EditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorViewController.m; sourceTree = "<group>"; };
@@ -247,6 +262,12 @@
 		3F0BFE461921557D0062159E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2FBEE520192E52B2005F5BED /* articlesIcon22.png */,
+				2FBEE521192E52B2005F5BED /* authorIcon22.png */,
+				2FBEE518192E4F7B005F5BED /* articlesIcon1.png */,
+				2FBEE519192E4F7B005F5BED /* articlesIcon2.png */,
+				2FBEE51A192E4F7B005F5BED /* authorIcon1.png */,
+				2FBEE51B192E4F7B005F5BED /* authorIcon2.png */,
 				2F0E0FE5192D52C100C57C19 /* articlesH.png */,
 				C362A8C0192D90280073873C /* categArrow.png */,
 				2F0E0FE3192D41B600C57C19 /* pages.png */,
@@ -362,6 +383,8 @@
 			children = (
 				A08FB3081923B4FD00A67BD7 /* NSObject+ObjectMap.h */,
 				A08FB3091923B4FD00A67BD7 /* NSObject+ObjectMap.m */,
+				A08BF5D8192E507200065044 /* NSString+URLEncoding.h */,
+				A08BF5D9192E507200065044 /* NSString+URLEncoding.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -509,13 +532,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F8FCF3C192BACA9001B2A2B /* Icon29-2.png in Resources */,
+				2FBEE523192E52B2005F5BED /* authorIcon22.png in Resources */,
 				2F9A660E1923C46C000A6910 /* Default@2x.png in Resources */,
 				2F8FCF38192BAB26001B2A2B /* Icon76.png in Resources */,
 				3F0BFE4A1921557D0062159E /* InfoPlist.strings in Resources */,
 				C3BBF71E19251F0900B26255 /* EditorTableViewCell.xib in Resources */,
+				2FBEE51E192E4F7B005F5BED /* authorIcon1.png in Resources */,
 				2F8FCF36192BAB26001B2A2B /* Icon29.png in Resources */,
 				C3B756C2192D2110009175B4 /* CategoryButtonCell.xib in Resources */,
 				A08FB3021922815400A67BD7 /* ViewController.xib in Resources */,
+				2FBEE522192E52B2005F5BED /* articlesIcon22.png in Resources */,
 				3F0BFE521921557D0062159E /* Images.xcassets in Resources */,
 				C362A8C6192D9DD50073873C /* TextViewController.xib in Resources */,
 				A023E84C192513EE0031C3B0 /* MainTableViewCell.xib in Resources */,
@@ -523,6 +549,7 @@
 				A08FB3071922825F00A67BD7 /* EditorViewController.xib in Resources */,
 				C362A8C1192D90280073873C /* categArrow.png in Resources */,
 				2F8FCF2F192BA773001B2A2B /* articlesIcon.png in Resources */,
+				2FBEE51D192E4F7B005F5BED /* articlesIcon2.png in Resources */,
 				2F8FCF37192BAB26001B2A2B /* Icon40.png in Resources */,
 				2F0E0FE4192D41B600C57C19 /* pages.png in Resources */,
 				2F0E0FE6192D52C100C57C19 /* articlesH.png in Resources */,
@@ -533,7 +560,9 @@
 				2F8FCF3E192BACA9001B2A2B /* Icon76-2.png in Resources */,
 				2F9A660C1923C1F2000A6910 /* Default.png in Resources */,
 				C3B756A9192A53BB009175B4 /* EditorTextViewCell.xib in Resources */,
+				2FBEE51C192E4F7B005F5BED /* articlesIcon1.png in Resources */,
 				A08BF5D6192E48A800065044 /* PickerViewController.xib in Resources */,
+				2FBEE51F192E4F7B005F5BED /* authorIcon2.png in Resources */,
 				3F621AF619266401007355B5 /* AuthorInfoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -579,6 +608,7 @@
 				A08FB3061922825F00A67BD7 /* EditorViewController.m in Sources */,
 				A08FB3101923B4FD00A67BD7 /* NSObject+ObjectMap.m in Sources */,
 				A08BF5D5192E48A800065044 /* PickerViewController.m in Sources */,
+				A08BF5DA192E507200065044 /* NSString+URLEncoding.m in Sources */,
 				C3B756C1192D2110009175B4 /* CategoryButtonCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
