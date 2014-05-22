@@ -26,6 +26,7 @@
 		2FBEE51F192E4F7B005F5BED /* authorIcon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FBEE51B192E4F7B005F5BED /* authorIcon2.png */; };
 		2FBEE522192E52B2005F5BED /* articlesIcon22.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FBEE520192E52B2005F5BED /* articlesIcon22.png */; };
 		2FBEE523192E52B2005F5BED /* authorIcon22.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FBEE521192E52B2005F5BED /* authorIcon22.png */; };
+		2FBEE528192E5A20005F5BED /* CustomFontLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBEE527192E5A20005F5BED /* CustomFontLabel.m */; };
 		3F0BFE401921557D0062159E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0BFE3F1921557D0062159E /* Foundation.framework */; };
 		3F0BFE421921557D0062159E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0BFE411921557D0062159E /* CoreGraphics.framework */; };
 		3F0BFE441921557D0062159E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0BFE431921557D0062159E /* UIKit.framework */; };
@@ -110,6 +111,8 @@
 		2FBEE51B192E4F7B005F5BED /* authorIcon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = authorIcon2.png; sourceTree = "<group>"; };
 		2FBEE520192E52B2005F5BED /* articlesIcon22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = articlesIcon22.png; sourceTree = "<group>"; };
 		2FBEE521192E52B2005F5BED /* authorIcon22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = authorIcon22.png; sourceTree = "<group>"; };
+		2FBEE526192E5A20005F5BED /* CustomFontLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomFontLabel.h; sourceTree = "<group>"; };
+		2FBEE527192E5A20005F5BED /* CustomFontLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomFontLabel.m; sourceTree = "<group>"; };
 		3F0BFE3C1921557D0062159E /* WHWriterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WHWriterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F0BFE3F1921557D0062159E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3F0BFE411921557D0062159E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -379,6 +382,8 @@
 				A08BF5C2192B9AEC00065044 /* Categories.m */,
 				A08BF5CF192BA99500065044 /* StoryToEdit.h */,
 				A08BF5D0192BA99500065044 /* StoryToEdit.m */,
+				2FBEE526192E5A20005F5BED /* CustomFontLabel.h */,
+				2FBEE527192E5A20005F5BED /* CustomFontLabel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -619,6 +624,7 @@
 				A08BF5DE192E586000065044 /* ImageEditViewController.m in Sources */,
 				A08BF5D5192E48A800065044 /* PickerViewController.m in Sources */,
 				A08BF5DA192E507200065044 /* NSString+URLEncoding.m in Sources */,
+				2FBEE528192E5A20005F5BED /* CustomFontLabel.m in Sources */,
 				C3B756C1192D2110009175B4 /* CategoryButtonCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
