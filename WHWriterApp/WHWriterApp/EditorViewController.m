@@ -10,7 +10,6 @@
 #import "EditorTableViewCell.h"
 #import "EditorTextViewCell.h"
 #import "TextViewController.h"
-#import "EditorPickerTableViewCell.h"
 #import "CategoryButtonCell.h"
 #import "TokenAuthorIdObject.h"
 #import "StoryObject.h"
@@ -18,6 +17,7 @@
 #import "AddDTO.h"
 #import "EditDTO.h"
 #import "Categories.h"
+#import "PickerViewController.h"
 
 const static CGFloat kJVFieldHeight = 35.0f;
 const static CGFloat kJVFieldHMargin = 0.0f;//10.0f;
@@ -224,7 +224,7 @@ const static CGFloat kJVFieldFontSize = 14.0f;
     
     //Category
     else if(indexPath.row==1){
-        TextViewController *vc5 = [[TextViewController alloc] init];
+        PickerViewController *vc5 = [[PickerViewController alloc] init];
         [self.navigationController pushViewController:vc5 animated:YES];
         vc5.title = @"Category";
     }
