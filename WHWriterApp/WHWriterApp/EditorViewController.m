@@ -215,11 +215,11 @@
         }
         
         cell.textViewLabel.text=@"body";
-        cell.scrollText.numberOfLines = 0;
-        cell.scrollText.text=[StoryToEdit sharedInstance].body;
+        //cell.scrollText.numberOfLines = 0;
+        //cell.scrollText.text=[StoryToEdit sharedInstance].body;
         //Still need to figure out to resize label!
         
-        
+        cell.editorTextView.text=[StoryToEdit sharedInstance].body;
         
         return cell;
     }
