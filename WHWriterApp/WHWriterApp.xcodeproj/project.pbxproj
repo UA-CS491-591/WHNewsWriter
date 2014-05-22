@@ -45,6 +45,7 @@
 		A08BF5D1192BA99500065044 /* StoryToEdit.m in Sources */ = {isa = PBXBuildFile; fileRef = A08BF5D0192BA99500065044 /* StoryToEdit.m */; };
 		A08BF5D5192E48A800065044 /* PickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A08BF5D3192E48A800065044 /* PickerViewController.m */; };
 		A08BF5D6192E48A800065044 /* PickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08BF5D4192E48A800065044 /* PickerViewController.xib */; };
+		A08BF5DA192E507200065044 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = A08BF5D9192E507200065044 /* NSString+URLEncoding.m */; };
 		A08FB3021922815400A67BD7 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08FB3011922815400A67BD7 /* ViewController.xib */; };
 		A08FB3061922825F00A67BD7 /* EditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A08FB3041922825F00A67BD7 /* EditorViewController.m */; };
 		A08FB3071922825F00A67BD7 /* EditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08FB3051922825F00A67BD7 /* EditorViewController.xib */; };
@@ -134,6 +135,8 @@
 		A08BF5D2192E48A800065044 /* PickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerViewController.h; sourceTree = "<group>"; };
 		A08BF5D3192E48A800065044 /* PickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerViewController.m; sourceTree = "<group>"; };
 		A08BF5D4192E48A800065044 /* PickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PickerViewController.xib; sourceTree = "<group>"; };
+		A08BF5D8192E507200065044 /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
+		A08BF5D9192E507200065044 /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncoding.m"; sourceTree = "<group>"; };
 		A08FB3011922815400A67BD7 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		A08FB3031922825F00A67BD7 /* EditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorViewController.h; sourceTree = "<group>"; };
 		A08FB3041922825F00A67BD7 /* EditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorViewController.m; sourceTree = "<group>"; };
@@ -362,6 +365,8 @@
 			children = (
 				A08FB3081923B4FD00A67BD7 /* NSObject+ObjectMap.h */,
 				A08FB3091923B4FD00A67BD7 /* NSObject+ObjectMap.m */,
+				A08BF5D8192E507200065044 /* NSString+URLEncoding.h */,
+				A08BF5D9192E507200065044 /* NSString+URLEncoding.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -579,6 +584,7 @@
 				A08FB3061922825F00A67BD7 /* EditorViewController.m in Sources */,
 				A08FB3101923B4FD00A67BD7 /* NSObject+ObjectMap.m in Sources */,
 				A08BF5D5192E48A800065044 /* PickerViewController.m in Sources */,
+				A08BF5DA192E507200065044 /* NSString+URLEncoding.m in Sources */,
 				C3B756C1192D2110009175B4 /* CategoryButtonCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
