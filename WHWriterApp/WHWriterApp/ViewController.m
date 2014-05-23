@@ -41,7 +41,19 @@
     _operationQueue = [[NSOperationQueue alloc]init];
     _loginRequest = [[LoginRequestObject alloc]init];
     _loginResponse = [[LoginResponseObject alloc]init];
+    
+    
+    //Load Saved Login info
+    NSUserDefaults *defaultsload = [NSUserDefaults standardUserDefaults];
+    NSString *username = [defaultsload objectForKey:@"username"];
+    NSString *password = [defaultsload objectForKey:@"password"];
+    _loginRequest.username = username;
+    _loginRequest.password = password;
+    
     _loginView = [[LoginView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    
+    
     [_loginView.login addTarget:self action:@selector(didTapMyButton:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_loginView];
 
@@ -64,6 +76,12 @@
     _loginRequest.username = _loginView.username.text;
     _loginRequest.password = _loginView.password.text;
     //Specify the string to get sent to the server
+    
+    // Store the login info
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:_loginRequest.username forKey:@"username"];
+    [defaults setObject:_loginRequest.password forKey:@"password"];
+    [defaults synchronize];
     
     //Make that string into raw data
     NSData *loginData = [_loginRequest JSONData];
