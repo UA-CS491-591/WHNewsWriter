@@ -21,6 +21,7 @@
 @property NSMutableArray *stories;
 @property NSOperationQueue *operationQueue;
 @property UISearchDisplayController *searchController;
+@property UIRefreshControl *refreshControl;
 
 @end
 
@@ -40,6 +41,14 @@
     [super viewDidLoad];
     _operationQueue = [[NSOperationQueue alloc]init];
     [self refreshTable];
+    
+    
+    //Adding refresh control for manual refresh
+    self.refreshControl = [[UIRefreshControl alloc] initWithFrame:CGRectMake(0, -60, self.tableView.frame.size.width, 60)];
+    [self.refreshControl addTarget:self action:@selector(refreshTable) forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:self.refreshControl];
+    
+    
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(didTapMyButton:)];
     
@@ -125,6 +134,8 @@
     }
 }
 
+
+
 -(void)didTapMyButton:(UIButton *)sender
 {
     EditorViewController *vc3 = [[EditorViewController alloc] init];
@@ -169,6 +180,7 @@
         //Hop back main thread
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.tableView reloadData];
+            [self.refreshControl endRefreshing];
         });
     }];
 }

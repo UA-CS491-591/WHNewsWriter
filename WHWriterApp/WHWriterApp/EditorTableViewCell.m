@@ -22,7 +22,6 @@
 {
     //Initialization Code
     _editorTextField.delegate = self;
-    
 }
 
 

@@ -136,6 +136,7 @@
                           //two instances of TextField
         
         cell.fieldLabel.text=@"title";
+        
         cell.field.text =[StoryToEdit sharedInstance].storyTitle;
         /*
         //Styling for text field
