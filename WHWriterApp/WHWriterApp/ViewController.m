@@ -60,6 +60,7 @@
     //Set http method
     [request setHTTPMethod:@"POST"];
     
+    
     _loginRequest.username = _loginView.username.text;
     _loginRequest.password = _loginView.password.text;
     //Specify the string to get sent to the server
