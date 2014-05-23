@@ -27,6 +27,7 @@
 		2FBEE522192E52B2005F5BED /* articlesIcon22.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FBEE520192E52B2005F5BED /* articlesIcon22.png */; };
 		2FBEE523192E52B2005F5BED /* authorIcon22.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FBEE521192E52B2005F5BED /* authorIcon22.png */; };
 		2FBEE528192E5A20005F5BED /* CustomFontLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBEE527192E5A20005F5BED /* CustomFontLabel.m */; };
+		2FBEE532192F94FC005F5BED /* authorInfo copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FBEE531192F94FC005F5BED /* authorInfo copy.png */; };
 		3F0BFE401921557D0062159E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0BFE3F1921557D0062159E /* Foundation.framework */; };
 		3F0BFE421921557D0062159E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0BFE411921557D0062159E /* CoreGraphics.framework */; };
 		3F0BFE441921557D0062159E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0BFE431921557D0062159E /* UIKit.framework */; };
@@ -113,6 +114,7 @@
 		2FBEE521192E52B2005F5BED /* authorIcon22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = authorIcon22.png; sourceTree = "<group>"; };
 		2FBEE526192E5A20005F5BED /* CustomFontLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomFontLabel.h; sourceTree = "<group>"; };
 		2FBEE527192E5A20005F5BED /* CustomFontLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomFontLabel.m; sourceTree = "<group>"; };
+		2FBEE531192F94FC005F5BED /* authorInfo copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "authorInfo copy.png"; sourceTree = "<group>"; };
 		3F0BFE3C1921557D0062159E /* WHWriterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WHWriterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F0BFE3F1921557D0062159E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3F0BFE411921557D0062159E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -270,6 +272,7 @@
 		3F0BFE461921557D0062159E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2FBEE531192F94FC005F5BED /* authorInfo copy.png */,
 				2FBEE520192E52B2005F5BED /* articlesIcon22.png */,
 				2FBEE521192E52B2005F5BED /* authorIcon22.png */,
 				2FBEE518192E4F7B005F5BED /* articlesIcon1.png */,
@@ -564,6 +567,7 @@
 				2F8FCF2F192BA773001B2A2B /* articlesIcon.png in Resources */,
 				2FBEE51D192E4F7B005F5BED /* articlesIcon2.png in Resources */,
 				2F8FCF37192BAB26001B2A2B /* Icon40.png in Resources */,
+				2FBEE532192F94FC005F5BED /* authorInfo copy.png in Resources */,
 				2F0E0FE4192D41B600C57C19 /* pages.png in Resources */,
 				2F0E0FE6192D52C100C57C19 /* articlesH.png in Resources */,
 				2F8FCF30192BA773001B2A2B /* authorIcon.png in Resources */,

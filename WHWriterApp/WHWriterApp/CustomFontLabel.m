@@ -12,14 +12,14 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    [self setFont:[UIFont fontWithName:@"American Typewriter" size:12.0]];
+    [self setFont:[UIFont fontWithName:@"American Typewriter" size:13.0]];
 }
 
 -(id)initWithFrame:(CGRect)frame
 {
     id result = [super initWithFrame:frame];
     if (result) {
-        [self setFont:[UIFont fontWithName:@"American Typewriter" size:12.0]];
+        [self setFont:[UIFont fontWithName:@"American Typewriter" size:13.0]];
     }
     [result setUserInteractionEnabled:NO];
     return result;
