@@ -15,6 +15,7 @@
 #import "TokenAuthorIdObject.h"
 #import "NSObject+ObjectMap.h"
 #import "NSString+URLEncoding.h"
+#import "ViewController.h"
 
 @interface TableViewController ()
 
@@ -51,6 +52,7 @@
     
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(didTapMyButton:)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemReply target:self action:@selector(didTapLogout:)];
     
     UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectZero];
     
@@ -141,6 +143,12 @@
 {
     EditorViewController *vc3 = [[EditorViewController alloc] init];
     [self.navigationController pushViewController:vc3 animated:YES];
+}
+-(void)didTapLogout:(UIButton *)sender
+{
+    [self presentViewController:[[ViewController alloc]init] animated:YES completion:^{
+        ;
+    }];
 }
 
 -(void)refreshTableOnSearch:(NSString *)text{
