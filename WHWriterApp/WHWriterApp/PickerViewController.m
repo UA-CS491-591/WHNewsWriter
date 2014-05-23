@@ -7,6 +7,8 @@
 //
 
 #import "PickerViewController.h"
+#import "CategoryObject.h"
+
 
 @interface PickerViewController ()
 
@@ -45,6 +47,18 @@
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent: (NSInteger)component
 {
     return [Categories sharedInstance].List.count;
+}
+
+-(UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
+{
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, pickerView.frame.size.width, 44)];
+    //label.backgroundColor = [UIColor lightGrayColor];
+    label.textColor = [UIColor blackColor];
+    label.font = [UIFont fontWithName:@"American Typewriter" size:18];
+    //label.text = [NSString stringWithFormat:@"  %d", row+1];
+    label.text = [[[Categories sharedInstance].List objectAtIndex:row] name];
+    label.textAlignment = NSTextAlignmentCenter;
+    return label;
 }
 
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row   forComponent:(NSInteger)component
