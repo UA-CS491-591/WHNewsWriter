@@ -21,6 +21,7 @@
     if (result) {
         [self setFont:[UIFont fontWithName:@"American Typewriter" size:12.0]];
     }
+    [result setUserInteractionEnabled:NO];
     return result;
 }
 @end

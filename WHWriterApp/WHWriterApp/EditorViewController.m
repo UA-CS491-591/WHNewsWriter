@@ -160,17 +160,6 @@
         
     }
     
-    //Category
-    else if(indexPath.row==2){
-        CategoryButtonCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CategoryButtonCell"];
-        if(!cell){
-            cell = [[CategoryButtonCell alloc] init];
-        }
-        cell.categoryLabel.text=@"category";
-        cell.categoryName.text = [StoryToEdit sharedInstance].category.name;
-        
-        return cell;
-    }
     
     //Subtitle
     else if(indexPath.row==1){
@@ -185,11 +174,26 @@
         cell.fieldLabel.text=@"subtitle";
         cell.field.text =[StoryToEdit sharedInstance].subtitle;
         
-    
+        
         //[StoryToEdit sharedInstance].subtitle = _Story.subtitle;
-    
+        
         return cell;
     }
+    
+    
+    //Category
+    else if(indexPath.row==2){
+        CategoryButtonCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CategoryButtonCell"];
+        if(!cell){
+            cell = [[CategoryButtonCell alloc] init];
+        }
+        cell.categoryLabel.text=@"category";
+        cell.categoryName.text = [StoryToEdit sharedInstance].category.name;
+        
+        return cell;
+    }
+    
+    
     else if(indexPath.row==3){
         EditorTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EditorTableViewCell"];
         if (!cell) {
@@ -207,6 +211,8 @@
         
         return cell;
     }
+    
+    
     //Body
     else {
         
@@ -240,19 +246,19 @@
         
     }
     
-    //Category
-    else if(indexPath.row==2){
-        PickerViewController *vc5 = [[PickerViewController alloc] init];
-        [self.navigationController pushViewController:vc5 animated:YES];
-        vc5.title = @"Category";
-    }
-    
     //Subtitle
     else if(indexPath.row==1){
         TextViewController *vc6 = [[TextViewController alloc] init];
         vc6.title = @"Subtitle";
         vc6.fieldName = vc6.title;
         [self.navigationController pushViewController:vc6 animated:YES];
+    }
+    
+    //Category
+    else if(indexPath.row==2){
+        PickerViewController *vc5 = [[PickerViewController alloc] init];
+        [self.navigationController pushViewController:vc5 animated:YES];
+        vc5.title = @"Category";
     }
     
     //ImageURL
@@ -275,13 +281,9 @@
     
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    //CGFloat *height;
-    if(indexPath.row == 2){
-        //return 168;
-        return 35.0f;
-    }
-    else if(indexPath.row<4){
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if(indexPath.row<4){
         return 35.0f;
     } else {
         return 340;

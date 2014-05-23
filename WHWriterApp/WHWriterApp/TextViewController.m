@@ -32,7 +32,6 @@
     [_editorTextView becomeFirstResponder];
     // Do any additional setup after loading the view from its nib.
     if([_fieldName isEqual:@"Title"]){
-        [_editorTextView setFont:[UIFont fontWithName:@"DIN Alternated Bold" size:50.0f]];
         [_editorTextView setText:[StoryToEdit sharedInstance].storyTitle];
     }
     else if([_fieldName isEqual:@"Subtitle"]){

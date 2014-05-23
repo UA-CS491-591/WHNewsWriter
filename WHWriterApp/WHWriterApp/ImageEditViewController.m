@@ -49,16 +49,16 @@
 
 #pragma mark - Text View Delegate Methods
 - (void)textViewDidBeginEditing:(UITextView *)textView {
-    CGRect textViewFrame = CGRectInset(self.view.bounds, 20.0, 20.0);
-    textViewFrame.size.height -= 216;
-    textView.frame = textViewFrame;
+    //CGRect textViewFrame = CGRectInset(self.view.bounds, 20.0, 20.0);
+    //textViewFrame.size.height -= 216;
+    //textView.frame = textViewFrame;
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    CGRect textViewFrame = CGRectInset(self.view.bounds, 20.0, 20.0);
-    _editorTextView.frame = textViewFrame;
-    [_editorTextView endEditing:YES];
-    [super touchesBegan:touches withEvent:event];
+    //CGRect textViewFrame = CGRectInset(self.view.bounds, 20.0, 20.0);
+    //_editorTextView.frame = textViewFrame;
+    //[_editorTextView endEditing:YES];
+    //[super touchesBegan:touches withEvent:event];
 }
 
 
