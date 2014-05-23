@@ -73,7 +73,7 @@
     [NSURLConnection sendAsynchronousRequest:request queue:_operationQueue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         //Decode to string
         _loginResponse = [[LoginResponseObject alloc]initWithJSONData:data];
-        if (_loginResponse.accessToken != nil) {
+        if (_loginResponse.accessToken != nil && _loginResponse.user.isWriter) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 NavController *Navigation = [[NavController alloc] initWithNibName:nil bundle:nil];
                 AuthorInfoViewController *AuthorVC = [[AuthorInfoViewController alloc] initWithNibName:NSStringFromClass([AuthorInfoViewController class]) bundle:nil];
